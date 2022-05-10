@@ -1,0 +1,55 @@
+prontera,147,189,5	script	Curandeira	616,{
+
+	.@timetick = gettimetick(2);
+	if(@heal_delay > .@timetick) {
+		end;
+	}
+	@heal_delay = .@timetick + 5; // 5 segundos de delay.
+	
+OnGetBuffs:
+	
+	.@buff_time = 24 * 60 * 60000;
+	
+	if(getbrokenid(1)) {
+		repairall;
+	}
+	
+	sc_end SC_STONE;
+	sc_end SC_FREEZE;
+	sc_end SC_STUN;
+	sc_end SC_SLEEP;
+	sc_end SC_POISON;
+	sc_end SC_CURSE;
+	sc_end SC_SILENCE;
+	sc_end SC_CONFUSION;
+	sc_end SC_BLIND;
+	sc_end SC_BLEEDING;
+	sc_end SC_HALLUCINATION;
+
+	sc_start SC_BLESSING, .@buff_time, 10;
+	sc_start SC_INCREASEAGI, .@buff_time, 10;
+	sc_start SC_IMPOSITIO, .@buff_time, 10;
+	sc_start SC_GLORIA, .@buff_time, 10;
+	sc_start SC_ASSUMPTIO, .@buff_time, 10;
+	
+	//sc_start SC_FOOD_STR_CASH, .@buff_time, 10;
+	//sc_start SC_FOOD_AGI_CASH, .@buff_time, 10;
+	//sc_start SC_FOOD_VIT_CASH, .@buff_time, 10;
+	//sc_start SC_FOOD_DEX_CASH, .@buff_time, 10;
+	//sc_start SC_FOOD_INT_CASH, .@buff_time, 10;
+	//sc_start SC_FOOD_LUK_CASH, .@buff_time, 10;
+	//sc_start SC_SAVAGE_STEAK, .@buff_time,20;
+	//sc_start SC_COCKTAIL_WARG_BLOOD, .@buff_time,20;
+	//sc_start SC_MINOR_BBQ, .@buff_time,20;
+	//sc_start SC_SIROMA_ICE_TEA, .@buff_time,20;
+	//sc_start SC_DROCERA_HERB_STEAMED, .@buff_time,20;
+	//sc_start SC_PUTTI_TAILS_NOODLES, .@buff_time,20;
+	
+	percentheal 100, 100;
+	
+	specialeffect2 312;
+	
+	dispbottom "[Curandeira] Você está curado.";
+	
+	end;
+}
