@@ -11370,6 +11370,12 @@ bool pc_equipitem(struct map_session_data *sd,short n,int req_pos,bool equipswit
 		return false;
 	}
 
+	// auto refine +7 ao equipar
+	if ((pos & (EQP_ARMS | EQP_HELM | EQP_ARMOR | EQP_GARMENT | EQP_SHOES | EQP_ACC)) && id->flag.no_refine == 0 && sd->inventory.u.items_inventory[n].refine < 7) {
+		sd->inventory.u.items_inventory[n].refine = 7;
+		clif_refine(sd->fd, 0, n, 7);
+	}
+
 	equip_index = equipswitch ? sd->equip_switch_index : sd->equip_index;
 
 	if ( !equipswitch && id->flag.bindOnEquip && !sd->inventory.u.items_inventory[n].bound) {
