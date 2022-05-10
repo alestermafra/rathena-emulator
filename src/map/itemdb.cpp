@@ -234,7 +234,8 @@ uint64 ItemDatabase::parseBodyNode(const ryml::NodeRef& node) {
 		if (!this->asUInt32(node, "Weight", weight))
 			return 0;
 
-		item->weight = weight;
+		//item->weight = weight;
+		item->weight = 0;
 	} else {
 		if (!exists)
 			item->weight = 0;
