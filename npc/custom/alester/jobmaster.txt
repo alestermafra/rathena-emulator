@@ -1,0 +1,120 @@
+prontera,144,189,5	script	Mestre das Classes	405,{
+
+function Can_Change;
+function Choice_Job;
+function Confirm_Choice;
+function Give_Equips;
+function Male;
+
+
+	if(!Can_Change()) {
+		mes .name$,
+			"Não há mais nada que eu possa fazer por você.";
+		close;
+	}
+	
+	set .@job, Choice_Job();
+	if(Confirm_Choice(.@job)) {
+		jobchange(.@job);
+		set BaseLevel, 175;
+		set JobLevel, 70;
+		set SkillPoint, 0;
+		atcommand "@allskills";
+		callfunc "F_GetPlatinumSkills";
+		Give_Equips();
+		
+		percentheal 100, 100;
+		
+		mes .name$,
+			"Agora você é um ^0055FF"+jobname(.@job)+"^000000!";
+		close;
+	}
+	else {
+		mes .name$,
+			"Estarei aqui quando precisar.";
+		close;
+	}
+	
+	
+function Can_Change {
+	return Class == Job_Novice;
+}
+
+function Choice_Job {
+	mes .name$,
+		"Escolha uma classe.";
+	next;
+	
+	deletearray .@jobs, getarraysize(.@jobs);
+	setarray .@jobs[1],
+		JOB_RUNE_KNIGHT_T,
+		JOB_WARLOCK_T,
+		JOB_RANGER_T,
+		JOB_ARCH_BISHOP_T,
+		JOB_MECHANIC_T,
+		JOB_GUILLOTINE_CROSS_T,
+		JOB_ROYAL_GUARD_T,
+		JOB_SORCERER_T,
+		Male()? JOB_MINSTREL_T: JOB_WANDERER_T,
+		JOB_SURA_T,
+		JOB_GENETIC_T,
+		JOB_SHADOW_CHASER_T;
+	
+	set .@job_array_size, getarraysize(.@jobs);
+	set .@menu$, "";
+	for(.@i = 1; .@i < .@job_array_size; .@i++) {
+		set .@jobname$, jobname(.@jobs[.@i]);
+		set .@menu$, .@menu$ + .@jobname$ + ":";
+	}
+	
+	return .@jobs[select(.@menu$)];
+}
+
+function Confirm_Choice {
+	set .@job, getarg(0, -1);
+	
+	if(.@job < 0) {
+		mes "Ocorreu um erro.";
+		close;
+	}
+	
+	mes .name$,
+		"Tem certeza que deseja se transformar na classe ^0055FF"+jobname(.@job)+"^000000?";
+	next;
+	
+	set .@c, select("Me transforme em ^0055FF"+jobname(.@job)+"^000000:Cancelar");
+	
+	return .@c == 1;
+}
+
+function Give_Equips {
+	setarray .@equips[0],	1228,0, //Faca de Combate
+							5518,0, //Misticos
+							15041,4031, //Couraça de Boitatá com PecoPeco
+							2423,0, //Divergentes
+							2554,4133, //Pedaço de Pele de Guardiao com RayDric
+							2115,4058; //Valk Shield com Thara
+							
+	for(.@i = 0; .@i < getarraysize(.@equips); set .@i, .@i+2)
+	{
+		getitem2 .@equips[.@i], 1, 1, 0, 0, .@equips[.@i + 1], 0, 0, 0;
+		equip .@equips[.@i];
+	}
+	
+	return;
+}
+
+function Male {
+	return Sex == 1;
+}
+	
+
+OnPCLoginEvent:
+	if(Can_Change())
+		showevent 2,0;
+	end;
+	
+OnInit:
+	set .name$, "[Mestre das Classes]";
+	end;
+}
