@@ -1,0 +1,56 @@
+prontera,140,193,5	script	Removedora de cartas	575,{
+
+	disable_items;
+	
+	mes "[Removedora de cartas]";
+	mes "Selecione a posição do equipamento que deseja remover as cartas.";
+	next;
+	
+	setarray .@position_name$, "Cabeça - Topo", "Cabeça - Meio", "Cabeça - Baixo", "Armadura", "Mão Direita", "Mão Esquerda", "Capa", "Sapatos", "Acessório Direito", "Acessório Esquerdo";
+	setarray .@position_id, EQI_HEAD_TOP, EQI_HEAD_MID, EQI_HEAD_LOW, EQI_ARMOR, EQI_HAND_R, EQI_HAND_L, EQI_GARMENT, EQI_SHOES, EQI_ACC_R, EQI_ACC_L;
+	
+	.@menu$ = "";
+	
+	for(.@i = 0; .@i < 10; .@i++) {
+		.@menu$ = .@menu$ + sprintf("%s [%s]", .@position_name$[.@i], (getequipisequiped(.@position_id[.@i])? getequipname(.@position_id[.@i]) : "Nenhum"));
+		.@menu$ = .@menu$ + ":";
+	}
+	
+	.@part = .@position_id[select(.@menu$) - 1];
+	
+	if(!getequipisequiped(.@part)) {
+		mes "[Removedora de cartas]";
+		mes "Não há nenhum equipamento nesta posição.";
+		close;
+	}
+	
+	if(getequipcardcnt(.@part) == 0) {
+		mes "[Removedora de cartas]";
+		mes "Este equipamento não possui cartas para remover.";
+		close;
+	}
+	
+	set .@cardcount, getequipcardcnt(.@part);
+	
+	mes "[Removedora de cartas]";
+	mes sprintf("Este equipamento possui %d carta" + (.@cardcount > 1? "s":"") + " equipada" + (.@cardcount > 1? "s":"") + ".", .@cardcount);
+	next;
+	
+	if(select("Continuar:Cancelar") == 2) {
+		mes "[Removedora de cartas]";
+		mes "Retorne caso precise de meus serviços.";
+		close;
+	}
+	
+	if(!getequipisequiped(.@part) || !getequipcardcnt(.@part)) {
+		logmes "Jogador foi remover as cartas mas nao tem nada equipado ou nenhuma carta no equipamento";
+		mes "Ocorreu um erro. Este problema foi reportado.";
+		close;
+	}
+	
+	successremovecards .@part;
+	
+	mes "[Removedora de cartas]";
+	mes "Aqui está seu equipamento e sua" + (.@cardcount > 1? "s":"") + " carta" + (.@cardcount > 1? "s":"") + ".";
+	close;
+}
