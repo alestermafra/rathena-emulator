@@ -1,0 +1,60 @@
+prontera,138,192,5	script	Homunculus	542,{
+
+	.@eac = eaclass();
+	if((.@eac&EAJ_BASEMASK) == EAJ_MERCHANT && (.@eac&EAJL_2_2)) {
+		if(gethominfo(0)) {
+			mes "[Criador de Homunculus]";
+			mes "Caso deseje trocar seu Homunculus, dispense o atual e fale comigo novamente.";
+			close;
+		}
+		
+		setarray .@hom_ids[1], 6001, 6002, 6003, 6004, 6005, 6006, 6007, 6008;
+		
+		mes "[Criador de Homunculus]",
+			"Qual Homunculus você quer para a ^0000CCprimeira^000000 evolução?";
+		next;
+		
+		switch(select("Lif v1:Amistir v1:Filir v1:Vanilmirth v1:Lif v2:Amistir v2:Filir v2:Vanilmirth v2")) {
+			case 1: .@homid = 6001; break;
+			case 2: .@homid = 6002; break;
+			case 3: .@homid = 6003; break;
+			case 4: .@homid = 6004; break;
+			case 5: .@homid = 6005; break;
+			case 6: .@homid = 6006; break;
+			case 7: .@homid = 6007; break;
+			case 8: .@homid = 6008; break;
+		}
+		
+		atcommand "@makehomun " + .@homid;
+		
+		sleep2 1000;
+		atcommand "@homevolution";
+		atcommand "@homlevel 99";
+		atcommand "@homfriendly 1000";
+		atcommand "@homhungry 100";
+		sleep2 2000;
+		
+		next;
+		
+		if(.@eac&EAJL_THIRD) {
+			mes "[Criador de Homunculus]",
+				"Agora me informe qual Homunculus S você deseja.";
+			next;
+			set .@choice, select("Eira:Bayeri:Sera:Dieter:Eleanor:Nenhum");
+			if(.@choice < 6) {
+				atcommand "@hommutate " + (6047 + .@choice);
+				atcommand "@homlevel 99";
+				sleep2 2000;
+			}
+		}
+		mes "[Criador de Homunculus]",
+			"Seu Homunculus está pronto!",
+			"Não esqueça de distribuir as habilidades dele.";
+		close;
+	}
+	else {
+		mes "[Criador de Homunculus]";
+		mes "Eu crio Homunculus para Bioquímicos.";
+		close;
+	}
+}
