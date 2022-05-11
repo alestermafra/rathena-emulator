@@ -1,0 +1,63 @@
+prontera,171,193,3	script	Mestre do Plágio	4_M_SHADOWCHASER,{
+
+	if(Class != JOB_SHADOW_CHASER_T) {
+		mes "[Mestre do Plágio]",
+			"Eu forneço habilidades para jogadores da classe ^0000CCShadow Chaser^000000 copiarem.";
+		close;
+	}
+	else {
+		mes "[Mestre do Plágio]",
+			"De qual habilidade você precisa?";
+		next;
+		
+		.@choice = select(implode(.SkillName$, ":")) - 1;
+		
+		.@id = .SkillId[.@choice];
+		.@lv = .SkillLv[.@choice];
+		.@type = .SkillType[.@choice];
+		.@name$ = .SkillName$[.@choice];
+		
+		mes "[Mestre do Plágio]",
+			"Você selecionou ^0000CC" + .@name$ + "^000000.";
+		close2;
+		
+		setunitdata getnpcid(0), UNPC_PLUSALLSTAT, 500;
+		
+		if(.@type == .SKILL_TARGET) {
+			unitskilluseid getnpcid(0), .@id, .@lv, getcharid(3);
+		}
+		else if(.@type == .SKILL_SELF) {
+			unitskilluseid getnpcid(0), .@id, .@lv, getnpcid(0);
+		}
+		else if(.@type == .SKILL_PLACE) {
+			unitskillusepos getnpcid(0), .@id, .@lv, 171, 193;
+		}
+		end;
+	}
+	
+	end;
+
+OnInit:
+	.SKILL_TARGET = 1;
+	.SKILL_PLACE = 2;
+	.SKILL_SELF = 4;
+	
+	deletearray .SkillID;
+	deletearray .SkillName$;
+	deletearray .SkillType;
+	deletearray .SkillLv;
+	
+	
+	setarray .SkillID[getarraysize(.SkillID)], 88;
+	setarray .SkillName$[getarraysize(.SkillName$)], "[Wizard] Frost Nova";
+	setarray .SkillType[getarraysize(.SkillType)], 4;
+	setarray .SkillLv[getarraysize(.SkillLv)], 10;
+	
+	setarray .SkillID[getarraysize(.SkillID)], 5006;
+	setarray .SkillName$[getarraysize(.SkillName$)], "[Mechanic] Magma Eruption";
+	setarray .SkillType[getarraysize(.SkillType)], 2;
+	setarray .SkillLv[getarraysize(.SkillLv)], 5;
+	
+	end;
+
+}
