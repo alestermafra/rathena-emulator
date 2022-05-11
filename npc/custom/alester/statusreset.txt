@@ -1,0 +1,29 @@
+prontera,144,195,5	script	Resetador	847,{
+
+	mes "[Resetador]",
+		"Gostaria de resetar seus atributos?";
+	next;
+	if(select("Sim:Não") == 2) {
+		mes "[Resetador]",
+			"Até mais.";
+		close;
+	}
+	else {
+		/* previous atrib */
+		.@for = readparam(bStr);
+		.@agi = readparam(bAgi);
+		.@vit = readparam(bVit);
+		.@int = readparam(bInt);
+		.@dex = readparam(bDex);
+		.@luk = readparam(bLuk);
+
+		resetstatus;
+		
+		mes "[Resetador]",
+			"Seus atributos foram resetados.";
+		close2;
+		
+		dispbottom "[Resetador] Atributos anteriores: " + .@for + " for, " + .@agi + " agi, " + .@vit + " vit, " + .@int + " int, " + .@dex + " dex, " + .@luk + " luk.";
+		end;
+	}
+}
