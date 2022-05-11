@@ -1,0 +1,1199 @@
+-	shop	Novidades	-1,501:-1
+prontera,164,189,3	script	Mercado	795,{
+	mes "[Mercado]",
+		"O mercado é onde você pode comprar equipamentos para seu personagem.",
+		"O que posso fazer por você?";
+	next;
+	
+	if(select("Me leve até lá:Visualizar novidades") == 1)
+		warp "job_cru",28,109;
+	else
+		CallShop "Novidades",1;
+	end;
+	
+OnInit:
+	setarray .@novidades[0],2407,2465,2466,2437,2492,2436,1160,1830,1825,1384,1392,1393,1926,1737,1741,1740,2004,13107,1548,1522,1544,1637,1643,13038,1647,1383,1183,1385,1562,1161,5261,1646,1127,1420,1563,1561,13400,13039,5498,5372,5469,5808,5527,18888,5547,2209,5671,18821,18508,5005,5014,2240,2266,2380,2382,2377,15052,2376,2378,2540,2538,2169,2160,2154,2663,4272,4210,4220,4331,4311,4421,4117,4332,4312,4356,4057,4268,4468,4327,12546,518,13208,12721,12720;
+	
+	npcshopdelitem "Novidades",501;
+	for(set .@i, 0; .@i < GetArraySize(.@novidades); set .@i, .@i+1)
+		npcshopadditem "Novidades",.@novidades[.@i],0;	
+	end;
+}
+
+
+job_cru,33,109,3	script	Saída#mercado	966,{
+
+message StrCharInfo(0), "Voltando para Prontera.";
+AddTimer 1000, "Saída#mercado::OnGoPrt";
+end;
+
+OnGoPrt:
+	warp "prontera",156,191;
+	end;
+}
+
+-	script	ControleLojas	-1,{
+end;
+OnInit:
+	freeloop(1);
+	setarray .@aneis[0], 2772,2828,2751,2767,2821,2471,2899,2473,2769,2822,2656,2664,2627,2702,2874,2747,2655,2710,2671,2894,2667,2727,2790,2788,2789,2693,2625,2617,2784,2607,2746,2616,2688,2728,2748,2732,2729,2689,2622,2703,2614,2783,2692,2624,2652,2726,2719,2640,2680,2716,2749,2718,2768,2824,2618,2720,2721,2722,2723,2724,2725,2771,2823,2649,2648,2650,2651,2736,2691,2623,2765,2701,2745,2717,2700,2690,2621,2685,2683,2678,2679,2682,2684,2620,2608,2626,2731,2730,2654,2677,2744,2766,2819,2770,2820,2659,2660,2661,2662,2787,2798,2881,2855,2911,2907,2910,2913,2985,2892,2853,2854,2959,2663;
+	setarray .@armaduras[0], 2394,15041,2349,2355,2389,15000,2386,2351,2310,2375,2374,2366,2399,2381,2319,2354,2327,2373,2390,2388,2342,2391,2345,
+						2364,2359,2353,2365,2371,2360,2347,2322,2367,2357,2338,15032,15040,2387,15022,15015,2378,2376,15052,2377,2382,2380;
+	setarray .@botas[0], 2444,2423,2481,2448,2420,2441,2434,2433,2417,2419,2422,2432,2416,2438,2439,2408,2426,2440,2424,2421,
+						2418,2450,2474,2407,2465,2466,2437,2492,2436;
+	setarray .@hats_baixo[0], 5846,5532,5445,5775,5594,5403,5361,5377,5362,5004,5305,5463,2269,5767,5548,5462,18505,18918,18703,18683,18665,18678,18900,18648,18536,5574,18702,18698,18754,18697,18666,18679,5107,2266,2240;
+	setarray .@hats_meio[0], 18657,5325,5314,5389,5074,5401,5421,5040,2286,5068,2204,5471,5516,5610,5315,5358,5592,5048,18896,18897,18540,2295,2278,5755,18676,18664,2202,18507,5288,5402,18647,5006,18620,5014,5005;
+	setarray .@hats_topo[0], 5374,5518,18600,18601,5451,18561,5452,5453,5013,5170,5360,5500,5564,5137,5766,5125,18570,5312,5531,5344,5172,5480,5765,5506,5845,5468,18550,18630,5283,5563,5211,5210,5376,5128,5481,5654,5291,5311,5822,5393,5286,5507,5413,5495,5083,5801,5690,5133,18539,5388,5836,5831,5830,5124,5659,5256,5285,18930,18931,18932,5375,5585,18700,18857,5115,18756,18542,5277,5379,5489,5147,5209,5466,5324,5526,5109,5416,18662,5411,5132,5738,5491,5660,5658,5188,5317,5426,5770,5508,18892,5395,5528,5034,5474,2272,5100,5310,5448,5449,5556,5367,18619,5131,5143,5539,18727,5819,18908,18909,18910;
+	setarray .@hats_topo2[0],18573,18878,18891,18641,5183,5030,5667,5294,5579,5292,5300,18692,18541,5529,5293,18574,5584,5208,2285,18534,5200,2222,2289,18523,5751,5335,5353,2291,5225,5753,5126,5127,5490,18674,5454,18597,5161,5123,5229,5038,5227,5660,5501,5213,2214,5322,5237,18700,5558,5151,18508,18821,5671,2209,5547,18888,5527,5808,5469,5372,5498,5261;
+	setarray .@capas[0], 2549,2554,2573,2589,2576,2525,2521,2546,2537,2527,2553,2515,2516,2542,2520,2513,2582,2544,2532,2518,2519,2545,2512,2514,2508,2530,2511,2536,2510,2509,2531,2523,2517,2524,2528,2529,2539,2565,2568,2538,2540;
+	setarray .@escudos[0], 2115,2128,2148,2125,2120,2116,2118,2138,2104,2130,2129,2110,2108,2113,2123,2122,2135,2134,2114,2124,2133,2161,2177,2153,2154,2160,2169;
+	setarray .@adagas[0], 13038,1228,13017,1230,1224,1225,13005,13011,1232,13036,1235,1231,1246,13004,1241,1205,12939,1226,13035,13030,1233,1249,1223,1220,13006,1237,13009,1202,13034,1205,13027,1234,13013,13028,13042,13062,13070,13069,13078,13076,13075,13092,13046,13047,13039,13081;
+	setarray .@aprendiz[0], 2628,2340,5055,2112,2512,2113,2416,5119,2355;
+	setarray .@arcos[0], 1743,1738,1739,1746,18110,1715,1727,1702,1705,1711,1724,1716,1708,1726,1721,1719,1725,1734,1736,1730,18111,18103,1720,18112,1732,1745,18109,1731,1740,1741,1737;
+	setarray .@pistolas[0], 13110,13179,13176,13177,13178,13172,13108,13174,13171,13173,13101,13105,13152,13153,13154,13155,13161,13107;
+	setarray .@cajados[0], 1640,2002,1641,1661,1633,1632,1611,1636,2001,1615,1629,1631,1622,1624,1634,1635,1623,1625,1630,1614,1602,1472,1609,1626,1620,1619,1473,2000,1649,1654,2005,1646,1647,1643,1637,1544,2004;
+	setarray .@chicotes[0], 1981,1977,1978,1955,1964,1967,1962,1976,1963,1968,1959,1953,1972,1984,1985,1951,1980,1979;
+	setarray .@esp_two_hands[0], 1187,1185,1182,1181,1155,1162,1166,1179,1117,1165,1164,1152,1168,1175,1189,1186,1191,1161,1183,1160;
+	setarray .@espadas[0], 13416,13417,13418,13410,13411,1108,1140,1134,1135,1132,13401,1105,1133,1143,1128,1145,1131,1141,1142,13013,1138,1112,1125,
+							1126,1144,1136,1148,1102,1139,1147,1421,13405,13413,13412,13414,13404,13400,1127;
+	setarray .@flechas[0], 1773,1750,1766,1767,1755,1754,1761,1752,1760,1759,1772,1774,1757,1770,1769,1765,1763,1762,1764,1775,1776,1751,
+							1768,1753,1756,1758;
+	setarray .@instrumentos[0], 1927,1930,1924,1923,1914,1913,1917,1916,1912,1910,1915,1906,1918,1902,1920,1919,1922,1925,1926;
+	setarray .@katars[0], 1282,1291,1279,1280,1270,13771,1266,1255,1264,1275,1277,1276,1263,1260,1278,1281,1292,1290,1285,1284,1250,1256,1254,1268;
+	setarray .@lancas[0], 1426,1486,1425,1482,1433,1422,1415,1414,1418,1402,1408,1417,1405,1416,1467,1470,1480,1466,1455,1452,1464,1471,1410,1469,1458,
+							1461,1481,1484,1435,1490,1420;
+	setarray .@shuri_municao[0], 13252,13293,13251,13253,13250,13254,13256,13292,13294,13259,13258,13257,13255,13291;
+	setarray .@mora_equips[0], 2007,2011,2859,15025,2467,2008,2012,2860,15026,2468,2009,2013,15027,2861,2469,2010,2014,2862,15028,2470,2156,2162,2864,2865,2866,15029,2569,2471,1657,1660,16013,16018,15030,2570,2472,2475,2574,15036,2883,2476,2575,15037,2884,2479,0,2890,2580,15042,2480,2891,2581,15043,2578,2887,2478,15039,2577,2886,2477,15038;
+	setarray .@cartas_arma[0], 4035,4092,4474,4140,4115,4316,4069,4202,4055,4024,4281,4004,4251,4002,4085,4172,4246,4086,4106,4362,4440,4427,4297,
+								4341,4094,4360,4072,4395,4017,4082,4320,4453,4368,4005,4317,4126,4065,4268,4057,4312,4117,4421;
+	setarray .@cartas_head[0],4458,4459,4358,4288,4229,4052,4354,4110,4087,4161,4269,4112,4336,4366,4223,4411,4412,4271,4127,4343,4195,4461,4188,4468,4311;
+	setarray .@cartas_acc[0], 4508,4505,4238,4237,4044,4348,4103,4027,4079,4077,4053,4064,4022,4084,4175,4252,4418,4423,4424,4436,4433,4416,4349,4230,4321,4036,4051,4293,4091,4327,4356,4331,4272;
+	setarray .@cartas_capa[0], 4133,4102,4056,4303,4402,4088,4129,4285,4179,4178,4325,4081,4116,4109,4287,4431,4432,4113,4095,4108,4159,4334,4375,4071,4313,4422,4429,4183,4210;
+	setarray .@cartas_escudo[0], 4058,4414,4253,4248,4013,4075,4217,4250,4439,4322,4413,4045,4231,4067,4397,4254,4277,4124;
+	setarray .@cartas_armadura[0], 4031,4114,4119,4098,4141,4099,4101,4089,4337,4346,4409,4401,4400,4387,4234,4243,4242,4371,4426,4299,4061,4298,4173,4279,4410,4105,4339,4392,4338,4008,4001,4216,4218,4166,4405,4315,4233,4286,4393,4370,4332,4220;
+	setarray .@cartas_bota[0], 4100,4097,4381,4107,4200,4396,4244,4160,4319,4378,4417,4199,4186,4257;
+	setarray .@essencias[0], 4910, 4916, 4919, 4913, 4922, 4925;
+	setarray .@renegado[0], 6120,6123,6121,6122;
+	setarray .@trovador[0], 11513,6144;
+	setarray .@feiticeiro[0], 6360,6361,6362,6363,11056,993,992,991,990,996,994,997,1025,995;
+	setarray .@ranger[0], 12341,6124,12383,1065,7940;
+	setarray .@wl[0], 6189,6190,6191,6192,6193,6194,6195,6196,6197,6198,6199,6200,6201,6202,6203,6204,6205;
+	setarray .@bio[0], 7135,7136,7139,7137,7138,6210,6211,6212,6213,6214,6215,6216,6217,13268,905,921,13260,13263,13261,13262,13264,13267,13290,12546;
+	setarray .@gx[0], 6128,12717,12718,12722,12724,12723,1771,12720,12721;
+	setarray .@mecha[0], 12383,6146,6147,6150,6151,6152,6154,6156,6186,1549,2800,2801,2802,2803,2804,2805,2806,2808,2807,12394,2810,12392,12393,12394,
+							18000,18001,18002,18003,2809,2139,18004,998,999,615,612,7054;
+	setarray .@rk[0], 12725,12726,12728,12729,12730,12731,12732,12733,12727;
+	setarray .@visu[0],19768,19650,19509,19513,19514,19521,19682,19574,19767,19520,19519,19510,19516,19573,26008,26036;
+	setarray .@kageobo[0], 6493,6512,6513,6514,6515,2171,2172,2173,13311,13312,13313,13314,13315,13316,15054,15055,15056,7521,7522,7523,7524;
+	setarray .@machados[0], 1310,1379,1380,1309,1377,1302,1305,1306,1307,1353,1363,1358,1364,1369,1355,1366,1365,1367,1368,1362,1382,1375,1376,1371,1311,1387,1385,1383,1393,1392,1384;
+	setarray .@projeteis[0], 13200,13201,13202,13203,13204,13205,13206,13207,13208;
+	setarray .@punhos[0], 1827,1826,1823,1824,1816,1812,1808,1815,1813,1804,1806,1818,1819,1820,1821,1822,1817,1522,1825,1830;
+	setarray .@shurikens[0], 13307,13305,13306,13300,13302,13303;
+	setarray .@livros[0], 1576,1564,1574,1575,1550,1554,1553,1556,1565,1557,1558,1559,1560,1552,1572,1577,2161,1584,1555,1561,1563,1562,1568;
+	setarray .@macas[0], 1546,1542,1543,1549,1541,1532,1521,1502,1538,1520,1539,1529,1525,1505,1515,1527,1508,1518,1531,16003,16010,16017,16000,1548,16019;
+	setarray .@utilidades[0], 643,504,505,506,678,525,536,601,518;
+
+	
+	npcshopdelitem "Acessórios",501;
+	npcshopdelitem "Armaduras",501;
+	npcshopdelitem "Botas",501;
+	npcshopdelitem "Chapéus - Baixo",501;
+	npcshopdelitem "Chapéus - Meio",501;
+	npcshopdelitem "Chapéus - Topo",501;
+	npcshopdelitem "Capas",501;
+	npcshopdelitem "Escudos",501;
+	npcshopdelitem "Adagas",501;
+	npcshopdelitem "Aprendiz",501;
+	npcshopdelitem "Arcos",501;
+	npcshopdelitem "Pistolas",501;
+	npcshopdelitem "Cajados",501;
+	npcshopdelitem "Chicotes",501;
+	npcshopdelitem "Espadas de Duas Mãos",501;
+	npcshopdelitem "Espadas",501;
+	npcshopdelitem "Flechas",501;
+	npcshopdelitem "Instrumentos",501;
+	npcshopdelitem "Katars",501;
+	npcshopdelitem "Lanças",501;
+	npcshopdelitem "Machados",501;
+	npcshopdelitem "Projéteis",501;
+	npcshopdelitem "Punhos",501;
+	npcshopdelitem "Shurikens",501;
+	npcshopdelitem "Shurikens e Kunais",501;
+	npcshopdelitem "Equips Mora",501;
+	npcshopdelitem "Cartas - Arma",501;
+	npcshopdelitem "Cartas - Cabeça",501;
+	npcshopdelitem "Cartas - Acessório",501;
+	npcshopdelitem "Cartas - Capa",501;
+	npcshopdelitem "Cartas - Escudo",501;
+	npcshopdelitem "Cartas - Armadura",501;
+	npcshopdelitem "Cartas - Bota",501;
+	npcshopdelitem "Essências",501;
+	npcshopdelitem "Renegado",501;
+	npcshopdelitem "Trovador",501;
+	npcshopdelitem "Feiticeiro",501;
+	npcshopdelitem "Sentinela",501;
+	npcshopdelitem "Arcano",501;
+	npcshopdelitem "Bioquímico",501;
+	npcshopdelitem "Sicário",501;
+	npcshopdelitem "Mecânico",501;
+	npcshopdelitem "Cavaleiro Rúnico",501;
+	npcshopdelitem "Normal",501;
+	npcshopdelitem "Super Vip",501;
+	npcshopdelitem "Rops",501;
+	npcshopdelitem "Visuais",501;
+	npcshopdelitem "Kagero/Oboro",501;
+	npcshopdelitem "Livros",501;
+	npcshopdelitem "Maças",501;
+	npcshopdelitem "Utilidades",501;
+	npcshopdelitem "Chapéus2 - Topo",501;
+
+	for(set .@i, 0; .@i < GetArraySize(.@aneis); set .@i, .@i+1)
+		npcshopadditem "Acessórios",.@aneis[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@armaduras); set .@i, .@i+1)
+		npcshopadditem "Armaduras",.@armaduras[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@botas); set .@i, .@i+1)
+		npcshopadditem "Botas",.@botas[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@hats_baixo); set .@i, .@i+1)
+		npcshopadditem "Chapéus - Baixo",.@hats_baixo[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@hats_meio); set .@i, .@i+1)
+		npcshopadditem "Chapéus - Meio",.@hats_meio[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@hats_topo); set .@i, .@i+1)
+		npcshopadditem "Chapéus - Topo",.@hats_topo[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@capas); set .@i, .@i+1)
+		npcshopadditem "Capas",.@capas[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@escudos); set .@i, .@i+1)
+		npcshopadditem "Escudos",.@escudos[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@adagas); set .@i, .@i+1)
+		npcshopadditem "Adagas",.@adagas[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@aprendiz); set .@i, .@i+1)
+		npcshopadditem "Aprendiz",.@aprendiz[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@arcos); set .@i, .@i+1)
+		npcshopadditem "Arcos",.@arcos[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@pistolas); set .@i, .@i+1)
+		npcshopadditem "Pistolas",.@pistolas[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@cajados); set .@i, .@i+1)
+		npcshopadditem "Cajados",.@cajados[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@chicotes); set .@i, .@i+1)
+		npcshopadditem "Chicotes",.@chicotes[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@esp_two_hands); set .@i, .@i+1)
+		npcshopadditem "Espadas de Duas Mãos",.@esp_two_hands[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@espadas); set .@i, .@i+1)
+		npcshopadditem "Espadas",.@espadas[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@flechas); set .@i, .@i+1)
+		npcshopadditem "Flechas",.@flechas[.@i],0;	
+	for(set .@i, 0; .@i < GetArraySize(.@instrumentos); set .@i, .@i+1)
+		npcshopadditem "Instrumentos",.@instrumentos[.@i],0;	
+	for(set .@i, 0; .@i < GetArraySize(.@katars); set .@i, .@i+1)
+		npcshopadditem "Katars",.@katars[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@lancas); set .@i, .@i+1)
+		npcshopadditem "Lanças",.@lancas[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@shuri_municao); set .@i, .@i+1)
+		npcshopadditem "Shurikens e Kunais",.@shuri_municao[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@mora_equips); set .@i, .@i+1)
+		npcshopadditem "Equips Mora",.@mora_equips[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@cartas_arma); set .@i, .@i+1)
+		npcshopadditem "Cartas - Arma",.@cartas_arma[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@cartas_head); set .@i, .@i+1)
+		npcshopadditem "Cartas - Cabeça",.@cartas_head[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@cartas_acc); set .@i, .@i+1)
+		npcshopadditem "Cartas - Acessório",.@cartas_acc[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@cartas_capa); set .@i, .@i+1)
+		npcshopadditem "Cartas - Capa",.@cartas_capa[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@cartas_escudo); set .@i, .@i+1)
+		npcshopadditem "Cartas - Escudo",.@cartas_escudo[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@cartas_armadura); set .@i, .@i+1)
+		npcshopadditem "Cartas - Armadura",.@cartas_armadura[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@cartas_bota); set .@i, .@i+1)
+		npcshopadditem "Cartas - Bota",.@cartas_bota[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@essencias); set .@i, .@i+1)
+		npcshopadditem "Essências",.@essencias[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@renegado); set .@i, .@i+1)
+		npcshopadditem "Renegado",.@renegado[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@trovador); set .@i, .@i+1)
+		npcshopadditem "Trovador",.@trovador[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@feiticeiro); set .@i, .@i+1)
+		npcshopadditem "Feiticeiro",.@feiticeiro[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@ranger); set .@i, .@i+1)
+		npcshopadditem "Sentinela",.@ranger[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@wl); set .@i, .@i+1)
+		npcshopadditem "Arcano",.@wl[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@bio); set .@i, .@i+1)
+		npcshopadditem "Bioquímico",.@bio[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@gx); set .@i, .@i+1)
+		npcshopadditem "Sicário",.@gx[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@mecha); set .@i, .@i+1)
+		npcshopadditem "Mecânico",.@mecha[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@rk); set .@i, .@i+1)
+		npcshopadditem "Cavaleiro Rúnico",.@rk[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@visu); set .@i, .@i+1)
+		npcshopadditem "Visuais",.@visu[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@kageobo); set .@i, .@i+1)
+		npcshopadditem "Kagero/Oboro",.@kageobo[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@machados); set .@i, .@i+1)
+		npcshopadditem "Machados",.@machados[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@projeteis); set .@i, .@i+1)
+		npcshopadditem "Projéteis",.@projeteis[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@punhos); set .@i, .@i+1)
+		npcshopadditem "Punhos",.@punhos[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@shurikens); set .@i, .@i+1)
+		npcshopadditem "Shurikens",.@shurikens[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@livros); set .@i, .@i+1)
+		npcshopadditem "Livros",.@livros[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@macas); set .@i, .@i+1)
+		npcshopadditem "Maças",.@macas[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@utilidades); set .@i, .@i+1)
+		npcshopadditem "Utilidades",.@utilidades[.@i],0;
+	for(set .@i, 0; .@i < GetArraySize(.@hats_topo2); set .@i, .@i+1)
+		npcshopadditem "Chapéus2 - Topo",.@hats_topo2[.@i],0;
+		
+		
+	freeloop(0);
+
+}
+-	script	ControleLojas2	-1,{
+end;
+OnInit:
+}
+
+
+job_cru,22,98,3	script	Armas	858,{ end; OnInit: WaitingRoom "Armas",0; end; }
+job_cru,14,94,3	shop	Adagas	638,501:-1
+job_cru,18,94,3	shop	Aprendiz	729,501:-1
+job_cru,22,94,3	shop	Arcos	634,501:-1
+job_cru,26,94,3	shop	Pistolas	632,501:-1
+job_cru,30,94,3	shop	Cajados	735,501:-1
+job_cru,14,90,3	shop	Chicotes	725,501:-1
+job_cru,18,90,3	shop	Espadas de Duas Mãos	734,501:-1
+job_cru,22,90,3	shop	Espadas	635,501:-1
+job_cru,26,90,3	shop	Punhos	629,501:-1
+job_cru,30,90,3	shop	Instrumentos	51,501:-1
+job_cru,14,86,3	shop	Katars	884,501:-1
+job_cru,18,86,3	shop	Lanças	417,501:-1
+job_cru,22,86,3	shop	Livros	71,501:-1
+job_cru,26,86,3	shop	Maças	49,501:-1
+job_cru,30,86,3	shop	Machados	63,501:-1
+job_cru,14,82,3	shop	Shurikens	637,501:-1
+
+job_cru,22,76,3	script	Munição	858,{ end; OnInit: WaitingRoom "Munição",0; end; }
+job_cru,18,72,3	shop	Shurikens e Kunais	636,501:-1
+job_cru,22,72,3	shop	Projéteis	633,501:-1
+job_cru,26,72,3	shop	Flechas	472,501:-1
+
+job_cru,22,66,3	script	Chapéus	858,{ end; OnInit: WaitingRoom "Chapéus",0; end; }
+job_cru,14,62,3	shop	Chapéus - Topo	750,501:-1
+job_cru,18,62,3	shop	Chapéus2 - Topo	750,501:-1
+job_cru,22,62,3	shop	Chapéus - Meio	750,501:-1
+job_cru,26,62,3	shop	Chapéus - Baixo	750,501:-1
+job_cru,30,62,3	shop	Visuais	750,501:-1
+
+job_cru,22,56,3	script	Outros	858,{ end; OnInit: WaitingRoom "Outros",0; end; }
+job_cru,14,52,3	shop	Acessórios	750,501:-1
+job_cru,18,52,3	shop	Armaduras	750,501:-1
+job_cru,22,52,3	shop	Botas	750,501:-1
+job_cru,26,52,3	shop	Capas	750,501:-1
+job_cru,30,52,3	shop	Escudos	750,501:-1
+prontera,169,180,1	shop	Utilidades	750,501:-1
+job_cru,22,47,3	shop	Kagero/Oboro	768,501:-1
+
+job_cru,18,47,3	shop	Renegado	481,501:-1
+job_cru,12,49,3	shop	Trovador	480,501:-1
+job_cru,16,49,3	shop	Feiticeiro	727,501:-1
+job_cru,20,49,3	shop	Sentinela	750,501:-1
+job_cru,24,49,3	shop	Arcano	64,501:-1
+job_cru,28,49,3	shop	Bioquímico	542,501:-1
+job_cru,26,47,3	shop	Sicário	467,501:-1
+job_cru,14,47,3	shop	Mecânico	933,501:-1
+job_cru,10,47,3	shop	Cavaleiro Rúnico	628,501:-1
+
+job_cru,22,43,3	script	Especiais	858,{ end; OnInit: WaitingRoom "Especiais",0; end; }
+job_cru,18,39,3	shop	Equips Mora	465,501:-1
+
+job_cru,19,109,5	script	Cartas	858,{ end; OnInit: WaitingRoom "Cartas",0; end; }
+job_cru,11,109,3	shop	Cartas - Cabeça	750,501:-1
+job_cru,15,109,3	shop	Cartas - Armadura	750,501:-1
+job_cru,11,106,3	shop	Cartas - Arma	750,501:-1
+job_cru,15,106,3	shop	Cartas - Escudo	750,501:-1
+job_cru,11,103,3	shop	Cartas - Capa	750,501:-1
+job_cru,15,103,3	shop	Cartas - Bota	750,501:-1
+job_cru,11,100,3	shop	Cartas - Acessório	750,501:-1
+job_cru,15,100,3	shop	Essências	654,501:-1
+
+
+/*prontera,165,196,3	script	Loja ROPs	856,{
+mes "[ Loja ROPs ]",
+"Olá,",
+"Você tem ^ff0000"+#CASHPOINTS+"^000000 ROPs.",
+"Selecione a loja que deseja olhar:";
+next;
+switch(select("Equipamentos:Outros:Visuais"))
+{
+	case 1:
+		CallShop "Equipamentos#cash";
+		break;
+	case 2:
+		CallShop "Outros#cash";
+		break;
+	case 3:
+		CallShop "Visuais#cash";
+		break;
+}
+end;
+}
+-	cashshop	Equipamentos#cash	-1,18885:20000,25045:20000,25046:20000,18894:13000,2936:5000,18603:5000,5800:9000,18670:9000
+-	cashshop	Visuais#cash	-1,25016:10000,26035:10000,26037:10000,26000:10000,26001:10000,26002:10000,26003:10000,26004:10000,26005:10000,26006:10000,26007:10000,26009:10000,26010:10000,26011:10000,26012:10000,26014:10000,26015:10000,26018:10000,26019:10000,26022:10000,26023:10000,26025:10000,26030:10000,26033:10000,26038:10000
+-	cashshop	Outros#cash	-1,25023:4000,25024:6500,25038:350,25039:150,25050:300,25047:100,25048:1000*/
+
+
+
+
+
+
+
+job_cru,26,109,3	script	Sugestão de itens	109,{
+
+mes "[ Sugestão de itens ]",
+"Olá,",
+"Se você acha que está faltando algum item neste mercado, aqui é o local que poderá sugerí-lo ao administrador.",
+"Lembrando que o flood nesta área poderá acarretar em uma punição.";
+next;
+switch(select("Sugerir item:Sair"+(GetGroupId() == 99? ":Visualizar sugestões":"")))
+{
+	case 1:
+		mes "[ Sugestão de itens ]",
+		"Por favor, informe o ID do item:";
+		input .@sug;
+		next;
+		if(GetItemName(.@sug) == "null")
+		{
+			mes "[ Sugestão de itens ]",
+			"Este item não existe em nossa base de dados.";
+			close;
+		}
+		mes "[ Sugestão de itens ]",
+		"Item ID: ^FF0000"+.@sug+"^000000",
+		"Nome do item: ^FF0000"+GetItemName(.@sug)+"^000000",
+		" ",
+		"Continuar?";
+		next;
+		if(select("Sim:Não") == 2) close;
+		if(query_sql("SELECT `char_name` FROM `mercado_sugestoes` WHERE `item_id` = "+.@sug, .@name$) > 0)
+		{
+			mes "[ Sugestão de itens ]",
+			"Este item já foi sugerido por ^FF0000"+.@name$+"^000000",
+			"Por favor, aguarde um pronunciamento da equipe em relação ao item em questão.",
+			"Agradecemos sua intenção.";
+			close;
+		}
+		query_sql("INSERT INTO `mercado_sugestoes` VALUES ("+.@sug+", '"+StrCharInfo(0)+"')");
+		mes "[ Sugestão de itens ]",
+		"Sua sugestão de item foi enviada.",
+		"A equipe RagnaWAR agradece.";
+	case 2: break;
+	case 3:
+		query_sql("SELECT `item_id`, `char_name` FROM `mercado_sugestoes`", .@item_ids, .@char_names$);
+		mes "[ Sugestão de itens ]",
+		"Selecione um item na lista para ver mais informações:";
+		next;
+		set .@str$, "";
+		for(set .@i, 0; .@i < GetArraySize(.@item_ids); set .@i, .@i+1)
+			set .@str$, .@str$ + .@item_ids[.@i] +" por ^FF0000"+.@char_names$[.@i]+"^000000:";
+		set .@str$, .@str$+ "Cancelar";
+		set .@choice, select(.@str$)-1;
+		if(.@choice == GetArraySize(.@item_ids)) close;
+		set .@id, .@item_ids[.@choice];
+		set .@name$, .@char_names$[.@choice];
+		mes "[ Sugestão de itens ]",
+		"Item ID: ^FF0000"+.@id+"^000000",
+		"Nome: ^FF0000"+GetItemName(.@id)+"^000000",
+		"Sugerido por: ^FF0000"+.@name$+"^000000";
+		GetItem .@id, 1;
+		next;
+		if(select("Deletar:Voltar") == 2) goto L_Menu;
+		query_sql("DELETE FROM `mercado_sugestoes` WHERE `item_id` = "+.@id);
+		mes "[ Sugestão de itens ]",
+		"Sugestão de ID ^FF0000"+.@id+"^000000 deletada.";
+		close;
+}
+close;
+
+
+OnInit:
+	WaitingRoom "Sugestão de Itens",0;
+	query_sql("CREATE TABLE IF NOT EXISTS `mercado_sugestoes` ("
+			+"`item_id` int(5) PRIMARY KEY,"
+			+"`char_name` CHAR(30) NOT NULL"
+			+");");
+	end;
+	
+OnPCLoginEvent:
+	if(GetGroupId() == 99)
+	{
+		set .@n, query_sql("SELECT `item_id` FROM `mercado_sugestoes`", .@item_ids);
+		if(.@n > 0)
+		{
+			dispbottom "Há "+.@n+" sugestões de equipamentos para o mercado.";
+		}
+	}
+	end;
+}
+
+
+
+
+
+job_cru,22,39,5	script	Senhor RWC	470,{
+
+set .@n$, "[Senhor RWC]";
+SelectAcessory:
+mes .@n$,
+"Posso criar para você um acessório RWC com os melhores encantamentos.",
+"Por favor, informe qual acessório você deseja criar:";
+next;
+if(select("Colar Memorável RWC:Anel Memorável RWC") == 1)
+	set .@ac_id, 2969;
+else set .@ac_id, 2967;
+for(set .@i,4; .@i>1; set .@i, .@i-1)
+{
+	mes .@n$,
+	"Informe o encantamento que deseja colocar no "+.@i+"o. slot:";
+	next;
+	if(.@i == 2)
+	{
+		setarray .@enchant[1],4702,4732,4742,4712,4722,4752;
+		set .@y, select("FOR:AGI:VIT:INT:DES:SOR");
+	}
+	else if(.@ac_id == 2969)
+	{
+		setarray .@enchant[1],4813,4806,4871;
+		set .@y, select("Spell:MATK (%):SP");
+	}
+	else
+	{
+		setarray .@enchant[1],4809,4767,4867,4797;
+		set .@y, select("Fighting Spirit:ATK (%):Max HP:HP");
+	}
+	setarray .@pos[.@i], .@enchant[.@y];
+}
+
+GetItem2 .@ac_id,1,1,0,0,0,.@pos[2],.@pos[3],.@pos[4];
+mes .@n$,
+"Aqui está seu acessório.";
+close;
+}
+			
+		
+
+
+job_cru,30,39,5	script	Encantamentos Angelicais	403,{
+
+	disable_items;
+	
+	mes "[Encantamentos Angelicais]",
+		"Qual equipamento deseja encantar?";
+	next;
+	
+	switch(select("Asas de Arcanjo:Asas de Arcanjo Caído:Resetar Encantamentos")) {
+		case 1:
+			.@equip_id = 2573;
+			setarray .@enchants[0],
+				4853, // Special STR
+				4854, // Special AGI
+				4855, // Special VIT
+				4856, // Special INT
+				4857, // Special DEX
+				4858, // Special LUK
+				4848, // Immune Lv 1 - reducao neutra 5%
+				4849, // Cranial Lv 1 - reducao humanoide 5%
+				4813, // Spell Lv 3 - MATK +12, CASTTIME -8%
+				4809, // Fighting Spirit Lv 3 - ATK +12, HIT +4
+				4834, // Expert Archer Lv 3 - Ranged atk +6%
+				4816, // Sharp Lv 3 - Critical +12, HIT +4
+				4761, // MATK Lv 2 - MATK +2%, CASTTIME -1%
+				4852; // Archbishop Lv 4 - Healing +20%, SP Cost +15%
+			.@slots = 1;
+			break;
+		case 2:
+			set .@equip_id, 2589;
+			setarray .@enchants[0],
+				4820,
+				4827,
+				4834,
+				4865,
+				4867,
+				4871,
+				4873,
+				4704,
+				4733,
+				4744,
+				4714,
+				4724,
+				4754;
+			set .@slots,3;
+			break;
+		case 3:
+			.@equip_id = getequipid(EQI_GARMENT);
+			if(.@equip_id != 2573 && .@equip_id != 2589) {
+				mes "[Encantamentos Angelicais]",
+					sprintf("Eu preciso que você esteja com ^0000FF%s^000000 ou ^0000FF%s^000000 equipados.", getitemname(2573), getitemname(2589));
+				close;
+			}
+			
+			set .@refine, getequiprefinerycnt(EQI_GARMENT);
+			set .@card, getequipcardid(EQI_GARMENT,0);
+			delequip EQI_GARMENT;
+			getitem2 .@equip_id, 1, 1, .@refine, 0, .@card, 0, 0, 0;
+			
+			mes "[Encantamentos Angelicais]",
+				"Seus encantamentos foram removidos.";
+			close;
+	}
+	
+	if(getequipid(EQI_GARMENT) != .@equip_id) {
+		mes "[Encantamentos Angelicais]",
+			sprintf("Eu preciso que você esteja com ^0000FF%s^000000 equipado.", getitemname(.@equip_id));
+		close;
+	}
+	
+	setarray .@card[0],
+		getequipcardid(EQI_GARMENT,0),
+		getequipcardid(EQI_GARMENT,1),
+		getequipcardid(EQI_GARMENT,2),
+		getequipcardid(EQI_GARMENT,3);
+	
+	setarray .@equip_enchants[0], getequipcardid(EQI_GARMENT,1), getequipcardid(EQI_GARMENT,2), getequipcardid(EQI_GARMENT,3);
+	
+	mes "[Encantamentos Angelicais]",
+		"Selecione o encantamento que deseja colocar em sua ^0000FF"+GetItemName(.@equip_id)+"^000000";
+	next;
+
+	if(.@equip_id == 2589 && .@card[3] > 0 && .@card[2] > 0) {
+		setarray .@enchants[0],
+			4821,
+			4828,
+			4835,
+			4866,
+			4868,
+			4801,
+			4807,
+			4853,
+			4854,
+			4855,
+			4856,
+			4857,
+			4858;
+	}
+	
+	.@menu$ = "";
+	for(set .@i, 0; .@i < getarraysize(.@enchants); set .@i, .@i+1)
+		set .@menu$, .@menu$ + getitemname(.@enchants[.@i]) + ":";
+	set .@enchant, .@enchants[select(.@menu$) - 1];
+	
+	if(!.@card[3]) setarray .@card[3], .@enchant;
+	else if(!.@card[2] && .@slots > 1) setarray .@card[2], .@enchant;
+	else if(!.@card[1] && .@slots > 2) setarray .@card[1], .@enchant;
+	else {
+		mes "[Encantamentos Angelicais]",
+			"Este equipamento já possui todos os encantamentos possíveis.";
+		close;
+	}
+	
+	if(getequipid(EQI_GARMENT) != .@equip_id) {
+		mes "[Encantamentos Angelicais]",
+			sprintf("Eu preciso que você esteja com ^0000FF%s^000000 equipado.", getitemname(.@equip_id));
+		close;
+	}
+	
+	.@refine = getequiprefinerycnt(EQI_GARMENT);
+	delequip EQI_GARMENT;
+	getitem2 .@equip_id, 1, 1, .@refine, 0, .@card[0], .@card[1], .@card[2], .@card[3];
+
+	mes "[Encantamentos Angelicais]",
+		"Aqui está seu equipamento encantado.";
+	close;
+}
+
+
+
+
+job_cru,14,40,5	script	Encantamentos Mora	618,{
+
+disable_items;
+mes "[ Encantador de Mora ]",
+"Olá, eu posso encantar seus equipamentos mora.",
+"Primeiramente selecione a classe de equipamentos que deseja encantar:";
+next;
+set .@class, select("Arcebispo:Arcano:Cavaleiro Rúnico:Sicário:Sentinela");
+setarray .@parts[0], EQI_HAND_R , EQI_HAND_L, EQI_ARMOR, EQI_SHOES, EQI_GARMENT, EQI_ACC_R;
+switch(.@class)
+{
+	case 1: //Arcebispo
+		setarray .@equips_enchants[0], 2864,2865,2866,2471,2472,2569,2570,15029,15030,2156,1657,16013;
+		setarray .@equips_location[0], 5,5,5,3,3,4,4,2,2,1,0,0;
+		
+		set .@str$, "";
+		for(set .@i, 0; .@i < GetArraySize(.@equips_enchants); set .@i, .@i+1)
+			set .@str$, .@str$ + GetItemName(.@equips_enchants[.@i])+":";
+		set .@choice1, select(.@str$)-1;
+		switch(.@choice1)
+		{
+			case 0:
+			case 1:
+			case 2:
+				setarray .@enchant_slot2[0],4803,4804,4805,4711,4721,4740; //Cura nv1, Catolicismo nv1, Arcebispo nv1, int2, des2, vit1
+				setarray .@enchant_slot3[0],4803,4804,4805,4799,4766,4788; //Cura nv1, Catolicismo nv1, Arcebispo nv1, hp500, atk2, defm6
+				set .@slot_atual, 2;
+				break;
+			case 3:
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+				setarray .@enchant_slot1[0],4712,4722,4761,4767; //int3, des3, matk2, atk3
+				setarray .@enchant_slot2[0],4713,4723,4740,4761,4703,4767; //int4, des4, vit1, matk2 for4, atk3
+				setarray .@enchant_slot3[0],4764,4799,4767,4788,4761,4713,4723,4703; //cri5, hp500, atk3, defm6, matk2, int4, des4, for4
+				set .@slot_atual, 1;
+				break;
+			case 10:
+				setarray .@enchant_slot2[0],4723,4741,4801,4761,4714; //des4, vit2, sp100, matk2, int5
+				setarray .@enchant_slot3[0],4714,4723,4761; //int5, des4, matk2
+				set .@slot_atual, 2;
+				break;
+			case 11:
+				setarray .@enchant_slot2[0],4723,4741,4704,4767; //des4, vit2, for5, atk3
+				setarray .@enchant_slot3[0],4704,4723,4767; //for5, des4, atk3
+				set .@slot_atual, 2;
+				break;
+		}
+		break;
+	case 2: //Warlock
+		setarray .@equips_enchants[0], 2007,2008,2009,2010,2467,2468,2469,2470,2859,2860,2861,2862,15025,15026,15027,15028;
+		setarray .@equips_location[0], 0, 0, 0, 0, 3, 3, 3, 3, 5, 5, 5, 5, 2, 2, 2, 2;
+		
+		set .@str$, "";
+		for(set .@i, 0; .@i < GetArraySize(.@equips_enchants); set .@i, .@i+1)
+			set .@str$, .@str$ + GetItemName(.@equips_enchants[.@i])+":";
+		set .@choice1, select(.@str$)-1;
+		switch(.@choice1)
+		{
+			case 0:
+			case 1:
+			case 2:
+			case 3:
+				setarray .@enchant_slot2[0],4720,4796,4713,4801,4761; //des1, hp200, int4, sp100, matk2
+				setarray .@enchant_slot3[0],4786,4761,4713,4721; //mdef2, matk2, int4, des2
+				set .@slot_atual, 2;
+				break;
+			case 4:
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+			case 11:
+			case 12:
+			case 13:
+			case 14:
+			case 15:
+				setarray .@enchant_slot1[0],4712,4722,4761; //Inteligence3,Dexterity3,matk2
+				setarray .@enchant_slot2[0],4720,4796,4713,4801,4761; //Dexterity1,HP200,Inteligence4,SP100,matk2
+				setarray .@enchant_slot3[0],4786,4761,4713,4721; //Mdef2,Matk2,Inteligence4,Dexterity2
+				set .@slot_atual, 1;
+				break;
+		}
+		break;
+	case 3: //RK
+		setarray .@equips_enchants[0], 2475,2476,2574,2575,15036,15037,2883,2884;
+		setarray .@equips_location[0], 3, 3, 4, 4, 2, 2, 5, 5;
+		
+		set .@str$, "";
+		for(set .@i, 0; .@i < GetArraySize(.@equips_enchants); set .@i, .@i+1)
+			set .@str$, .@str$ + GetItemName(.@equips_enchants[.@i])+":";
+		set .@choice1, select(.@str$)-1;
+		switch(.@choice1)
+		{
+			case 0:
+				setarray .@enchant_slot3[0], 4794,4788,4701,4721,4731,4744; //Def12, mdef6, for2, des2, agi2, vit5
+				set .@slot_atual, 3;
+				break;
+			case 1:
+				setarray .@enchant_slot3[0], 4794,4788,4701,4721,4733,4753,4807; //Def12, mdef6, for2, des2, agi4, luk4, atk_speed1
+				set .@slot_atual, 3;
+				break;
+			case 2:
+				setarray .@enchant_slot3[0], 4763,4754,4734,4744,4794; //Evasion 12, luk5, agi5, vit5, def12
+				set .@slot_atual, 3;
+				break;
+			case 3:
+				setarray .@enchant_slot3[0], 4754,4703,4765,4816,4763,4734; //luk5, str4, critical7, sharp3, evasion12, agi5
+				set .@slot_atual, 3;
+				break;
+			case 4:
+				setarray .@enchant_slot3[0], 4744,4794,4821,4705,4767; //vit5, def12, fightspirit6,str6,atk3
+				set .@slot_atual, 3;
+				break;
+			case 5:
+				setarray .@enchant_slot3[0], 4793,4733,4754,4807,4703,4765,4816; //def9, agi4, luk5, atk_speed1, str4, critical7, sharp3
+				set .@slot_atual, 3;
+				break;
+			case 6:
+			case 7:
+				setarray .@enchant_slot2[0], 4793,4788,4701,4721; //def9, mdef6, str2, des2
+				setarray .@enchant_slot3[0], 4793,4788,4701,4721; //def9, mdef6, str2, des2
+				set .@slot_atual, 2;
+				break;
+		}
+		break;
+	case 4: //Sicário
+		setarray .@equips_enchants[0], 2477,2478,2577,2578,15038,15039,2886,2887;
+		setarray .@equips_location[0], 3, 3, 4, 4, 2, 2, 5, 5;
+		
+		set .@str$, "";
+		for(set .@i, 0; .@i < GetArraySize(.@equips_enchants); set .@i, .@i+1)
+			set .@str$, .@str$ + GetItemName(.@equips_enchants[.@i])+":";
+		set .@choice1, select(.@str$)-1;
+		switch(.@choice1)
+		{
+			case 0:
+				setarray .@enchant_slot3[0], 4793,4788,4703,4721,4731,4740,4754,4765,4816; //def9, mdef6, str4, dex2, agi2, vit1, luk5, critical7, sharp3
+				set .@slot_atual, 3;
+				break;
+			case 1:
+				setarray .@enchant_slot3[0], 4705,4821,4767,4793,4788,4721,4731; //str6, fightspirit6, atk3, def9, mdef6, des2, agi2
+				set .@slot_atual, 3;
+				break;
+			case 2:
+			case 3:
+				setarray .@enchant_slot3[0], 4763,4754,4734,4744,4794; //Evasion 12, luk5, agi5, vit5, def12
+				set .@slot_atual, 3;
+				break;
+			case 4:
+				setarray .@enchant_slot3[0], 4793,4733,4754,4807,4703,4765,4816; //def9, agi4, luk5, atk_speed1, str4, critical7, sharp3
+				set .@slot_atual, 3;
+				break;
+			case 5:
+				setarray .@enchant_slot3[0], 4705,4821,4767,4754,4765,4816; //str6, fightspirit6, atk3, luk5, critical7, sharp3
+				set .@slot_atual, 3;
+				break;
+			case 6:
+			case 7:
+				setarray .@enchant_slot2[0], 4793,4788,4701,4721; //def9, mdef6, str2, des2
+				setarray .@enchant_slot3[0], 4793,4788,4701,4721; //def9, mdef6, str2, des2
+				set .@slot_atual, 2;
+				break;		
+		}
+		break;
+	case 5: //Sentinela
+		setarray .@equips_enchants[0], 2479,2480,2580,2581,15042,15043,2890,2891;
+		setarray .@equips_location[0], 3, 3, 4, 4, 2, 2, 5, 5;
+		
+		set .@str$, "";
+		for(set .@i, 0; .@i < GetArraySize(.@equips_enchants); set .@i, .@i+1)
+			set .@str$, .@str$ + GetItemName(.@equips_enchants[.@i])+":";
+		set .@choice1, select(.@str$)-1;
+		switch(.@choice1)
+		{
+			case 0:
+				setarray .@enchant_slot3[0], 4793,4788,4703,4721,4731,4740,4754,4765,4816; //def9, mdef6, str4, dex2, agi2, vit1, luk5, critical7, sharp3
+				set .@slot_atual, 3;
+				break;
+			case 1:
+				setarray .@enchant_slot3[0], 4705,4821,4767,4793,4788,4721,4731; //str6, fightspirit6, atk3, def9, mdef6, des2, agi2
+				set .@slot_atual, 3;
+				break;
+			case 2:
+			case 3:
+				setarray .@enchant_slot3[0], 4705,4821,4767,4763,4754,4734; //str6, fightspirit6, atk3, evasion12, luk5, agi5
+				set .@slot_atual, 3;
+				break;
+			case 4:
+				setarray .@enchant_slot3[0],4754,4724,4765,4835,4816,4705; //luk5, dex5, critical7, expert_archer4, sharp3
+				set .@slot_atual, 3;
+				break;
+			case 5:
+				setarray .@enchant_slot3[0], 4753,4724,4765,4835,4705,4821,4767; //luk4, dex5, critical7, expert_archer4, str6, fightspirit6, atk3
+				set .@slot_atual, 3;
+				break;
+			case 6:
+			case 7:
+				setarray .@enchant_slot2[0], 4793,4788,4701,4721; //def9, mdef6, str2, des2
+				setarray .@enchant_slot3[0], 4793,4788,4701,4721; //def9, mdef6, str2, des2
+				set .@slot_atual, 2;
+				break;	
+		}
+		break;
+}
+
+set .@part, .@parts[.@equips_location[.@choice1]];
+if(getequipid(.@part) == .@equips_enchants[.@choice1] < 1)
+{	mes "[ Encantador de Mora ]",
+	"Você não está com o equipamento selecionado equipado. Se for um acessório, equipe-o no slot direito.",
+	"Compre-o no mercado e volte a falar comigo.";
+	close;
+}
+
+if(.@part == EQI_HAND_R || .@part == EQI_HAND_L || .@part == EQI_ARMOR ||
+	.@part == EQI_SHOES || .@part == EQI_GARMENT)
+	set .@refine, getequiprefinerycnt(.@part);
+set .@equip_id, .@equips_enchants[.@choice1];
+while(.@slot_atual <= 3)
+{
+	mes "[ Encantador de Mora ]",
+	"Informe o encantamento que deseja para o "+.@slot_atual+"º slot:";
+	next;
+	set .@str$, "";
+	switch(.@slot_atual)
+	{
+		case 1:
+			for(set .@i, 0; .@i < GetArraySize(.@enchant_slot1); set .@i, .@i+1)
+				set .@str$, .@str$ + GetItemName(.@enchant_slot1[.@i])+":";
+			set .@choice, select(.@str$)-1;
+			set .@enchant, .@enchant_slot1[.@choice];
+			break;
+		case 2:
+			for(set .@i, 0; .@i < GetArraySize(.@enchant_slot2); set .@i, .@i+1)
+				set .@str$, .@str$ + GetItemName(.@enchant_slot2[.@i])+":";
+			set .@choice, select(.@str$)-1;
+			set .@enchant, .@enchant_slot2[.@choice];
+			break;
+		case 3:
+			for(set .@i, 0; .@i < GetArraySize(.@enchant_slot3); set .@i, .@i+1)
+				set .@str$, .@str$ + GetItemName(.@enchant_slot3[.@i])+":";
+			set .@choice, select(.@str$)-1;
+			set .@enchant, .@enchant_slot3[.@choice];
+			break;
+		default: mes "Ocorreu algum erro. Por favor, tente novamente."; close;
+	}
+	setarray .@enchants[.@slot_atual], .@enchant;
+	set .@slot_atual, .@slot_atual + 1;
+}
+
+	if(getequiprefinerycnt(.@part) != .@refine || getequipid(.@part) != .@equip_id) //ANTI CHEAT
+	{
+		mes "Ops... Ocorreu um problema.";
+		close;
+	}
+	
+delequip .@part;
+GetItem2 .@equip_id,1,1,.@refine,0,0,.@enchants[1],.@enchants[2],.@enchants[3];
+mes "[ Encantador de Mora ]",
+"Aqui está. Até mais!!";
+close;
+}
+
+
+
+
+job_cru,26,39,5	script	Encantamentos Malangdo	549,{
+
+disable_items;
+set .n$, "[Encantamentos de Malangdo]";
+mes .n$,
+"Sou um viajante de Malangdo e tenho o poder de fornecer os melhores encantamentos para sua arma.";
+next;
+set @mal_enchant_select, select("Encantar Arma:Resetar Encantamentos");
+mes .n$,
+"Primeiramente deixe-me verificar se é possível mexer em sua arma...";
+next;
+set @mal_equip_id, getequipid(EQI_HAND_R);
+set .@equip_type, getiteminfo(@mal_equip_id,11);
+
+switch(.@equip_type)
+{
+	case 1: // Daggers
+		switch(@mal_equip_id) {
+			case 1224: callsub Encantar,2; //Sword_Breaker
+			case 1225: callsub Encantar,2; //Mail_Breaker
+			case 1227: callsub Encantar,2; //Weeder_Knife
+			case 1229: callsub Encantar,2; //Mama's_Knife
+			case 1232: callsub Encantar,2; //Assasin_Dagger
+			case 1233: callsub Encantar,2; //Exercise
+			case 1235: callsub Encantar,2; //Azoth
+			case 1236: callsub Encantar,2; //Sucsamad
+			case 1237: callsub Encantar,2; //Grimtooth_
+			case 1240: callsub Encantar,2; //Princess_Knife
+			case 1241: callsub Encantar,2; //Cursed_Dagger
+			case 1242: callsub Encantar,2; //Counter_Dagger
+			case 1244: callsub Encantar,2; //Holy_Dagger
+			case 13046: callsub Encantar,1; //Krieg
+			case 13047: callsub Encantar,2; //Weihna
+			case 13061: callsub Encantar,2; //Black_Wing
+			case 1223: callsub Encantar,2; //Forturn_Sword
+			case 1228: callsub Encantar,2; //Combat_Knife
+			case 1234: callsub Encantar,2; //Moonlight_Sword
+			case 1230: callsub Encantar,2; //House_Auger
+			case 1231: callsub Encantar,2; //Bazerald
+			case 13062: callsub Encantar,2; //Ancient_Dagger
+		}
+		break;
+	case 16: // Katars
+		switch(@mal_equip_id) {
+			case 1271: callsub Encantar,2; //Blood_Tears
+			case 1263: callsub Encantar,2; //Unholy_Touch
+			case 1270: callsub Encantar,2; //Drill_Katar
+			case 1284: callsub Encantar,2; //Krishna
+			case 1285: callsub Encantar,2; //Cakram
+			case 1268: callsub Encantar,2; //Wild_Beast_Claw
+			case 1269: callsub Encantar,2; //Inverse_Scale
+			case 1265: callsub Encantar,2; //Bloody_Roar
+			case 1261: callsub Encantar,2; //Infiltrator
+			case 1266: callsub Encantar,2; //Infiltrator_
+		}
+		break;
+	case 6: // 1-H Axes
+		switch(@mal_equip_id) {
+			case 1305: callsub Encantar,2; //Cleaver
+			case 1311: callsub Encantar,2; //Vecer_Axe
+		}
+		break;
+	case 7: // 2-H Axes
+		switch(@mal_equip_id) {
+			case 1364: callsub Encantar,2; //Great_Axe
+			case 1365: callsub Encantar,2; //Sabbath
+			case 1385: callsub Encantar,2; //Bradium_Stonehammer
+			case 1367: callsub Encantar,2; //Slaughter
+			case 1368: callsub Encantar,2; //Tomahawk
+			case 1387: callsub Encantar,2; //Giant_Axe
+			case 1369: callsub Encantar,2; //Guillotine
+			case 1363: callsub Encantar,2; //Brood_Axe
+			case 1376: callsub Encantar,2; //Heart_Breaker
+			case 1377: callsub Encantar,2; //Hurricane_Fury
+			case 1366: callsub Encantar,2; //Right_Epsilon
+			case 1370: callsub Encantar,2; //Doom_Slayer
+			case 1371: callsub Encantar,2; //Doom_Slayer_
+		}
+		break;
+	case 2: // 1-H Swords
+		switch(@mal_equip_id) {
+			case 1131: callsub Encantar,2; //Ice_Falchon
+			case 1133: callsub Encantar,2; //Fire_Brand
+			case 1134: callsub Encantar,2; //Scissores_Sword
+			case 1135: callsub Encantar,2; //Cutlas
+			case 1136: callsub Encantar,2; //Solar_Sword
+			case 1138: callsub Encantar,2; //Mysteltainn_
+			case 1139: callsub Encantar,2; //Tale_Fing_
+			case 1140: callsub Encantar,2; //Byeorrun_Gum
+			case 1141: callsub Encantar,2; //Immaterial_Sword
+			case 1148: callsub Encantar,2; //Star_Dust_Blade
+			case 13421: callsub Encantar,2; //Ruber
+			case 13431: callsub Encantar,2; //Chrome_Sword
+			case 1137: callsub Encantar,2; //Excalibur
+			case 1130: callsub Encantar,2; //Nagan
+			case 1132: callsub Encantar,2; //Edge
+		}
+		break;
+	case 3: // 2-H Swords
+		switch(@mal_equip_id) {
+			case 1164: callsub Encantar,2; //Muramasa
+			case 1166: callsub Encantar,2; //Dragon_Slayer
+			case 1167: callsub Encantar,2; //Schweizersabel
+			case 1168: callsub Encantar,2; //Zweihander
+			case 1170: callsub Encantar,2; //Katzbalger
+			case 1171: callsub Encantar,2; //Zweihander_
+			case 1176: callsub Encantar,2; //Muscle_Cutter
+			case 1178: callsub Encantar,2; //Schweizersabel_
+			case 1180: callsub Encantar,2; //Dragon_Slayer_
+			case 1181: callsub Encantar,2; //Tae_Goo_Lyeon
+			case 1182: callsub Encantar,2; //Bloody_Eater
+			case 1188: callsub Encantar,2; //Veteran_Sword
+			case 1189: callsub Encantar,1; //Krasnaya
+			case 1196: callsub Encantar,2; //Chrome_Twohand_Sword
+			case 1165: callsub Encantar,2; //Masamune
+			case 1169: callsub Encantar,2; //Executioner_
+			case 1179: callsub Encantar,2; //Executioner__
+			case 1175: callsub Encantar,2; //Altas_Weapon
+			case 1185: callsub Encantar,2; //Violet_Fear
+			case 1186: callsub Encantar,2; //Death_Guidance
+		}
+		break;
+	case 4: // 1-H Spears
+		switch(@mal_equip_id) {
+			case 1420: callsub Encantar,2; //Long_Horn
+			case 1413: callsub Encantar,2; //Gungnir
+			case 1414: callsub Encantar,2; //Gelerdria
+			case 1416: callsub Encantar,2; //Tjungkuletti
+			case 1418: callsub Encantar,2; //Gungnir_
+			case 1433: callsub Encantar,2; //Imperial_Spear
+			case 1415: callsub Encantar,2; //Skewer
+			case 1421: callsub Encantar,2; //Battle_Hook
+			case 1422: callsub Encantar,2; //Hunting_Spear
+		}
+		break;
+	case 5: // 2-H Spears
+		switch(@mal_equip_id) {
+			case 1466: callsub Encantar,2; //Crescent_Scythe
+			case 1467: callsub Encantar,2; //Bill_Guisarme
+			case 1468: callsub Encantar,2; //Zephyrus
+			case 1469: callsub Encantar,2; //Longinus's_Spear
+			case 1470: callsub Encantar,2; //Brionac
+			case 1471: callsub Encantar,2; //Hell_Fire
+			case 1474: callsub Encantar,2; //Gae_Bolg
+			case 1477: callsub Encantar,2; //Spectral_Spear
+			case 1478: callsub Encantar,2; //Ahlspiess
+			case 1479: callsub Encantar,2; //Spectral_Spear_
+			case 1480: callsub Encantar,2; //Gae_Bolg_
+			case 1481: callsub Encantar,1; //Zephyrus_
+			case 1484: callsub Encantar,2; //Cardo
+		}
+		break;
+	case 10: // Staves
+		switch(@mal_equip_id) {
+			case 1616: callsub Encantar,2; //Staff_Of_Wing
+			case 1629: callsub Encantar,2; //Walking_Stick
+			case 1631: callsub Encantar,2; //Holy_Stick
+			case 1643: callsub Encantar,2; //Dead_Tree_Cane
+			case 1654: callsub Encantar,2; //Mental_Stick
+			case 1636: callsub Encantar,2; //Thorn_Staff
+			case 1637: callsub Encantar,2; //Eraser
+			case 1473: callsub Encantar,2; //Wizardy_Staff
+		}
+		break;
+	case 23: // New 2-H Staves
+		switch(@mal_equip_id) {
+			case 2004: callsub Encantar,2; //Kronos
+			case 2005: callsub Encantar,2; //Dea_Staff
+			case 2001: callsub Encantar,2; //Divine_Cross
+			case 2000: callsub Encantar,2; //Destruction_Rod
+		}
+		break;
+	case 8: // Maces
+		switch(@mal_equip_id) {
+			case 1524: callsub Encantar,2; //Golden_Mace
+			case 1525: callsub Encantar,2; //Long_Mace
+			case 1527: callsub Encantar,2; //Quadrille
+			case 1539: callsub Encantar,2; //Golden_Mace_
+			case 1541: callsub Encantar,2; //Nemesis
+			case 16000: callsub Encantar,2; //Erde
+			case 16001: callsub Encantar,2; //Red_Square_Bag
+			case 16010: callsub Encantar,2; //Red_Ether_Bag
+			case 1523: callsub Encantar,2; //Spike
+			case 1538: callsub Encantar,2; //Spike_
+			case 1526: callsub Encantar,2; //Slash
+			case 1528: callsub Encantar,2; //Grand_Cross
+			case 1540: callsub Encantar,2; //Grand_Cross_
+		}
+		break;
+	case 15: // Books
+		switch(@mal_equip_id) {
+			case 1557: callsub Encantar,2; //Book_Of_The_Apocalypse
+			case 1558: callsub Encantar,2; //Girl's_Diary
+			case 1559: callsub Encantar,2; //Legacy_Of_Dragon
+			case 1561: callsub Encantar,2; //Hardback
+			case 1562: callsub Encantar,2; //Bible_Of_Battlefield
+			case 1565: callsub Encantar,2; //Death_Note
+		}
+		break;
+	case 12: // Knuckles
+		switch(@mal_equip_id) {
+			case 1813: callsub Encantar,2; //Kaiser_Knuckle
+			case 1814: callsub Encantar,2; //Berserk
+			case 1815: callsub Encantar,2; //Claw_Of_Garm
+			case 1816: callsub Encantar,2; //Berserk_
+			case 1830: callsub Encantar,2; //Sura_Rampage
+		}
+		break;
+	case 11: // Bows
+		switch(@mal_equip_id) {
+			case 1719: callsub Encantar,2; //Bow_Of_Roguemaster
+			case 1722: callsub Encantar,2; //Balistar
+			case 1724: callsub Encantar,2; //Dragon_Wing
+			case 1725: callsub Encantar,2; //Bow_Of_Minstrel
+			case 1727: callsub Encantar,2; //Balistar_
+			case 1737: callsub Encantar,2; //Ixion_Wing
+			case 1740: callsub Encantar,2; //Nepenthes_Bow
+			case 1741: callsub Encantar,2; //Cursed_Lyre
+			case 1745: callsub Encantar,2; //Falken_Blitz
+			case 18103: callsub Encantar,2; //Mystic_Bow
+			case 1720: callsub Encantar,2; //Bow_Of_Rudra
+		}
+		break;
+	case 13: // Musical Instruments
+		switch(@mal_equip_id) {
+			case 1913: callsub Encantar,2; //Electronic_Guitar
+			case 1918: callsub Encantar,2; //Oriental_Lute
+			case 1920: callsub Encantar,2; //Berserk_Guitar
+			case 1922: callsub Encantar,2; //Oriental_Lute_
+			case 1926: callsub Encantar,2; //Harp_Of_Nepenthes
+			case 1930: callsub Encantar,2; //Green_Whistle
+		}
+		break;
+	case 14: // Whips
+		switch(@mal_equip_id) {
+			case 1962: callsub Encantar,2; //Lariat
+			case 1963: callsub Encantar,2; //Rapture_Rose
+			case 1964: callsub Encantar,2; //Chemeti
+			case 1969: callsub Encantar,2; //Bladed_Whip
+			case 1970: callsub Encantar,2; //Queen's_Whip
+			case 1972: callsub Encantar,2; //Electric_Eel
+			case 1973: callsub Encantar,2; //Sea_Witch_Foot
+			case 1974: callsub Encantar,2; //Carrot_Whip
+			case 1976: callsub Encantar,2; //Queen's_Whip_
+			case 1979: callsub Encantar,2; //Stem_Of_Nepenthes
+			case 1984: callsub Encantar,2; //Stem_Whip
+			case 1985: callsub Encantar,2; //Rosebine
+		}
+		break;
+}
+mes .@n$,
+"Infelizmente não é possível encantar sua arma.";
+close;
+
+Encantar: //GetArg(0) = Slots encantáveis
+	set .@equip_id, @mal_equip_id;
+	set .@equip_name$, getitemname(.@equip_id)+((getitemslots(.@equip_id))?"["+getitemslots(.@equip_id)+"]":"");
+	setarray .@equip_card[0], getequipcardid(EQI_HAND_R,0),getequipcardid(EQI_HAND_R,1),getequipcardid(EQI_HAND_R,2),getequipcardid(EQI_HAND_R,3);
+	if(@mal_enchant_select == 2)
+	{
+		for(set .@i,0; .@i<4; set .@i,.@i+1) {
+			if (.@equip_card[.@i] >= 4700) // Armor Enchant System
+				set .@equip_card[.@i],0;
+		}
+		set .@equip_refine, getequiprefinerycnt(EQI_HAND_R);
+		delequip EQI_HAND_R;
+		getitem2 .@equip_id,1,1,.@equip_refine,0,.@equip_card[0],.@equip_card[1],.@equip_card[2],.@equip_card[3];
+		mes .n$,
+		"Encantamentos resetados.";
+		close;
+	}
+	set .@equip_refine, getequiprefinerycnt(EQI_HAND_R);
+	mes .n$,
+	"Seu equipamento é: "+.@equip_name$,
+	"Por favor, escolha o tipo de encantamento:";
+	next;
+	switch(select("Físico:Mágico:Longa Distância"))
+	{
+		case 1:
+			set .@e, select("Agilidade:Espírito do Lutador:Crítico:Vel. de Ataque")-1;
+			setarray .@short_range[0],4735,4823,4844,4807;
+			set .@enchant, .@short_range[.@e];
+			break;
+		case 2:
+			set .@e, select("Destreza:Inteligência:Pedra de Encantamento:Pedra de Conjuração")-1;
+			setarray .@caster[0],4722,4715,4827,4761;
+			set .@enchant, .@caster[.@e];
+			break;
+		case 3:
+			set .@e, select("Agilidade:Mira Apurada:Crítico:Vel. de Ataque")-1;
+			setarray .@long_range[0],4735,4837,4844,4807;
+			set .@enchant, .@long_range[.@e];
+			break;
+	}
+	mes .n$;
+	if(.@equip_card[3] == 0) set .@equip_card[3], .@enchant;
+	else if(.@equip_card[2] == 0 && GetArg(0) > 1) set .@equip_card[2], .@enchant;
+	else {
+		mes "Este equipamento já tem todos os encantamentos possíveis.";
+		close;
+	}
+	if(getequiprefinerycnt(EQI_HAND_R) != .@equip_refine || getequipid(EQI_HAND_R) != .@equip_id) //ANTI CHEAT
+	{
+		mes "Ops... Ocorreu um problema.";
+		close;
+	}
+	delequip EQI_HAND_R;
+	getitem2 .@equip_id,1,1,.@equip_refine,0,.@equip_card[0],.@equip_card[1],.@equip_card[2],.@equip_card[3];
+	mes "Aqui está!";
+	close;
+}
