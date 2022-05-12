@@ -1,0 +1,178 @@
+prontera,136,191,5	script	Gerenciador de Builds	847,{
+
+	function Main;
+	function MinhasBuilds;
+	function GravarBuild;
+	
+	Main();
+
+	function Main {
+		mes .NPC_NAME$, "O que deseja?";
+		next;
+		
+		switch(select("Minhas builds:Gravar build:^FF0000Sair^000000")) {
+			case 1:
+				return MinhasBuilds();
+				
+			case 2:
+				return GravarBuild();
+				
+			case 3:
+				mes .NPC_NAME$, "Até a próxima!";
+				close;
+		}
+	}	
+	
+	function MinhasBuilds {
+		set .@count, query_sql(sprintf("SELECT `id`, `build_name` FROM `build_saver` WHERE `char_id` = %d", getcharid(0)), .@buildIds, .@buildNames$);
+		
+		if(.@count == 0) {
+			mes .NPC_NAME$, "Você não tem nenhuma build gravada.";
+			next;
+			return Main();
+		}
+		
+		mes .NPC_NAME$, sprintf("Você tem %d/%d build(s) gravadas.", .@count, .MAX_BUILDS), "Qual build você deseja visualizar?";
+		next;
+		
+		set .@menu$, "";
+		for(set .@i, 0; .@i < .@count; set .@i, .@i + 1) {
+			set .@menu$, .@menu$ + .@buildNames$[.@i] + ":";
+		}
+		set .@menu$, .@menu$ + "^FF0000Voltar^000000";
+		set .@cancel, .@i;
+		
+		set .@choice, select(.@menu$) - 1;
+		if(.@choice == .@cancel) {
+			return Main();
+		}
+		
+		set .@buildId, .@buildIds[.@choice];
+		set .@buildName$, .@buildNames[.@choice];
+		
+		query_sql(sprintf("SELECT `str`,`agi`,`vit`,`int`,`dex`,`luk` FROM `build_saver` WHERE `id` = %d", .@buildId), .@str, .@agi, .@vit, .@int, .@dex, .@luk);
+			
+		mes .NPC_NAME$, sprintf("Nome da build: %s", .@buildNames$[.@buildName$]),
+			"FOR: " + .@str,
+			"AGI: " + .@agi,
+			"VIT: " + .@vit,
+			"INT: " + .@int,
+			"DES: " + .@dex,
+			"SOR: " + .@luk;
+		next;
+		
+		if(select("Aplicar build:^FF0000Deletar^000000") == 2) {
+			mes .NPC_NAME$, "Tem certeza?";
+			next;
+			
+			if(select("Sim:Não") == 2) {
+				return Main();
+			}
+			
+			query_sql(sprintf("DELETE FROM `build_saver` WHERE `id`= %d", .@buildId));
+			
+			mes .NPC_NAME$, "Build deletada.";
+			next;
+			return Main();
+		}
+		
+		ResetStatus;
+		while(ReadParam(bStr) < .@str && StatusPoint)
+			StatusUp bStr;
+		while(ReadParam(bAgi) < .@agi && StatusPoint)
+			StatusUp bAgi;
+		while(ReadParam(bVit) < .@vit && StatusPoint)
+			StatusUp bVit;
+		while(ReadParam(bInt) < .@int && StatusPoint)
+			StatusUp bInt;
+		while(ReadParam(bDex) < .@dex && StatusPoint)
+			StatusUp bDex;
+		while(ReadParam(bLuk) < .@luk && StatusPoint)
+			StatusUp bLuk;
+			
+		mes .NPC_NAME$;
+		mes "Build aplicada.";
+		close;
+	}
+	
+	function GravarBuild {
+		query_sql(sprintf("SELECT COUNT(`id`) FROM `build_saver` WHERE `char_id` = %d", getcharid(0)), .@count);
+					
+		if(.@count >= .MAX_BUILDS) {
+			mes .NPC_NAME$, "Você já atingiu o limite de builds gravadas. Exclua uma antes de continuar.";
+			next;
+			return Main();
+		}
+
+		mes .NPC_NAME$, "Dê um nome para sua build:";
+		next;
+
+		input .@buildName$;
+
+		while(getstrlen(.@buildName$) > 30) {
+			mes "Informe um nome de até 30 caracteres:";
+			input .@buildName$;
+		}
+
+		next;
+
+		set .@str, ReadParam(bStr);
+		set .@agi, ReadParam(bAgi);
+		set .@vit, ReadParam(bVit);
+		set .@int, ReadParam(bInt);
+		set .@dex, ReadParam(bDex);
+		set .@luk, ReadParam(bLuk);
+
+		mes .NPC_NAME$,
+			"Build: " + .@buildName$,
+			"FOR: " + .@str,
+			"AGI: " + .@agi,
+			"VIT: " + .@vit,
+			"INT: " + .@int,
+			"DES: " + .@dex,
+			"SOR: " + .@luk;
+		next;
+
+		if(select("Gravar build:^FF0000Voltar^000000") == 2) {
+			return Main();
+		}
+
+		set .@exists, query_sql(sprintf("SELECT `id` FROM `build_saver` WHERE `char_id` = %d AND `build_name` = '%s'", getcharid(0), .@buildName$), .@buildId);
+
+		if(.@exists) {
+			mes .NPC_NAME$;
+			mes "Você já tem uma build com este nome. Deseja sobrescrevê-la?";
+			next;
+			
+			if(select("Sim:Não") == 2) {
+				return Main();
+			}
+			
+			query_sql(sprintf("DELETE FROM `build_saver` WHERE `id` = %d", .@buildId));
+		}
+		query_sql(sprintf("INSERT INTO `build_saver` (`char_id`, `build_name`, `str`, `agi`, `vit`, `int`, `dex`, `luk`) VALUES (%d, '%s', %d, %d, %d, %d, %d, %d)", getcharid(0), .@buildName$, .@str, .@agi, .@vit, .@int, .@dex, .@luk));
+
+		mes .NPC_NAME$, sprintf("Build ^0000FF%s^000000 gravada.", .@buildName$);
+		next;
+		return Main();	
+	}
+	
+	OnInit:
+		query_sql("CREATE TABLE IF NOT EXISTS `build_saver` ("
+			+ "`id` INT(11) UNSIGNED PRIMARY KEY AUTO_INCREMENT,"
+			+ "`char_id` INT(11) NOT NULL,"
+			+ "`build_name` CHAR(30),"
+			+ "`str` INT(3),"
+			+ "`agi` INT(3),"
+			+ "`vit` INT(3),"
+			+ "`int` INT(3),"
+			+ "`dex` INT(3),"
+			+ "`luk` INT(3)"
+			+ ");"
+		);
+		
+		set .NPC_NAME$, "[Gerenciador de Builds]";
+		set .MAX_BUILDS, 3;
+		end;
+}
+		
