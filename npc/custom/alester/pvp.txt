@@ -1,0 +1,266 @@
+function	script	F_IsPlayerOnPVP	{
+	getmapxy(.@map$, .@x, .@y);
+	return strcmp(.@map$, "pvp_y_1-2") == 0;
+}
+
+prontera,164,175,3	script	Arena PVP	468,{
+	function pvpPlayersCount;
+	function enter;
+	function refreshWaitingRoom;
+		
+	mes "[PVP]", "Deseja entrar na Arena PVP?";
+	next;
+	
+	.@choice = select("Entrar:^FF0000Cancelar^000000");
+	
+	if(.@choice == 2) {
+		close;
+	}
+	else {
+		enter();
+	}
+	end;
+		
+	OnInit:
+	OnTimer5000:
+		refreshWaitingRoom();
+		end;
+			
+	function pvpPlayersCount {
+		return getmapusers("pvp_y_1-2");
+	}
+	
+	function refreshWaitingRoom {
+		.@count = pvpPlayersCount();
+		delwaitingroom;
+		waitingroom sprintf("Arena PVP [%d]", .@count), 0;
+		initnpctimer;
+	}
+	
+	function enter {
+		if(pvpPlayersCount() == 0) announce sprintf("[PVP] O jogador \"%s\" entrou na Arena PVP.", strcharinfo(0)), bc_all;
+		warp "pvp_y_1-2", 0, 0;
+	}
+}
+
+-	script	pvp_exit	-1,{
+	function startExitTicker;
+	function exititingFlag;
+	function exitTicker;
+	function cancelExit;
+	
+	
+	if(exititingFlag()) {
+		cancelExit();
+	}
+	else {
+		startExitTicker(5);
+	}
+	end;
+	
+	OnExitTicker:
+		exitTicker();
+		end;
+	
+	function startExitTicker {
+		@pvpExitTicker = getarg(0);
+		dispbottom sprintf("[PVP] Você sairá em %d segundos", @pvpExitTicker);
+		addtimer 1000, sprintf("%s::OnExitTicker", strnpcinfo(0));
+	}
+	
+	function exitTicker {
+		@pvpExitTicker = @pvpExitTicker - 1;
+		
+		if(@pvpExitTicker == 0) {
+			dispbottom "[PVP] Voltando para Prontera";
+			warp "prontera", 156, 191;
+		}
+		else {
+			dispbottom sprintf("[PVP] %d", @pvpExitTicker);
+			addtimer 1000, sprintf("%s::OnExitTicker", strnpcinfo(0));
+		}
+		end;
+	}
+	
+	function exititingFlag {
+		return @pvpExitTicker > 0;
+	}
+	
+	function cancelExit {
+		@pvpExitTicker = 0;
+		deltimer sprintf("%s::OnExitTicker", strnpcinfo(0));
+		dispbottom "[PVP] Saída cancelada.";
+		end;
+	}
+}
+
+pvp_y_1-2,128,154,5	duplicate(pvp_exit)	Saída#pvp_exit_1	417
+
+
+-	script	pvp_revive	-1,{
+	function inPVP;
+	function startReviveTicker;
+	function enableSafeMode;
+	function disableSafeMode;
+	function sendToSafeZone;
+	function sendToBattle;
+	function createSafeZoneWall;
+	
+	OnInit:
+		createSafeZoneWall();
+		end;
+	
+	OnPCDieEvent:
+		if(!inPVP()) {
+			end;
+		}
+		
+		startReviveTicker(20);
+		end;
+		
+	OnReviveTicker:
+		if(!inPVP()) {
+			@pvpReviveTicker = 0;
+			disableSafeMode();
+		}
+		else {
+			@pvpReviveTicker = @pvpReviveTicker - 1;
+			
+			if(@pvpReviveTicker == 0) {
+				sendToBattle();
+			}
+			else {
+				if(@pvpReviveTicker == 15) {
+					sendToSafeZone();
+				}
+				else {
+					if(@pvpReviveTicker == 10 || @pvpReviveTicker == 5) {
+						dispbottom sprintf("[PVP] Você será revivido em %d segundos.", @pvpReviveTicker);
+					}
+					else if(@pvpReviveTicker < 5) {
+						dispbottom sprintf("[PVP] %d", @pvpReviveTicker);
+					}
+				}
+				
+				addtimer 1000, sprintf("%s::OnReviveTicker", strnpcinfo(0));
+			}
+		}
+		end;
+		
+	function inPVP {
+		return callfunc("F_IsPlayerOnPVP");
+	}
+	
+	function startReviveTicker {
+		@pvpReviveTicker = getarg(0);
+		dispbottom sprintf("[PVP] Você será revivido em %d segundos.", @pvpReviveTicker);
+		addtimer 1000, sprintf("%s::OnReviveTicker", strnpcinfo(0));
+	}
+	
+	function enableSafeMode {
+		@pvpSafeZone = 1;
+		atcommand "@battleignore";
+	}
+	
+	function isSafeModeEnabled {
+		return @pvpSafeZone == 1;
+	}
+	
+	function disableSafeMode {
+		if(isSafeModeEnabled()) {
+			@pvpSafeZone = 0;
+			atcommand "@battleignore";
+		}
+	}
+	
+	function sendToSafeZone {
+		enableSafeMode();
+		warp "pvp_y_1-2", rand(196, 206), rand(71, 76);
+		doevent "Curandeira::OnGetBuffs";
+	}
+	
+	function sendToBattle {
+		dispbottom "[PVP] Voltando para a batalha.";
+		sleep2 500;
+		disableSafeMode();
+		warp "pvp_y_1-2", 0, 0;
+	}
+	
+	function createSafeZoneWall {
+		if(checkwall("pvp_revive_area_wall")) {
+			delwall "pvp_revive_area_wall";
+		}
+		setwall "pvp_y_1-2", 191, 76, 6, 4, 0, "pvp_revive_area_wall";
+	}
+}
+
+
+pvp_y_1-2,193,73,1	script	pvp_safe_zone_warper	45,2,2,2,{
+	OnTouch:
+		if(@pvpReviveTicker == 0)
+			warp "pvp_y_1-2", 0, 0;
+		end;
+}
+
+
+-	script	pvpKillDieEvents	-1,{
+	function killAnnouncer;
+	function revengeAnnouncer;
+	function showEmote;
+
+	OnPCKillEvent:
+		if(!callfunc("F_IsPlayerOnPVP")) {
+			end;
+		}
+		
+		@pvpKills = @pvpKills + 1;
+		
+		killAnnouncer();
+		revengeAnnouncer();
+		showEmote();
+		end;
+		
+	OnPCDieEvent:
+		if(!callfunc("F_IsPlayerOnPVP")) {
+			end;
+		}
+		
+		@pvpKills = 0;
+		@pvpLastKillerrid = killerrid;
+		end;
+	
+	function killAnnouncer {
+		.@combos$[2] = "DOUBLE KILL";
+		.@combos$[3] = "TRIPPLE KILL";
+		.@combos$[5] = "UKTRA KILL";
+		.@combos$[7] = "RAMPAGE";
+		.@combos$[9] = "FANTASTIC";
+		.@combos$[11] = "UNBELIVEBLE";
+		.@combos$[13] = "GODLIKE";
+		.@combos$[15] = "MONSTER KILL";
+		
+		if(.@combos$[@pvpKills] != "") {
+			.@combo$ = .@combos$[@pvpKills];
+			mapannounce "pvp_y_1-2", sprintf("[PVP] O jogador \"%s\" fez %s!", strcharinfo(0), .@combo$), bc_map;
+		}
+	}
+	
+	function revengeAnnouncer {
+		if(@pvpLastKillerrid == killedrid) {
+			mapannounce "pvp_y_1-2", sprintf("[PVP] O jogador \"%s\" se vingou de \"%s\"!", strcharinfo(0), rid2name(killedrid)), bc_map;
+			@pvpLastKillerrid = 0;
+		}
+	}
+	
+	function showEmote {
+		setarray .@emotes[0], 18, 30, 31, 3, 14, 29;
+		emotion .@emotes[rand(0, getarraysize(.@emotes))], getcharid(3);
+	}
+}
+
+pvp_y_1-2	mapflag	pvp
+pvp_y_1-2	mapflag	pvp_noguild
+pvp_y_1-2	mapflag	nomemo
+pvp_y_1-2	mapflag	noteleport
+pvp_y_1-2	mapflag	nosave
+pvp_y_1-2	mapflag	noreturn
