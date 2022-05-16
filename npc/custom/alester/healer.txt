@@ -1,4 +1,4 @@
-prontera,147,189,5	script	Curandeira	616,{
+prontera,152,193,5	script	Curandeira	616,{
 	.@timetick = gettimetick(2);
 	if(@heal_delay > .@timetick) {
 		end;
@@ -45,6 +45,34 @@ prontera,147,189,5	script	Curandeira	616,{
 		sc_start SC_PUTTI_TAILS_NOODLES, .@buff_time,20;
 
 		percentheal 100, 100;
+		
+		// suprimentos
+		.@max = 3000;
+		setarray .@stuff[0],
+			522,
+			11504,
+			645,
+			656,
+			657,
+			12121,
+			12120,
+			12119,
+			12118,
+			12117,
+			12116,
+			12114,
+			12115,
+			12406,
+			525;
+		
+		for(.@i = 0; .@i < getarraysize(.@stuff); .@i++) {
+			.@item = .@stuff[.@i];
+			.@count = countitem(.@item);
+			if(.@count < .@max) {
+				getitem .@item, .@max - countitem(.@item);
+			}
+		}
+		
 		specialeffect2 312;
 		dispbottom "[Curandeira] Você está curado.";
 		end;
