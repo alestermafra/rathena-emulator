@@ -12,3 +12,4 @@
  *	 <datatype> name;
  **/
 
+ int auto_refine;

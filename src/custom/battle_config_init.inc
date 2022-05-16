@@ -11,3 +11,4 @@
  *	 { "name", &battle_config.<variable name>, <default value>, <minimum value>, <maximum value> },
  **/
 
+ {"auto_refine", &battle_config.auto_refine, 0, 0, MAX_REFINE}
