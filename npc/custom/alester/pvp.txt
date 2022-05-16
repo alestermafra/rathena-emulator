@@ -3,15 +3,11 @@ function	script	F_IsPlayerOnPVP	{
 	return strcmp(.@map$, "pvp_y_1-2") == 0;
 }
 
-prontera,164,175,3	script	Arena PVP	468,{
+prontera,159,193,3	script	Arena PVP	468,{
 	function pvpPlayersCount;
 	function enter;
-	function refreshWaitingRoom;
-		
-	mes "[PVP]", "Deseja entrar na Arena PVP?";
-	next;
 	
-	.@choice = select("Entrar:^FF0000Cancelar^000000");
+	.@choice = select(sprintf("Entrar na Arena PVP [%d]:^FF0000Sair^000000", pvpPlayersCount()));
 	
 	if(.@choice == 2) {
 		close;
@@ -20,21 +16,9 @@ prontera,164,175,3	script	Arena PVP	468,{
 		enter();
 	}
 	end;
-		
-	OnInit:
-	OnTimer5000:
-		refreshWaitingRoom();
-		end;
 			
 	function pvpPlayersCount {
 		return getmapusers("pvp_y_1-2");
-	}
-	
-	function refreshWaitingRoom {
-		.@count = pvpPlayersCount();
-		delwaitingroom;
-		waitingroom sprintf("Arena PVP [%d]", .@count), 0;
-		initnpctimer;
 	}
 	
 	function enter {
