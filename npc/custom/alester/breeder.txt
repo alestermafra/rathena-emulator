@@ -10,7 +10,7 @@
 //= One-click automatic mount rentals.
 //============================================================
 
-prontera,142,194,5	script	Montarias	726,{
+prontera,167,195,3	script	Montarias	726,{
 	if (ismounting()) {
 		message strcharinfo(0),"You must first remove your mount.";
 		end;

@@ -1,12 +1,6 @@
 prontera,144,195,5	script	Resetador	847,{
-
-	mes "[Resetador]",
-		"Gostaria de resetar seus atributos?";
-	next;
-	if(select("Sim:Não") == 2) {
-		mes "[Resetador]",
-			"Até mais.";
-		close;
+	if(select("Resetar meus atributos:^FF0000Sair^000000") == 2) {
+		end;
 	}
 	else {
 		/* previous atrib */
@@ -18,10 +12,6 @@ prontera,144,195,5	script	Resetador	847,{
 		.@luk = readparam(bLuk);
 
 		resetstatus;
-		
-		mes "[Resetador]",
-			"Seus atributos foram resetados.";
-		close2;
 		
 		dispbottom "[Resetador] Atributos anteriores: " + .@for + " for, " + .@agi + " agi, " + .@vit + " vit, " + .@int + " int, " + .@dex + " dex, " + .@luk + " luk.";
 		end;

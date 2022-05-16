@@ -1,22 +1,8 @@
--	shop	Novidades	-1,501:-1
-prontera,164,189,3	script	Mercado	795,{
-	mes "[Mercado]",
-		"O mercado é onde você pode comprar equipamentos para seu personagem.",
-		"O que posso fazer por você?";
-	next;
-	
-	if(select("Me leve até lá:Visualizar novidades") == 1)
+prontera,162,194,5	script	Mercado	795,{
+	if(select("Ir até o mercado:^FF0000Sair^000000") == 1)
 		warp "job_cru",28,109;
 	else
 		CallShop "Novidades",1;
-	end;
-	
-OnInit:
-	setarray .@novidades[0],2407,2465,2466,2437,2492,2436,1160,1830,1825,1384,1392,1393,1926,1737,1741,1740,2004,13107,1548,1522,1544,1637,1643,13038,1647,1383,1183,1385,1562,1161,5261,1646,1127,1420,1563,1561,13400,13039,5498,5372,5469,5808,5527,18888,5547,2209,5671,18821,18508,5005,5014,2240,2266,2380,2382,2377,15052,2376,2378,2540,2538,2169,2160,2154,2663,4272,4210,4220,4331,4311,4421,4117,4332,4312,4356,4057,4268,4468,4327,12546,518,13208,12721,12720;
-	
-	npcshopdelitem "Novidades",501;
-	for(set .@i, 0; .@i < GetArraySize(.@novidades); set .@i, .@i+1)
-		npcshopadditem "Novidades",.@novidades[.@i],0;	
 	end;
 }
 

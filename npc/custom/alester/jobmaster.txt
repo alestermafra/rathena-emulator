@@ -1,4 +1,4 @@
-prontera,144,189,5	script	Mestre das Classes	405,{
+prontera,149,194,3	script	Mestre das Classes	405,{
 
 function Can_Change;
 function Choice_Job;

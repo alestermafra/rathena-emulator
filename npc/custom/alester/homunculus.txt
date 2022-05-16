@@ -1,4 +1,4 @@
-prontera,138,192,5	script	Homunculus	542,{
+prontera,169,194,3	script	Homunculus	542,{
 
 	.@eac = eaclass();
 	if((.@eac&EAJ_BASEMASK) == EAJ_MERCHANT && (.@eac&EAJL_2_2)) {

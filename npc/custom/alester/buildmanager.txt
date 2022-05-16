@@ -1,4 +1,4 @@
-prontera,136,191,5	script	Gerenciador de Builds	847,{
+prontera,140,193,5	script	Gerenciador de Builds	847,{
 
 	function Main;
 	function MinhasBuilds;
