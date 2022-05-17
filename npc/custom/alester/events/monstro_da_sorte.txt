@@ -1,0 +1,81 @@
+-	script	MonstroDaSorte	-1,{
+	function spawnEventMobs;
+	function killEventMobs;
+	
+	OnClock0012:
+	OnClock0112:
+	OnClock0212:
+	OnClock0312:
+	OnClock0412:
+	OnClock0512:
+	OnClock0612:
+	OnClock0712:
+	OnClock0812:
+	OnClock0912:
+	OnClock1012:
+	OnClock1112:
+	OnClock1212:
+	OnClock1312:
+	OnClock1412:
+	OnClock1512:
+	OnClock1612:
+	OnClock1712:
+	OnClock1812:
+	OnClock1912:
+	OnClock2012:
+	OnClock2112:
+	OnClock2212:
+	OnClock2312:
+	OnEventStart:
+		killEventMobs();
+		.@size = getArraySize(.maps$);
+		.@count = 2;
+		
+		copyArray .@maps$[0], .maps$[0], .@size;
+		
+		// shuffle
+		for(.@i = 0; .@i < .@size * 2; .@i++) {
+			.@x = rand(.@size);
+			.@y = rand(.@size);
+			
+			.@temp$ = .@maps$[.@x];
+			.@maps$[.@x] = .@maps$[.@y];
+			.@maps$[.@y] = .@temp$;
+		}
+		
+		copyArray .@selectedMaps$[0], .@maps$[0], .@count;
+		
+		spawnEventMobs(.@selectedMaps$, .@count);
+		end;
+	
+	OnMonsterKillEvent:
+		announce sprintf("O jogador \"%s\" encontrou o monstro da sorte!", strCharInfo(0)), bc_all;
+		killEventMobs();
+		getItem 512, 1;
+		end;
+	
+	OnInit:
+		setarray .maps$[0], "prontera", "morocc", "geffen", "payon", "alberta", "izlude";
+		.monsterId = 1002;
+		killEventMobs();
+		end;
+		
+	
+	// functions
+	function spawnEventMobs {
+		.@count = getArraySize(getArg(0));
+		
+		for(.@i = 0; .@i < .@count; .@i++) {
+			.@map$ = getElementOfArray(getArg(0), .@i);
+			announce sprintf("Um monstro da sorte foi invocado em %s!", .@map$), bc_all;
+			monster .@map$, 0, 0, "Monstro da Sorte", .monsterId, 1, sprintf("%s::OnMonsterKillEvent", strNPCInfo(0));
+		}
+	}
+	
+	function killEventMobs {
+		for(.@i = 0; .@i < getArraySize(.maps$); .@i++) {
+			killmonster .maps$[.@i], sprintf("%s::OnMonsterKillEvent", strNPCInfo(0));
+		}
+	}
+}
+
