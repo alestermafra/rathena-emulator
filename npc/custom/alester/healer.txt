@@ -29,7 +29,7 @@ prontera,152,193,5	script	Curandeira	616,{
 		sc_start SC_INCREASEAGI, .@buff_time, 10;
 		sc_start SC_IMPOSITIO, .@buff_time, 10;
 		sc_start SC_GLORIA, .@buff_time, 10;
-		sc_start SC_ASSUMPTIO, .@buff_time, 10;
+		//sc_start SC_ASSUMPTIO, .@buff_time, 10;
 		
 		sc_start SC_FOOD_STR_CASH, .@buff_time, 10;
 		sc_start SC_FOOD_AGI_CASH, .@buff_time, 10;
@@ -49,21 +49,33 @@ prontera,152,193,5	script	Curandeira	616,{
 		// suprimentos
 		.@max = 3000;
 		setarray .@stuff[0],
-			522,
-			11504,
-			645,
-			656,
-			657,
-			12121,
-			12120,
-			12119,
-			12118,
-			12117,
-			12116,
-			12114,
-			12115,
-			12406,
-			525;
+			11548, // Poção Branca de GdE
+			11549, // Poção Azul de GdE
+			606, // Aloe Vera
+			12375, // Acarajé
+			14586, // Doce Hiper Açucarado
+			12684, // Poção de Ouro
+			14542, // Poção Maior de Defesa
+			14544, // Poção Maior de Defesa Mágica
+			12437, // Suco Celular Enriquecido
+			12596, // Doce Mágico
+			12217, // Aspersio
+			12791, // Pílula de Combate
+			12404, // Poção Energizante
+			14601, // Bênção de Tyr
+			645, // Poção de Concentração
+			656, // Poção do Despertar
+			657, // Poção da Fúria Selvagem
+			12121, // Poção Anti-Vento
+			12120, // Poção Anti-Terra
+			12119, // Poção Anti-Água
+			12118, // Poção Anti-Fogo
+			12117, // Conversor Elemental Vento
+			12116, // Conversor Elemental Terra
+			12114, // Conversor Elemental Fogo
+			12115, // Conversor Elemental Água
+			12406, // Pergaminho Fantasma
+			525; // Panacea
 		
 		for(.@i = 0; .@i < getarraysize(.@stuff); .@i++) {
 			.@item = .@stuff[.@i];
