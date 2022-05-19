@@ -7,12 +7,12 @@ prontera,164,175,3	script	Cheffênia	421,{
 	
 	.@choice = select("Sala 1:Sala 2:Sala 3:Sala 4:^FF0000Sair^000000");
 	
-	if(.@choice == 2) {
+	if(.@choice >= 5) {
 		mes .@name$, "Até logo.";
 		close;
 	}
 	
-	setarray .@maps$[1], "bossnia_01";
+	setarray .@maps$[1], "bossnia_01", "bossnia_02", "bossnia_03", "bossnia_04";
 	warp .@maps$[.@choice], 0, 0;
 	end;
 }
