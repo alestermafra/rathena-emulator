@@ -1,6 +1,6 @@
--	script	MonstroDaSorte	-1,{
-	function spawnEventMobs;
-	function killEventMobs;
+-	script	Monstro da Sorte	-1,{
+	function killMobs;
+	function eventEnd;
 	
 	OnClock0012:
 	OnClock0112:
@@ -27,55 +27,50 @@
 	OnClock2212:
 	OnClock2312:
 	OnEventStart:
-		killEventMobs();
-		.@size = getArraySize(.maps$);
-		.@count = 2;
+		.map$ = .maps$[rand(getArraySize(.maps$))];
+		killMobs();
 		
-		copyArray .@maps$[0], .maps$[0], .@size;
+		monster .map$, 0, 0, "Monstro da Sorte", .mobId, .mobCount, sprintf("%s::OnMonsterKillEvent", strNPCInfo(0));
+		announce sprintf("Monstros da sorte foram invocados em %s! [@evento]", .map$), bc_all;
 		
-		// shuffle
-		for(.@i = 0; .@i < .@size * 2; .@i++) {
-			.@x = rand(.@size);
-			.@y = rand(.@size);
-			
-			.@temp$ = .@maps$[.@x];
-			.@maps$[.@x] = .@maps$[.@y];
-			.@maps$[.@y] = .@temp$;
+		bindatcmd "evento", sprintf("%s::OnAtCommand", strNpcInfo(3));
+		end;
+		
+	OnAtCommand:
+		getmapxy .@map$, .@x, .@y;
+		if(strcmp(.@map$, "prontera") == 0) {
+			if(select("Ir até o mapa do evento:^FF0000Sair^000000") == 1) {
+				warp .map$, 0, 0;
+			}
 		}
-		
-		copyArray .@selectedMaps$[0], .@maps$[0], .@count;
-		
-		spawnEventMobs(.@selectedMaps$, .@count);
 		end;
 	
 	OnMonsterKillEvent:
 		announce sprintf("O jogador \"%s\" encontrou o monstro da sorte!", strCharInfo(0)), bc_all;
-		killEventMobs();
 		getItem 512, 1;
+		eventEnd();
 		end;
 	
 	OnInit:
-		setarray .maps$[0], "prontera", "morocc", "geffen", "payon", "alberta", "izlude";
-		.monsterId = 1002;
-		killEventMobs();
+		setarray .maps$[0], "morocc", "geffen", "payon", "alberta", "izlude";
+		.mobId = 1002;
+		.mobCount = 3;
+		killMobs();
 		end;
 		
 	
-	// functions
-	function spawnEventMobs {
-		.@count = getArraySize(getArg(0));
-		
-		for(.@i = 0; .@i < .@count; .@i++) {
-			.@map$ = getElementOfArray(getArg(0), .@i);
-			announce sprintf("Um monstro da sorte foi invocado em %s!", .@map$), bc_all;
-			monster .@map$, 0, 0, "Monstro da Sorte", .monsterId, 1, sprintf("%s::OnMonsterKillEvent", strNPCInfo(0));
-		}
-	}
-	
-	function killEventMobs {
+	// functions	
+	function killMobs {
 		for(.@i = 0; .@i < getArraySize(.maps$); .@i++) {
 			killmonster .maps$[.@i], sprintf("%s::OnMonsterKillEvent", strNPCInfo(0));
 		}
+	}
+	
+	function eventEnd {
+		unbindatcmd "evento";
+		killMobs();
+		sleep 5000;
+		mapwarp .map$, "prontera", 156, 191;
 	}
 }
 
