@@ -11,4 +11,5 @@
  *	 { "name", &battle_config.<variable name>, <default value>, <minimum value>, <maximum value> },
  **/
 
- {"auto_refine", &battle_config.auto_refine, 0, 0, MAX_REFINE}
+ {"auto_refine", &battle_config.auto_refine, 0, 0, MAX_REFINE},
+ {"reserved_costume_id", &battle_config.reserved_costume_id, 999999998, 0, INT_MAX}

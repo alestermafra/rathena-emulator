@@ -13,3 +13,4 @@
  **/
 
  int auto_refine;
+ int reserved_costume_id;

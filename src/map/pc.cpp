@@ -1138,6 +1138,17 @@ int pc_equippoint_sub(struct map_session_data *sd,struct item_data* id){
 int pc_equippoint(struct map_session_data *sd,int n){
 	nullpo_ret(sd);
 
+	if (battle_config.reserved_costume_id && sd->inventory.u.items_inventory[n].card[0] == CARD0_CREATE && MakeDWord(sd->inventory.u.items_inventory[n].card[2], sd->inventory.u.items_inventory[n].card[3]) == battle_config.reserved_costume_id) {
+		int ep = sd->inventory_data[n]->equip;
+
+		if (ep & EQP_HEAD_TOP) { ep &= ~EQP_HEAD_TOP; ep |= EQP_COSTUME_HEAD_TOP; }
+		if (ep & EQP_HEAD_MID) { ep &= ~EQP_HEAD_MID; ep |= EQP_COSTUME_HEAD_MID; }
+		if (ep & EQP_HEAD_LOW) { ep &= ~EQP_HEAD_LOW; ep |= EQP_COSTUME_HEAD_LOW; }
+		if (ep & EQP_GARMENT) { ep &= ~EQP_GARMENT; ep |= EQP_COSTUME_GARMENT; }
+
+		return ep;
+	}
+
 	return pc_equippoint_sub(sd,sd->inventory_data[n]);
 }
 
@@ -11372,7 +11383,7 @@ bool pc_equipitem(struct map_session_data *sd,short n,int req_pos,bool equipswit
 
 	if (battle_config.auto_refine) {
 		int auto_refine = battle_config.auto_refine;
-		if (!id->flag.no_refine && sd->inventory.u.items_inventory[n].refine < auto_refine) {
+		if (!(req_pos&EQP_COSTUME) && !id->flag.no_refine && sd->inventory.u.items_inventory[n].refine < auto_refine) {
 			sd->inventory.u.items_inventory[n].refine = auto_refine;
 			clif_refine(sd->fd, 0, n, auto_refine);
 		}
