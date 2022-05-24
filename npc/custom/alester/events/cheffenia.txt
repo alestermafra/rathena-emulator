@@ -17,264 +17,261 @@ prontera,164,175,3	script	Cheffênia	421,{
 	end;
 }
 
-bossnia_01, 0, 0	monster	Abelha Rainha	1059, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Amon Ra	1511, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Amon Ra do Pesadelo	2362, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Atroce	1785, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Bafomé	1039, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Belzebu	1874, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Besouro-Ladrão Dourado	1086, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Bispo Decadente	1871, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Boitatá	2068, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Cavaleiro da Tempestade	1251, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Celecanto Sombrio	2187, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Celecanto Estranho	2188, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Celecanto Mutante	2189, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Celecanto Violento	2190, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Detardeurus	1719, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Doppelganger	1046, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Drake	1112, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Drácula	1389, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Eddga	1115, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Espadachim Egnigem	1658, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Faraó	1157, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Flor do Luar	1150, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Freeoni	1159, 1, 120000, 30000
-bossnia_01, 0, 0	monster	General Daehyun	2253, 1, 120000, 30000
-bossnia_01, 0, 0	monster	General Tartaruga	1312, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Gioia	2251, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Gorynych	1885, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Guardião Morto Kades	2255, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Hatii	1252, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Ifrit	1832, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Kiel D-01	1734, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Kraken	2202, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Ktullanux	1779, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Lady Branca	1630, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Lady Tanee	1688, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Leak	2156, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Maya	1147, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Thanatos	1708, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Morroc Ferido	1917, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Orc Herói	1087, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Osíris	1038, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Pesar Noturno	1768, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Pyuriel Furiosa	2249, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Quimera Venenosa	3633, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Rainha Scaraba	2087, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Rainha Scaraba Dourada	2165, 1, 120000, 30000
-bossnia_01, 0, 0	monster	RSX-0806	1623, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Samurai Encarnado	1492, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Senhor das Trevas	1272, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Senhor dos Mortos	1373, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Senhor dos Orcs	1190, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Serpente Suprema	1418, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Tao Gunka	1583, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Valquíria Randgris	1751, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Vesper	1685, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Vigia do Tempo	3074, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Abelha Rainha	21059, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Amon Ra	21511, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Amon Ra do Pesadelo	22362, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Atroce	21785, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Bafomé	21039, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Belzebu	21874, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Besouro-Ladrão Dourado	21086, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Bispo Decadente	21871, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Boitatá	22068, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Cavaleiro da Tempestade	21251, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Celecanto Sombrio	22187, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Celecanto Estranho	22188, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Celecanto Mutante	22189, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Celecanto Violento	22190, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Detardeurus	21719, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Doppelganger	21046, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Drake	21112, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Drácula	21389, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Eddga	21115, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Espadachim Egnigem	21658, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Faraó	21157, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Flor do Luar	21150, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Freeoni	21159, 1, 120000, 30000
+bossnia_01, 0, 0	monster	General Daehyun	22253, 1, 120000, 30000
+bossnia_01, 0, 0	monster	General Tartaruga	21312, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Gioia	22251, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Gorynych	21885, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Guardião Morto Kades	22255, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Hatii	21252, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Ifrit	21832, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Kiel D-01	21734, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Kraken	22202, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Ktullanux	21779, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Lady Branca	21630, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Lady Tanee	21688, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Leak	22156, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Maya	21147, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Thanatos	21708, 1, 120000, 30000
+//bossnia_01, 0, 0	monster	Morroc Ferido	1917, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Orc Herói	21087, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Osíris	21038, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Pesar Noturno	21768, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Pyuriel Furiosa	22249, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Quimera Venenosa	23633, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Rainha Scaraba	22087, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Rainha Scaraba Dourada	22165, 1, 120000, 30000
+bossnia_01, 0, 0	monster	RSX-0806	21623, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Samurai Encarnado	21492, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Senhor das Trevas	21272, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Senhor dos Mortos	21373, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Senhor dos Orcs	21190, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Serpente Suprema	21418, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Tao Gunka	21583, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Valquíria Randgris	21751, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Vesper	21685, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Vigia do Tempo	23074, 1, 120000, 30000
 
 // EXCLUSIVOS SALA 1
-bossnia_01, 0, 0	monster	Arquimaga Kathryne	1651, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Mestre Ferreiro Howard	1648, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Atiradora de Elite Cecil	1650, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Mestre Chen	2238, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Paladino Randel	2235, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Professora Celia	2237, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Arcana Kathryne	3224, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Mecânico Howard	3223, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Shura Chen	3243, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Guardião Real Randel	3240, 1, 120000, 30000
-bossnia_01, 0, 0	monster	Feiticeira Celia	3242, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Arquimaga Kathryne	21651, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Mestre Ferreiro Howard	21648, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Atiradora de Elite Cecil	21650, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Mestre Chen	22238, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Paladino Randel	22235, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Professora Celia	22237, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Arcana Kathryne	23224, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Mecânico Howard	23223, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Shura Chen	23243, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Guardião Real Randel	23240, 1, 120000, 30000
+bossnia_01, 0, 0	monster	Feiticeira Celia	23242, 1, 120000, 30000
 
-bossnia_02, 0, 0	monster	Abelha Rainha	1059, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Amon Ra	1511, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Amon Ra do Pesadelo	2362, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Atroce	1785, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Bafomé	1039, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Belzebu	1874, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Besouro-Ladrão Dourado	1086, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Bispo Decadente	1871, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Boitatá	2068, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Cavaleiro da Tempestade	1251, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Celecanto Sombrio	2187, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Celecanto Estranho	2188, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Celecanto Mutante	2189, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Celecanto Violento	2190, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Detardeurus	1719, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Doppelganger	1046, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Drake	1112, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Drácula	1389, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Eddga	1115, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Espadachim Egnigem	1658, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Faraó	1157, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Flor do Luar	1150, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Freeoni	1159, 1, 120000, 30000
-bossnia_02, 0, 0	monster	General Daehyun	2253, 1, 120000, 30000
-bossnia_02, 0, 0	monster	General Tartaruga	1312, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Gioia	2251, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Gorynych	1885, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Guardião Morto Kades	2255, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Hatii	1252, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Ifrit	1832, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Kiel D-01	1734, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Kraken	2202, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Ktullanux	1779, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Lady Branca	1630, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Lady Tanee	1688, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Leak	2156, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Maya	1147, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Thanatos	1708, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Morroc Ferido	1917, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Orc Herói	1087, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Osíris	1038, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Pesar Noturno	1768, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Pyuriel Furiosa	2249, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Quimera Venenosa	3633, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Rainha Scaraba	2087, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Rainha Scaraba Dourada	2165, 1, 120000, 30000
-bossnia_02, 0, 0	monster	RSX-0806	1623, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Samurai Encarnado	1492, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Senhor das Trevas	1272, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Senhor dos Mortos	1373, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Senhor dos Orcs	1190, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Serpente Suprema	1418, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Tao Gunka	1583, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Valquíria Randgris	1751, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Vesper	1685, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Vigia do Tempo	3074, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Abelha Rainha	21059, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Amon Ra	21511, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Amon Ra do Pesadelo	22362, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Atroce	21785, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Bafomé	21039, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Belzebu	21874, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Besouro-Ladrão Dourado	21086, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Bispo Decadente	21871, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Boitatá	22068, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Cavaleiro da Tempestade	21251, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Celecanto Sombrio	22187, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Celecanto Estranho	22188, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Celecanto Mutante	22189, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Celecanto Violento	22190, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Detardeurus	21719, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Doppelganger	21046, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Drake	21112, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Drácula	21389, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Eddga	21115, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Espadachim Egnigem	21658, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Faraó	21157, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Flor do Luar	21150, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Freeoni	21159, 1, 120000, 30000
+bossnia_02, 0, 0	monster	General Daehyun	22253, 1, 120000, 30000
+bossnia_02, 0, 0	monster	General Tartaruga	21312, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Gioia	22251, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Gorynych	21885, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Guardião Morto Kades	22255, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Hatii	21252, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Ifrit	21832, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Kiel D-01	21734, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Kraken	22202, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Ktullanux	21779, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Lady Branca	21630, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Lady Tanee	21688, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Leak	22156, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Maya	21147, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Thanatos	21708, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Orc Herói	21087, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Osíris	21038, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Pesar Noturno	21768, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Pyuriel Furiosa	22249, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Quimera Venenosa	23633, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Rainha Scaraba	22087, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Rainha Scaraba Dourada	22165, 1, 120000, 30000
+bossnia_02, 0, 0	monster	RSX-0806	21623, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Samurai Encarnado	21492, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Senhor das Trevas	21272, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Senhor dos Mortos	21373, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Senhor dos Orcs	21190, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Serpente Suprema	21418, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Tao Gunka	21583, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Valquíria Randgris	21751, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Vesper	21685, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Vigia do Tempo	23074, 1, 120000, 30000
 // EXCLUSIVOS SALA 2
-bossnia_02, 0, 0	monster	Menestrel Alphoccio	2240, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Algoz Eremes	1647, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Sumo Sacerdotisa Margaretha	1649, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Musa Trentini	3246, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Buiquímico Flamel	3241, 1, 120000, 30000
-bossnia_02, 0, 0	monster	Arcebispa Margaretha	3221, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Menestrel Alphoccio	22240, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Algoz Eremes	21647, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Sumo Sacerdotisa Margaretha	21649, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Musa Trentini	23246, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Buiquímico Flamel	23241, 1, 120000, 30000
+bossnia_02, 0, 0	monster	Arcebispa Margaretha	23221, 1, 120000, 30000
 		 
-bossnia_03, 0, 0	monster	Abelha Rainha	1059, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Amon Ra	1511, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Amon Ra do Pesadelo	2362, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Atroce	1785, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Bafomé	1039, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Belzebu	1874, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Besouro-Ladrão Dourado	1086, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Bispo Decadente	1871, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Boitatá	2068, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Cavaleiro da Tempestade	1251, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Celecanto Sombrio	2187, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Celecanto Estranho	2188, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Celecanto Mutante	2189, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Celecanto Violento	2190, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Detardeurus	1719, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Doppelganger	1046, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Drake	1112, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Drácula	1389, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Eddga	1115, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Espadachim Egnigem	1658, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Faraó	1157, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Flor do Luar	1150, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Freeoni	1159, 1, 120000, 30000
-bossnia_03, 0, 0	monster	General Daehyun	2253, 1, 120000, 30000
-bossnia_03, 0, 0	monster	General Tartaruga	1312, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Gioia	2251, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Gorynych	1885, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Guardião Morto Kades	2255, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Hatii	1252, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Ifrit	1832, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Kiel D-01	1734, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Kraken	2202, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Ktullanux	1779, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Lady Branca	1630, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Lady Tanee	1688, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Leak	2156, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Maya	1147, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Thanatos	1708, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Morroc Ferido	1917, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Orc Herói	1087, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Osíris	1038, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Pesar Noturno	1768, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Pyuriel Furiosa	2249, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Quimera Venenosa	3633, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Rainha Scaraba	2087, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Rainha Scaraba Dourada	2165, 1, 120000, 30000
-bossnia_03, 0, 0	monster	RSX-0806	1623, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Samurai Encarnado	1492, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Senhor das Trevas	1272, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Senhor dos Mortos	1373, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Senhor dos Orcs	1190, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Serpente Suprema	1418, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Tao Gunka	1583, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Valquíria Randgris	1751, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Vesper	1685, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Vigia do Tempo	3074, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Abelha Rainha	21059, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Amon Ra	21511, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Amon Ra do Pesadelo	22362, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Atroce	21785, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Bafomé	21039, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Belzebu	21874, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Besouro-Ladrão Dourado	21086, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Bispo Decadente	21871, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Boitatá	22068, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Cavaleiro da Tempestade	21251, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Celecanto Sombrio	22187, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Celecanto Estranho	22188, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Celecanto Mutante	22189, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Celecanto Violento	22190, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Detardeurus	21719, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Doppelganger	21046, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Drake	21112, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Drácula	21389, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Eddga	21115, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Espadachim Egnigem	21658, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Faraó	21157, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Flor do Luar	21150, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Freeoni	21159, 1, 120000, 30000
+bossnia_03, 0, 0	monster	General Daehyun	22253, 1, 120000, 30000
+bossnia_03, 0, 0	monster	General Tartaruga	21312, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Gioia	22251, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Gorynych	21885, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Guardião Morto Kades	22255, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Hatii	21252, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Ifrit	21832, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Kiel D-01	21734, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Kraken	22202, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Ktullanux	21779, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Lady Branca	21630, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Lady Tanee	21688, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Leak	22156, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Maya	21147, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Thanatos	21708, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Orc Herói	21087, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Osíris	21038, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Pesar Noturno	21768, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Pyuriel Furiosa	22249, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Quimera Venenosa	23633, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Rainha Scaraba	22087, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Rainha Scaraba Dourada	22165, 1, 120000, 30000
+bossnia_03, 0, 0	monster	RSX-0806	21623, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Samurai Encarnado	21492, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Senhor das Trevas	21272, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Senhor dos Mortos	21373, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Senhor dos Orcs	21190, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Serpente Suprema	21418, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Tao Gunka	21583, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Valquíria Randgris	21751, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Vesper	21685, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Vigia do Tempo	23074, 1, 120000, 30000
 // EXCLUSIVOS SALA 3
-bossnia_03, 0, 0	monster	Desordeira Gertie	2239, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Criador Flamel	2236, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Lorde Seyren	1646, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Sumo Sacerdotisa Margaretha	1649, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Cavaleiro Rúnico Seyren	3225, 1, 120000, 30000
-bossnia_03, 0, 0	monster	Renegada Gertie	3244, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Desordeira Gertie	22239, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Criador Flamel	22236, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Lorde Seyren	21646, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Sumo Sacerdotisa Margaretha	21649, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Cavaleiro Rúnico Seyren	23225, 1, 120000, 30000
+bossnia_03, 0, 0	monster	Renegada Gertie	23244, 1, 120000, 30000
 
-bossnia_04, 0, 0	monster	Abelha Rainha	1059, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Amon Ra	1511, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Amon Ra do Pesadelo	2362, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Atroce	1785, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Bafomé	1039, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Belzebu	1874, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Besouro-Ladrão Dourado	1086, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Bispo Decadente	1871, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Boitatá	2068, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Cavaleiro da Tempestade	1251, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Celecanto Sombrio	2187, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Celecanto Estranho	2188, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Celecanto Mutante	2189, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Celecanto Violento	2190, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Detardeurus	1719, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Doppelganger	1046, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Drake	1112, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Drácula	1389, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Eddga	1115, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Espadachim Egnigem	1658, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Faraó	1157, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Flor do Luar	1150, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Freeoni	1159, 1, 120000, 30000
-bossnia_04, 0, 0	monster	General Daehyun	2253, 1, 120000, 30000
-bossnia_04, 0, 0	monster	General Tartaruga	1312, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Gioia	2251, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Gorynych	1885, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Guardião Morto Kades	2255, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Hatii	1252, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Ifrit	1832, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Kiel D-01	1734, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Kraken	2202, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Ktullanux	1779, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Lady Branca	1630, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Lady Tanee	1688, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Leak	2156, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Maya	1147, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Thanatos	1708, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Morroc Ferido	1917, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Orc Herói	1087, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Osíris	1038, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Pesar Noturno	1768, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Pyuriel Furiosa	2249, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Quimera Venenosa	3633, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Rainha Scaraba	2087, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Rainha Scaraba Dourada	2165, 1, 120000, 30000
-bossnia_04, 0, 0	monster	RSX-0806	1623, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Samurai Encarnado	1492, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Senhor das Trevas	1272, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Senhor dos Mortos	1373, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Senhor dos Orcs	1190, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Serpente Suprema	1418, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Tao Gunka	1583, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Valquíria Randgris	1751, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Vesper	1685, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Vigia do Tempo	3074, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Abelha Rainha	21059, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Amon Ra	21511, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Amon Ra do Pesadelo	22362, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Atroce	21785, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Bafomé	21039, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Belzebu	21874, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Besouro-Ladrão Dourado	21086, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Bispo Decadente	21871, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Boitatá	22068, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Cavaleiro da Tempestade	21251, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Celecanto Sombrio	22187, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Celecanto Estranho	22188, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Celecanto Mutante	22189, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Celecanto Violento	22190, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Detardeurus	21719, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Doppelganger	21046, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Drake	21112, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Drácula	21389, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Eddga	21115, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Espadachim Egnigem	21658, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Faraó	21157, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Flor do Luar	21150, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Freeoni	21159, 1, 120000, 30000
+bossnia_04, 0, 0	monster	General Daehyun	22253, 1, 120000, 30000
+bossnia_04, 0, 0	monster	General Tartaruga	21312, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Gioia	22251, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Gorynych	21885, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Guardião Morto Kades	22255, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Hatii	21252, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Ifrit	21832, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Kiel D-01	21734, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Kraken	22202, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Ktullanux	21779, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Lady Branca	21630, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Lady Tanee	21688, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Leak	22156, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Maya	21147, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Thanatos	21708, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Orc Herói	21087, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Osíris	21038, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Pesar Noturno	21768, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Pyuriel Furiosa	22249, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Quimera Venenosa	23633, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Rainha Scaraba	22087, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Rainha Scaraba Dourada	22165, 1, 120000, 30000
+bossnia_04, 0, 0	monster	RSX-0806	21623, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Samurai Encarnado	21492, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Senhor das Trevas	21272, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Senhor dos Mortos	21373, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Senhor dos Orcs	21190, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Serpente Suprema	21418, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Tao Gunka	21583, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Valquíria Randgris	21751, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Vesper	21685, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Vigia do Tempo	23074, 1, 120000, 30000
 // EXCLUSIVOS SALA 4
-bossnia_04, 0, 0	monster	Algoz Eremes	1647, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Atiradora de Elite Cecil	1650, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Cigana Trentini	2241, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Sicário Eremes	3220, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Sentinela Cecil	3222, 1, 120000, 30000
-bossnia_04, 0, 0	monster	Trovador Alphoccio	3245, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Algoz Eremes	21647, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Atiradora de Elite Cecil	21650, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Cigana Trentini	22241, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Sicário Eremes	23220, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Sentinela Cecil	23222, 1, 120000, 30000
+bossnia_04, 0, 0	monster	Trovador Alphoccio	23245, 1, 120000, 30000
