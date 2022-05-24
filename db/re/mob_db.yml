@@ -1772,28 +1772,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Blue_Box
-        Rate: 4000
-      - Item: Seed_Of_Yggdrasil
-        Rate: 3000
-      - Item: Osiris_Doll
-        Rate: 500
+    #MvpDrops:
+    #  - Item: Old_Blue_Box
+    #    Rate: 4000
+    #  - Item: Seed_Of_Yggdrasil
+    #    Rate: 3000
+    #  - Item: Osiris_Doll
+    #    Rate: 500
     Drops:
-      - Item: Old_Violet_Box
-        Rate: 1000
-      - Item: Assasin_Dagger
-        Rate: 75
-      - Item: Crown
-        Rate: 100
-      - Item: Jamadhar_
-        Rate: 300
-      - Item: Sacred_Marks
-        Rate: 500
-      - Item: Spinx_Helm
-        Rate: 75
-      - Item: Cakram
-        Rate: 50
+    #  - Item: Old_Violet_Box
+    #    Rate: 1000
+    #  - Item: Assasin_Dagger
+    #    Rate: 75
+    #  - Item: Crown
+    #    Rate: 100
+    #  - Item: Jamadhar_
+    #    Rate: 300
+    #  - Item: Sacred_Marks
+    #    Rate: 500
+    #  - Item: Spinx_Helm
+    #    Rate: 75
+    #  - Item: Cakram
+    #    Rate: 50
       - Item: Osiris_Card
         Rate: 1
         StealProtected: true
@@ -1831,28 +1831,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 2000
-      - Item: Baphomet_Doll
-        Rate: 500
-      - Item: Evil_Horn
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 2000
+    #  - Item: Baphomet_Doll
+    #    Rate: 500
+    #  - Item: Evil_Horn
+    #    Rate: 5000
     Drops:
-      - Item: Crescent_Scythe
-        Rate: 200
-      - Item: Magestic_Goat
-        Rate: 150
-      - Item: Crescent_Scythe_
-        Rate: 25
-      - Item: Emperium
-        Rate: 250
-      - Item: Magestic_Goat_
-        Rate: 5
-      - Item: Elunium
-        Rate: 2716
-      - Item: Oridecon
-        Rate: 2086
+    #  - Item: Crescent_Scythe
+    #    Rate: 200
+    #  - Item: Magestic_Goat
+    #    Rate: 150
+    #  - Item: Crescent_Scythe_
+    #    Rate: 25
+    #  - Item: Emperium
+    #    Rate: 250
+    #  - Item: Magestic_Goat_
+    #    Rate: 5
+    #  - Item: Elunium
+    #    Rate: 2716
+    #  - Item: Oridecon
+    #    Rate: 2086
       - Item: Baphomet_Card
         Rate: 1
         StealProtected: true
@@ -2151,26 +2151,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Cardinal_Jewel_
-        Rate: 1500
-      - Item: Blue_Potion
-        Rate: 6000
+    #MvpDrops:
+    #  - Item: Cardinal_Jewel_
+    #    Rate: 1500
+    #  - Item: Blue_Potion
+    #    Rate: 6000
     Drops:
-      - Item: Plate_Armor_
-        Rate: 125
-      - Item: Broad_Sword_
-        Rate: 110
-      - Item: Zweihander
-        Rate: 75
-      - Item: Sharp_Gear
-        Rate: 175
-      - Item: Lance_
-        Rate: 275
-      - Item: Elunium
-        Rate: 1843
-      - Item: Oridecon
-        Rate: 1350
+    #  - Item: Plate_Armor_
+    #    Rate: 125
+    #  - Item: Broad_Sword_
+    #    Rate: 110
+    #  - Item: Zweihander
+    #    Rate: 75
+    #  - Item: Sharp_Gear
+    #    Rate: 175
+    #  - Item: Lance_
+    #    Rate: 275
+    #  - Item: Elunium
+    #    Rate: 1843
+    #  - Item: Oridecon
+    #    Rate: 1350
       - Item: Doppelganger_Card
         Rate: 1
         StealProtected: true
@@ -2769,28 +2769,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Rough_Wind
-        Rate: 1500
-      - Item: Royal_Jelly
-        Rate: 4000
-      - Item: Scarlet_Jewel
-        Rate: 3000
+    #MvpDrops:
+    #  - Item: Rough_Wind
+    #    Rate: 1500
+    #  - Item: Royal_Jelly
+    #    Rate: 4000
+    #  - Item: Scarlet_Jewel
+    #    Rate: 3000
     Drops:
-      - Item: Gungnir
-        Rate: 75
-      - Item: Honey
-        Rate: 5000
-      - Item: Coronet
-        Rate: 125
-      - Item: Old_Card_Album
-        Rate: 500
-      - Item: Young_Twig
-        Rate: 5
-      - Item: Elunium
-        Rate: 2134
-      - Item: Red_Square_Bag
-        Rate: 50
+    #  - Item: Gungnir
+    #    Rate: 75
+    #  - Item: Honey
+    #    Rate: 5000
+    #  - Item: Coronet
+    #    Rate: 125
+    #  - Item: Old_Card_Album
+    #    Rate: 500
+    #  - Item: Young_Twig
+    #    Rate: 5
+    #  - Item: Elunium
+    #    Rate: 2134
+    #  - Item: Red_Square_Bag
+    #    Rate: 50
       - Item: Mistress_Card
         Rate: 1
         StealProtected: true
@@ -3988,26 +3988,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Gold_Ring
-        Rate: 2000
-      - Item: Ora_Ora
-        Rate: 1000
+    #MvpDrops:
+    #  - Item: Gold_Ring
+    #    Rate: 2000
+    #  - Item: Ora_Ora
+    #    Rate: 1000
     Drops:
-      - Item: Gold
-        Rate: 500
-      - Item: Golden_Mace
-        Rate: 75
-      - Item: Golden_Gear
-        Rate: 125
-      - Item: Golden_Bell
-        Rate: 250
-      - Item: Emperium
-        Rate: 150
-      - Item: Elunium
-        Rate: 1000
-      - Item: Oridecon
-        Rate: 750
+    #  - Item: Gold
+    #    Rate: 500
+    #  - Item: Golden_Mace
+    #    Rate: 75
+    #  - Item: Golden_Gear
+    #    Rate: 125
+    #  - Item: Golden_Bell
+    #    Rate: 250
+    #  - Item: Emperium
+    #    Rate: 150
+    #  - Item: Elunium
+    #    Rate: 1000
+    #  - Item: Oridecon
+    #    Rate: 750
       - Item: Golden_Bug_Card
         Rate: 1
         StealProtected: true
@@ -4047,28 +4047,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Red_Jewel
-        Rate: 2000
-      - Item: Yggdrasilberry
-        Rate: 1500
-      - Item: Steel
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Red_Jewel
+    #    Rate: 2000
+    #  - Item: Yggdrasilberry
+    #    Rate: 1500
+    #  - Item: Steel
+    #    Rate: 5000
     Drops:
-      - Item: Voucher_Of_Orcish_Hero
-        Rate: 4850
-      - Item: Monkey_Circlet
-        Rate: 250
-      - Item: Right_Epsilon
-        Rate: 75
-      - Item: Shield_
-        Rate: 125
-      - Item: Orcish_Sword
-        Rate: 500
-      - Item: Elunium
-        Rate: 2280
-      - Item: Giant_Axe
-        Rate: 50
+    #  - Item: Voucher_Of_Orcish_Hero
+    #    Rate: 4850
+    #  - Item: Monkey_Circlet
+    #    Rate: 250
+    #  - Item: Right_Epsilon
+    #    Rate: 75
+    #  - Item: Shield_
+    #    Rate: 125
+    #  - Item: Orcish_Sword
+    #    Rate: 500
+    #  - Item: Elunium
+    #    Rate: 2280
+    #  - Item: Giant_Axe
+    #    Rate: 50
       - Item: Orc_Hero_Card
         Rate: 1
         StealProtected: true
@@ -5251,26 +5251,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: White_Potion
-        Rate: 5000
-      - Item: Violet_Jewel
-        Rate: 500
+    #MvpDrops:
+    #  - Item: White_Potion
+    #    Rate: 5000
+    #  - Item: Violet_Jewel
+    #    Rate: 500
     Drops:
-      - Item: Saber_
-        Rate: 300
-      - Item: Ring_Pommel_Saber_
-        Rate: 475
-      - Item: Cutlas
-        Rate: 75
-      - Item: Hae_Dong_Gum_
-        Rate: 200
-      - Item: Corsair
-        Rate: 175
-      - Item: Elunium
-        Rate: 1600
-      - Item: Krasnaya
-        Rate: 50
+    #  - Item: Saber_
+    #    Rate: 300
+    #  - Item: Ring_Pommel_Saber_
+    #    Rate: 475
+    #  - Item: Cutlas
+    #    Rate: 75
+    #  - Item: Hae_Dong_Gum_
+    #    Rate: 200
+    #  - Item: Corsair
+    #    Rate: 175
+    #  - Item: Elunium
+    #    Rate: 1600
+    #  - Item: Krasnaya
+    #    Rate: 50
       - Item: Drake_Card
         Rate: 1
         StealProtected: true
@@ -5398,28 +5398,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Tiger's_Skin
-        Rate: 5000
-      - Item: Tiger_Footskin
-        Rate: 1000
-      - Item: Flame_Heart
-        Rate: 3000
+    #MvpDrops:
+    #  - Item: Tiger's_Skin
+    #    Rate: 5000
+    #  - Item: Tiger_Footskin
+    #    Rate: 1000
+    #  - Item: Flame_Heart
+    #    Rate: 3000
     Drops:
-      - Item: Fire_Brand
-        Rate: 75
-      - Item: Smoking_Pipe
-        Rate: 125
-      - Item: Honey
-        Rate: 5000
-      - Item: Katar_Of_Raging_Blaze
-        Rate: 250
-      - Item: Tiger_Footskin
-        Rate: 400
-      - Item: Elunium
-        Rate: 1200
-      - Item: Krieg
-        Rate: 100
+    #  - Item: Fire_Brand
+    #    Rate: 75
+    #  - Item: Smoking_Pipe
+    #    Rate: 125
+    #  - Item: Honey
+    #    Rate: 5000
+    #  - Item: Katar_Of_Raging_Blaze
+    #    Rate: 250
+    #  - Item: Tiger_Footskin
+    #    Rate: 400
+    #  - Item: Elunium
+    #    Rate: 1200
+    #  - Item: Krieg
+    #    Rate: 100
       - Item: Eddga_Card
         Rate: 1
         StealProtected: true
@@ -6934,28 +6934,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Crystal_Jewel
-        Rate: 2000
-      - Item: Old_Blue_Box
-        Rate: 3000
-      - Item: Old_Violet_Box
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Crystal_Jewel
+    #    Rate: 2000
+    #  - Item: Old_Blue_Box
+    #    Rate: 3000
+    #  - Item: Old_Violet_Box
+    #    Rate: 2000
     Drops:
-      - Item: Queen's_Hair_Ornament
-        Rate: 250
-      - Item: Safety_Ring
-        Rate: 100
-      - Item: Tiara
-        Rate: 100
-      - Item: Armlet_Of_Obedience
-        Rate: 250
-      - Item: Mother's_Nightmare
-        Rate: 5
-      - Item: Elunium
-        Rate: 1750
-      - Item: Dea_Staff
-        Rate: 50
+    #  - Item: Queen's_Hair_Ornament
+    #    Rate: 250
+    #  - Item: Safety_Ring
+    #    Rate: 100
+    #  - Item: Tiara
+    #    Rate: 100
+    #  - Item: Armlet_Of_Obedience
+    #    Rate: 250
+    #  - Item: Mother's_Nightmare
+    #    Rate: 5
+    #  - Item: Elunium
+    #    Rate: 1750
+    #  - Item: Dea_Staff
+    #    Rate: 50
       - Item: Maya_Card
         Rate: 1
         StealProtected: true
@@ -7089,28 +7089,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Fox_Tail
-        Rate: 5000
-      - Item: White_Potion
-        Rate: 1500
-      - Item: Golden_Jewel
-        Rate: 500
+    #MvpDrops:
+    #  - Item: Fox_Tail
+    #    Rate: 5000
+    #  - Item: White_Potion
+    #    Rate: 1500
+    #  - Item: Golden_Jewel
+    #    Rate: 500
     Drops:
-      - Item: Spectral_Spear
-        Rate: 250
-      - Item: Moonlight_Sword
-        Rate: 50
-      - Item: Long_Mace
-        Rate: 75
-      - Item: Punisher
-        Rate: 250
-      - Item: Silver_Knife_Of_Chaste
-        Rate: 325
-      - Item: Elunium
-        Rate: 1300
-      - Item: Staff_Of_Bordeaux
-        Rate: 50
+    #  - Item: Spectral_Spear
+    #    Rate: 250
+    #  - Item: Moonlight_Sword
+    #    Rate: 50
+    #  - Item: Long_Mace
+    #    Rate: 75
+    #  - Item: Punisher
+    #    Rate: 250
+    #  - Item: Silver_Knife_Of_Chaste
+    #    Rate: 325
+    #  - Item: Elunium
+    #    Rate: 1300
+    #  - Item: Staff_Of_Bordeaux
+    #    Rate: 50
       - Item: Moonlight_Flower_Card
         Rate: 1
         StealProtected: true
@@ -7425,28 +7425,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Royal_Jelly
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Royal_Jelly
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 5000
     Drops:
-      - Item: Broken_Pharaoh_Symbol
-        Rate: 2910
-      - Item: Tutankhamen's_Mask
-        Rate: 1250
-      - Item: Solar_Sword
-        Rate: 50
-      - Item: Holy_Robe
-        Rate: 75
-      - Item: Gemmed_Crown
-        Rate: 250
-      - Item: Tablet
-        Rate: 150
-      - Item: Bazerald
-        Rate: 40
+    #  - Item: Broken_Pharaoh_Symbol
+    #    Rate: 2910
+    #  - Item: Tutankhamen's_Mask
+    #    Rate: 1250
+    #  - Item: Solar_Sword
+    #    Rate: 50
+    #  - Item: Holy_Robe
+    #    Rate: 75
+    #  - Item: Gemmed_Crown
+    #    Rate: 250
+    #  - Item: Tablet
+    #    Rate: 150
+    #  - Item: Bazerald
+    #    Rate: 40
       - Item: Pharaoh_Card
         Rate: 1
         StealProtected: true
@@ -7531,28 +7531,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Frozen_Heart
-        Rate: 500
-      - Item: Crystal_Jewel
-        Rate: 1000
-      - Item: Star_Crumb
-        Rate: 4000
+    #MvpDrops:
+    #  - Item: Frozen_Heart
+    #    Rate: 500
+    #  - Item: Crystal_Jewel
+    #    Rate: 1000
+    #  - Item: Star_Crumb
+    #    Rate: 4000
     Drops:
-      - Item: Thin_N'_Long_Tongue
-        Rate: 4850
-      - Item: Forturn_Sword
-        Rate: 250
-      - Item: Sucsamad
-        Rate: 75
-      - Item: Jaws_Of_Ant
-        Rate: 2500
-      - Item: Mr_Scream
-        Rate: 150
-      - Item: Elunium
-        Rate: 1450
-      - Item: Weihna
-        Rate: 50
+    #  - Item: Thin_N'_Long_Tongue
+    #    Rate: 4850
+    #  - Item: Forturn_Sword
+    #    Rate: 250
+    #  - Item: Sucsamad
+    #    Rate: 75
+    #  - Item: Jaws_Of_Ant
+    #    Rate: 2500
+    #  - Item: Mr_Scream
+    #    Rate: 150
+    #  - Item: Elunium
+    #    Rate: 1450
+    #  - Item: Weihna
+    #    Rate: 50
       - Item: Phreeoni_Card
         Rate: 1
         StealProtected: true
@@ -8883,26 +8883,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Voucher_Of_Orcish_Hero
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Voucher_Of_Orcish_Hero
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 2000
     Drops:
-      - Item: Brood_Axe
-        Rate: 200
-      - Item: Ring_
-        Rate: 200
-      - Item: Loard_Circlet
-        Rate: 200
-      - Item: Doom_Slayer_
-        Rate: 200
-      - Item: Old_Violet_Box
-        Rate: 500
-      - Item: Elunium
-        Rate: 2134
-      - Item: Erde
-        Rate: 1550
+    #  - Item: Brood_Axe
+    #    Rate: 200
+    #  - Item: Ring_
+    #    Rate: 200
+    #  - Item: Loard_Circlet
+    #    Rate: 200
+    #  - Item: Doom_Slayer_
+    #    Rate: 200
+    #  - Item: Old_Violet_Box
+    #    Rate: 500
+    #  - Item: Elunium
+    #    Rate: 2134
+    #  - Item: Erde
+    #    Rate: 1550
       - Item: Orc_Load_Card
         Rate: 1
         StealProtected: true
@@ -11631,28 +11631,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Skyblue_Jewel
-        Rate: 4500
-      - Item: Boots_
-        Rate: 500
-      - Item: Mistic_Frozen
-        Rate: 3000
+    #MvpDrops:
+    #  - Item: Skyblue_Jewel
+    #    Rate: 4500
+    #  - Item: Boots_
+    #    Rate: 500
+    #  - Item: Mistic_Frozen
+    #    Rate: 3000
     Drops:
-      - Item: Zephyrus
-        Rate: 75
-      - Item: Old_Blue_Box
-        Rate: 1500
-      - Item: Old_Violet_Box
-        Rate: 2000
-      - Item: Ring_
-        Rate: 100
-      - Item: Manteau_
-        Rate: 250
-      - Item: Elunium
-        Rate: 2280
-      - Item: Loard_Circlet
-        Rate: 1
+    #  - Item: Zephyrus
+    #    Rate: 75
+    #  - Item: Old_Blue_Box
+    #    Rate: 1500
+    #  - Item: Old_Violet_Box
+    #    Rate: 2000
+    #  - Item: Ring_
+    #    Rate: 100
+    #  - Item: Manteau_
+    #    Rate: 250
+    #  - Item: Elunium
+    #    Rate: 2280
+    #  - Item: Loard_Circlet
+    #    Rate: 1
       - Item: Knight_Windstorm_Card
         Rate: 1
         StealProtected: true
@@ -11691,26 +11691,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Fang_Of_Garm
-        Rate: 1000
-      - Item: Old_Blue_Box
-        Rate: 3000
-      - Item: Mistic_Frozen
-        Rate: 3000
+    #MvpDrops:
+    #  - Item: Fang_Of_Garm
+    #    Rate: 1000
+    #  - Item: Old_Blue_Box
+    #    Rate: 3000
+    #  - Item: Mistic_Frozen
+    #    Rate: 3000
     Drops:
-      - Item: Fang_Of_Garm
-        Rate: 2750
-      - Item: Ice_Falchon
-        Rate: 75
-      - Item: Katar_Of_Cold_Icicle
-        Rate: 250
-      - Item: Claw_Of_Garm
-        Rate: 250
-      - Item: Elunium
-        Rate: 1989
-      - Item: Oridecon
-        Rate: 1450
+    #  - Item: Fang_Of_Garm
+    #    Rate: 2750
+    #  - Item: Ice_Falchon
+    #    Rate: 75
+    #  - Item: Katar_Of_Cold_Icicle
+    #    Rate: 250
+    #  - Item: Claw_Of_Garm
+    #    Rate: 250
+    #  - Item: Elunium
+    #    Rate: 1989
+    #  - Item: Oridecon
+    #    Rate: 1450
       - Item: Garm_Card
         Rate: 1
         StealProtected: true
@@ -12647,28 +12647,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Skull
-        Rate: 6000
-      - Item: Blue_Coif_
-        Rate: 500
-      - Item: Old_Violet_Box
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Skull
+    #    Rate: 6000
+    #  - Item: Blue_Coif_
+    #    Rate: 500
+    #  - Item: Old_Violet_Box
+    #    Rate: 2000
     Drops:
-      - Item: Bone_Wand
-        Rate: 400
-      - Item: Kronos
-        Rate: 50
-      - Item: Grimtooth_
-        Rate: 150
-      - Item: Mage_Coat
-        Rate: 150
-      - Item: Cape_Of_Ancient_Lord
-        Rate: 50
-      - Item: Elunium
-        Rate: 2571
-      - Item: Bone_Helm_
-        Rate: 5
+    #  - Item: Bone_Wand
+    #    Rate: 400
+    #  - Item: Kronos
+    #    Rate: 50
+    #  - Item: Grimtooth_
+    #    Rate: 150
+    #  - Item: Mage_Coat
+    #    Rate: 150
+    #  - Item: Cape_Of_Ancient_Lord
+    #    Rate: 50
+    #  - Item: Elunium
+    #    Rate: 2571
+    #  - Item: Bone_Helm_
+    #    Rate: 5
       - Item: Dark_Lord_Card
         Rate: 1
         StealProtected: true
@@ -14516,28 +14516,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Turtle_Shell
-        Rate: 5500
-      - Item: Yggdrasilberry
-        Rate: 1500
-      - Item: Old_Violet_Box
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Turtle_Shell
+    #    Rate: 5500
+    #  - Item: Yggdrasilberry
+    #    Rate: 1500
+    #  - Item: Old_Violet_Box
+    #    Rate: 2000
     Drops:
-      - Item: Iron_Driver
-        Rate: 4
-      - Item: War_Axe
-        Rate: 3
-      - Item: Cookbook09
-        Rate: 100
-      - Item: Pole_Axe
-        Rate: 5
-      - Item: Broken_Shell
-        Rate: 2668
-      - Item: Immaterial_Sword
-        Rate: 40
-      - Item: Union_Of_Tribe
-        Rate: 1
+    #  - Item: Iron_Driver
+    #    Rate: 4
+    #  - Item: War_Axe
+    #    Rate: 3
+    #  - Item: Cookbook09
+    #    Rate: 100
+    #  - Item: Pole_Axe
+    #    Rate: 5
+    #  - Item: Broken_Shell
+    #    Rate: 2668
+    #  - Item: Immaterial_Sword
+    #    Rate: 40
+    #  - Item: Union_Of_Tribe
+    #    Rate: 1
       - Item: Turtle_General_Card
         Rate: 1
         StealProtected: true
@@ -16698,28 +16698,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Crystal_Jewel__
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Crystal_Jewel__
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: Boroken_Shiled_Piece
-        Rate: 2668
-      - Item: Pole_Axe
-        Rate: 3
-      - Item: House_Auger
-        Rate: 5
-      - Item: Ring_
-        Rate: 1
-      - Item: Shine_Spear_Blade
-        Rate: 5
-      - Item: War_Axe
-        Rate: 1
-      - Item: Iron_Driver
-        Rate: 1
+    #  - Item: Boroken_Shiled_Piece
+    #    Rate: 2668
+    #  - Item: Pole_Axe
+    #    Rate: 3
+    #  - Item: House_Auger
+    #    Rate: 5
+    #  - Item: Ring_
+    #    Rate: 1
+    #  - Item: Shine_Spear_Blade
+    #    Rate: 5
+    #  - Item: War_Axe
+    #    Rate: 1
+    #  - Item: Iron_Driver
+    #    Rate: 1
       - Item: Lord_Of_Death_Card
         Rate: 1
         StealProtected: true
@@ -17439,26 +17439,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Crystal_Jewel__
-        Rate: 5000
-      - Item: Fruit_Of_Mastela
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Crystal_Jewel__
+    #    Rate: 5000
+    #  - Item: Fruit_Of_Mastela
+    #    Rate: 5000
     Drops:
-      - Item: Yggdrasilberry
-        Rate: 2350
-      - Item: Wizardy_Staff
-        Rate: 3
-      - Item: Balistar
-        Rate: 3
-      - Item: Cape_Of_Ancient_Lord
-        Rate: 8
-      - Item: Ring_
-        Rate: 2
-      - Item: Book_Of_The_Apocalypse
-        Rate: 2
+    #  - Item: Yggdrasilberry
+    #    Rate: 2350
+    #  - Item: Wizardy_Staff
+    #    Rate: 3
+    #  - Item: Balistar
+    #    Rate: 3
+    #  - Item: Cape_Of_Ancient_Lord
+    #    Rate: 8
+    #  - Item: Ring_
+    #    Rate: 2
+    #  - Item: Book_Of_The_Apocalypse
+    #    Rate: 2
       - Item: Dracula_Card
         Rate: 1
         StealProtected: true
@@ -18642,28 +18642,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Seed_Of_Yggdrasil
-        Rate: 3500
-      - Item: Elunium
-        Rate: 5500
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Seed_Of_Yggdrasil
+    #    Rate: 3500
+    #  - Item: Elunium
+    #    Rate: 5500
     Drops:
-      - Item: Taegeuk_Plate
-        Rate: 2910
-      - Item: Sword_Of_Grave_Keeper
-        Rate: 2550
-      - Item: Hell_Fire
-        Rate: 40
-      - Item: Ph.D_Hat
-        Rate: 40
-      - Item: Gae_Bolg
-        Rate: 250
-      - Item: Pill
-        Rate: 450
-      - Item: Sway_Apron
-        Rate: 1000
+    #  - Item: Taegeuk_Plate
+    #    Rate: 2910
+    #  - Item: Sword_Of_Grave_Keeper
+    #    Rate: 2550
+    #  - Item: Hell_Fire
+    #    Rate: 40
+    #  - Item: Ph.D_Hat
+    #    Rate: 40
+    #  - Item: Gae_Bolg
+    #    Rate: 250
+    #  - Item: Pill
+    #    Rate: 450
+    #  - Item: Sway_Apron
+    #    Rate: 1000
       - Item: Dark_Snake_Lord_Card
         Rate: 1
         StealProtected: true
@@ -20717,28 +20717,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Seed_Of_Yggdrasil
-        Rate: 3500
-      - Item: Elunium
-        Rate: 5500
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Seed_Of_Yggdrasil
+    #    Rate: 3500
+    #  - Item: Elunium
+    #    Rate: 5500
     Drops:
-      - Item: Masamune
-        Rate: 1
-      - Item: Elunium
-        Rate: 1750
-      - Item: Assassin_Mask_
-        Rate: 250
-      - Item: Yggdrasilberry
-        Rate: 2250
-      - Item: Steel
-        Rate: 3153
-      - Item: Huuma_Thunderstorm
-        Rate: 2000
-      - Item: Azoth
-        Rate: 40
+    #  - Item: Masamune
+    #    Rate: 1
+    #  - Item: Elunium
+    #    Rate: 1750
+    #  - Item: Assassin_Mask_
+    #    Rate: 250
+    #  - Item: Yggdrasilberry
+    #    Rate: 2250
+    #  - Item: Steel
+    #    Rate: 3153
+    #  - Item: Huuma_Thunderstorm
+    #    Rate: 2000
+    #  - Item: Azoth
+    #    Rate: 40
       - Item: Incant_Samurai_Card
         Rate: 1
         StealProtected: true
@@ -21553,28 +21553,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Seed_Of_Yggdrasil
-        Rate: 3500
-      - Item: Crystal_Jewel__
-        Rate: 5500
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Seed_Of_Yggdrasil
+    #    Rate: 3500
+    #  - Item: Crystal_Jewel__
+    #    Rate: 5500
     Drops:
-      - Item: Spinx_Helm
-        Rate: 75
-      - Item: Safety_Ring
-        Rate: 25
-      - Item: Rojerta_Piece
-        Rate: 3880
-      - Item: Elunium
-        Rate: 1940
-      - Item: Old_Card_Album
-        Rate: 200
-      - Item: Tablet
-        Rate: 5
-      - Item: Yggdrasilberry
-        Rate: 1500
+    #  - Item: Spinx_Helm
+    #    Rate: 75
+    #  - Item: Safety_Ring
+    #    Rate: 25
+    #  - Item: Rojerta_Piece
+    #    Rate: 3880
+    #  - Item: Elunium
+    #    Rate: 1940
+    #  - Item: Old_Card_Album
+    #    Rate: 200
+    #  - Item: Tablet
+    #    Rate: 5
+    #  - Item: Yggdrasilberry
+    #    Rate: 1500
       - Item: Amon_Ra_Card
         Rate: 1
         StealProtected: true
@@ -23739,28 +23739,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Oridecon
-        Rate: 6000
-      - Item: Old_Violet_Box
-        Rate: 3000
-      - Item: Blue_Potion
-        Rate: 6000
+    #MvpDrops:
+    #  - Item: Oridecon
+    #    Rate: 6000
+    #  - Item: Old_Violet_Box
+    #    Rate: 3000
+    #  - Item: Blue_Potion
+    #    Rate: 6000
     Drops:
-      - Item: Gemstone
-        Rate: 2425
-      - Item: Stone_Piece
-        Rate: 2425
-      - Item: Golden_Jewel
-        Rate: 500
-      - Item: Binoculars
-        Rate: 200
-      - Item: White_Potion
-        Rate: 1500
-      - Item: Runstone_Rare
-        Rate: 100
-      - Item: Gemmed_Sallet_
-        Rate: 3
+    #  - Item: Gemstone
+    #    Rate: 2425
+    #  - Item: Stone_Piece
+    #    Rate: 2425
+    #  - Item: Golden_Jewel
+    #    Rate: 500
+    #  - Item: Binoculars
+    #    Rate: 200
+    #  - Item: White_Potion
+    #    Rate: 1500
+    #  - Item: Runstone_Rare
+    #    Rate: 100
+    #  - Item: Gemmed_Sallet_
+    #    Rate: 3
       - Item: Tao_Gunka_Card
         Rate: 1
         StealProtected: true
@@ -25201,28 +25201,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Dark_Blindfold
-        Rate: 3500
-      - Item: Crystal_Jewel__
-        Rate: 5500
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Dark_Blindfold
+    #    Rate: 3500
+    #  - Item: Crystal_Jewel__
+    #    Rate: 5500
     Drops:
-      - Item: Wheel
-        Rate: 3000
-      - Item: House_Auger
-        Rate: 3
-      - Item: House_Auger_
-        Rate: 1
-      - Item: Old_Violet_Box
-        Rate: 500
-      - Item: Headlamp
-        Rate: 2500
-      - Item: Counter_Dagger
-        Rate: 50
-      - Item: Spanner
-        Rate: 20
+    #  - Item: Wheel
+    #    Rate: 3000
+    #  - Item: House_Auger
+    #    Rate: 3
+    #  - Item: House_Auger_
+    #    Rate: 1
+    #  - Item: Old_Violet_Box
+    #    Rate: 500
+    #  - Item: Headlamp
+    #    Rate: 2500
+    #  - Item: Counter_Dagger
+    #    Rate: 50
+    #  - Item: Spanner
+    #    Rate: 20
       - Item: Rsx_0806_Card
         Rate: 1
         StealProtected: true
@@ -25479,28 +25479,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Celestial_Robe
-        Rate: 2000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Celestial_Robe
+    #    Rate: 2000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: Long_Hair
-        Rate: 2750
-      - Item: Old_Blue_Box
-        Rate: 2500
-      - Item: Old_Violet_Box
-        Rate: 1500
-      - Item: Limpid_Celestial_Robe
-        Rate: 1500
-      - Item: Tantanmen
-        Rate: 25
-      - Item: Red_Silk_Seal
-        Rate: 50
-      - Item: Tiara
-        Rate: 5
+    #  - Item: Long_Hair
+    #    Rate: 2750
+    #  - Item: Old_Blue_Box
+    #    Rate: 2500
+    #  - Item: Old_Violet_Box
+    #    Rate: 1500
+    #  - Item: Limpid_Celestial_Robe
+    #    Rate: 1500
+    #  - Item: Tantanmen
+    #    Rate: 25
+    #  - Item: Red_Silk_Seal
+    #    Rate: 50
+    #  - Item: Tiara
+    #    Rate: 5
       - Item: Bacsojin_Card
         Rate: 1
         StealProtected: true
@@ -26206,28 +26206,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 2000
     Drops:
-      - Item: Edge
-        Rate: 1250
-      - Item: Goast_Chill
-        Rate: 5000
-      - Item: Grave_
-        Rate: 4500
-      - Item: Brionac
-        Rate: 1750
-      - Item: Longinus's_Spear
-        Rate: 1500
-      - Item: Dragon_Slayer
-        Rate: 1250
-      - Item: Skewer
-        Rate: 750
+    #  - Item: Edge
+    #    Rate: 1250
+    #  - Item: Goast_Chill
+    #    Rate: 5000
+    #  - Item: Grave_
+    #    Rate: 4500
+    #  - Item: Brionac
+    #    Rate: 1750
+    #  - Item: Longinus's_Spear
+    #    Rate: 1500
+    #  - Item: Dragon_Slayer
+    #    Rate: 1250
+    #  - Item: Skewer
+    #    Rate: 750
       - Item: B_Seyren_Card
         Rate: 1
         StealProtected: true
@@ -26266,28 +26266,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 2000
     Drops:
-      - Item: Moonlight_Sword
-        Rate: 750
-      - Item: House_Auger
-        Rate: 750
-      - Item: Glittering_Clothes
-        Rate: 4500
-      - Item: Exercise
-        Rate: 1750
-      - Item: Assasin_Dagger
-        Rate: 1750
-      - Item: Goast_Chill
-        Rate: 5000
-      - Item: High_Weapon_Box
-        Rate: 5000
+    #  - Item: Moonlight_Sword
+    #    Rate: 750
+    #  - Item: House_Auger
+    #    Rate: 750
+    #  - Item: Glittering_Clothes
+    #    Rate: 4500
+    #  - Item: Exercise
+    #    Rate: 1750
+    #  - Item: Assasin_Dagger
+    #    Rate: 1750
+    #  - Item: Goast_Chill
+    #    Rate: 5000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
       - Item: B_Eremes_Card
         Rate: 1
         StealProtected: true
@@ -26327,28 +26327,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 2000
     Drops:
-      - Item: Mysteltainn_
-        Rate: 1750
-      - Item: Byeorrun_Gum
-        Rate: 1250
-      - Item: Goast_Chill
-        Rate: 5000
-      - Item: Sabbath
-        Rate: 1750
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Guillotine
-        Rate: 1250
-      - Item: Tomahawk
-        Rate: 1750
+    #  - Item: Mysteltainn_
+    #    Rate: 1750
+    #  - Item: Byeorrun_Gum
+    #    Rate: 1250
+    #  - Item: Goast_Chill
+    #    Rate: 5000
+    #  - Item: Sabbath
+    #    Rate: 1750
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Guillotine
+    #    Rate: 1250
+    #  - Item: Tomahawk
+    #    Rate: 1750
       - Item: B_Harword_Card
         Rate: 1
         StealProtected: true
@@ -26388,28 +26388,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 2000
     Drops:
-      - Item: Berserk
-        Rate: 1750
-      - Item: Safety_Ring
-        Rate: 1250
-      - Item: Celestial_Robe
-        Rate: 4500
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Quadrille
-        Rate: 1750
-      - Item: Grand_Cross
-        Rate: 1250
-      - Item: Goast_Chill
-        Rate: 5000
+    #  - Item: Berserk
+    #    Rate: 1750
+    #  - Item: Safety_Ring
+    #    Rate: 1250
+    #  - Item: Celestial_Robe
+    #    Rate: 4500
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Quadrille
+    #    Rate: 1750
+    #  - Item: Grand_Cross
+    #    Rate: 1250
+    #  - Item: Goast_Chill
+    #    Rate: 5000
       - Item: B_Magaleta_Card
         Rate: 1
         StealProtected: true
@@ -26449,28 +26449,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Luna_Bow
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Luna_Bow
+    #    Rate: 2000
     Drops:
-      - Item: Combat_Knife
-        Rate: 1750
-      - Item: Goast_Chill
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 4500
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Grimtooth_
-        Rate: 1750
-      - Item: Bow_Of_Rudra
-        Rate: 750
-      - Item: Dragon_Wing
-        Rate: 1250
+    #  - Item: Combat_Knife
+    #    Rate: 1750
+    #  - Item: Goast_Chill
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 4500
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Grimtooth_
+    #    Rate: 1750
+    #  - Item: Bow_Of_Rudra
+    #    Rate: 750
+    #  - Item: Dragon_Wing
+    #    Rate: 1250
       - Item: B_Shecil_Card
         Rate: 1
         StealProtected: true
@@ -26510,28 +26510,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 2000
     Drops:
-      - Item: Cursed_Dagger
-        Rate: 1750
-      - Item: Goast_Chill
-        Rate: 5000
-      - Item: Critical_Ring
-        Rate: 4500
-      - Item: Robe_Of_Casting
-        Rate: 1250
-      - Item: Goast_Chill
-        Rate: 1000
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Glittering_Clothes
-        Rate: 1750
+    #  - Item: Cursed_Dagger
+    #    Rate: 1750
+    #  - Item: Goast_Chill
+    #    Rate: 5000
+    #  - Item: Critical_Ring
+    #    Rate: 4500
+    #  - Item: Robe_Of_Casting
+    #    Rate: 1250
+    #  - Item: Goast_Chill
+    #    Rate: 1000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Glittering_Clothes
+    #    Rate: 1750
       - Item: B_Katrinn_Card
         Rate: 1
         StealProtected: true
@@ -26871,29 +26871,29 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 2000
     Drops:
-      - Item: Scarlet_Twohand_Sword
-        Rate: 500
-        RandomOptionGroup: Group_5
-      - Item: Gift_Box
-        Rate: 2500
-      - Item: Old_Blue_Box
-        Rate: 2500
-      - Item: Schweizersabel
-        Rate: 500
-      - Item: Formal_Suit
-        Rate: 500
-      - Item: Goast_Chill
-        Rate: 500
-      - Item: Nagan
-        Rate: 500
+    #  - Item: Scarlet_Twohand_Sword
+    #    Rate: 500
+    #    RandomOptionGroup: Group_5
+    #  - Item: Gift_Box
+    #    Rate: 2500
+    #  - Item: Old_Blue_Box
+    #    Rate: 2500
+    #  - Item: Schweizersabel
+    #    Rate: 500
+    #  - Item: Formal_Suit
+    #    Rate: 500
+    #  - Item: Goast_Chill
+    #    Rate: 500
+    #  - Item: Nagan
+    #    Rate: 500
       - Item: B_Ygnizem_Card
         Rate: 1
         StealProtected: true
@@ -27945,28 +27945,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 2000
     Drops:
-      - Item: Broken_Steel_Piece
-        Rate: 2500
-      - Item: Mystery_Piece
-        Rate: 1500
-      - Item: Old_Violet_Box
-        Rate: 500
-      - Item: Vesper_Core01
-        Rate: 50
-      - Item: Vesper_Core02
-        Rate: 50
-      - Item: Vesper_Core03
-        Rate: 50
-      - Item: Vesper_Core04
-        Rate: 50
+    #  - Item: Broken_Steel_Piece
+    #    Rate: 2500
+    #  - Item: Mystery_Piece
+    #    Rate: 1500
+    #  - Item: Old_Violet_Box
+    #    Rate: 500
+    #  - Item: Vesper_Core01
+    #    Rate: 50
+    #  - Item: Vesper_Core02
+    #    Rate: 50
+    #  - Item: Vesper_Core03
+    #    Rate: 50
+    #  - Item: Vesper_Core04
+    #    Rate: 50
       - Item: Apocalips_H_Card
         Rate: 1
         StealProtected: true
@@ -28100,28 +28100,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Dex_Dish10
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Dex_Dish10
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 2000
     Drops:
-      - Item: Agi_Dish10
-        Rate: 2500
-      - Item: Tropical_Banana
-        Rate: 2000
-      - Item: Fantastic_Cooking_Kits
-        Rate: 500
-      - Item: Banana_Hat
-        Rate: 500
-      - Item: Elunium
-        Rate: 2500
-      - Item: Old_Violet_Box
-        Rate: 1000
-      - Item: Kakkung_
-        Rate: 3000
+    #  - Item: Agi_Dish10
+    #    Rate: 2500
+    #  - Item: Tropical_Banana
+    #    Rate: 2000
+    #  - Item: Fantastic_Cooking_Kits
+    #    Rate: 500
+    #  - Item: Banana_Hat
+    #    Rate: 500
+    #  - Item: Elunium
+    #    Rate: 2500
+    #  - Item: Old_Violet_Box
+    #    Rate: 1000
+    #  - Item: Kakkung_
+    #    Rate: 3000
       - Item: Lady_Tanee_Card
         Rate: 1
         StealProtected: true
@@ -29005,28 +29005,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 2000
     Drops:
-      - Item: Treasure_Box
-        Rate: 500
-      - Item: Morrigane's_Manteau
-        Rate: 500
-      - Item: Piece_Of_Bone_Armor
-        Rate: 2500
-      - Item: Full_Plate_Armor_
-        Rate: 2500
-      - Item: Grave_
-        Rate: 2500
-      - Item: Wing_Of_Eagle
-        Rate: 500
-      - Item: Bloody_Iron_Ball
-        Rate: 250
+    #  - Item: Treasure_Box
+    #    Rate: 500
+    #  - Item: Morrigane's_Manteau
+    #    Rate: 500
+    #  - Item: Piece_Of_Bone_Armor
+    #    Rate: 2500
+    #  - Item: Full_Plate_Armor_
+    #    Rate: 2500
+    #  - Item: Grave_
+    #    Rate: 2500
+    #  - Item: Wing_Of_Eagle
+    #    Rate: 500
+    #  - Item: Bloody_Iron_Ball
+    #    Rate: 250
       - Item: Thanatos_Card
         Rate: 1
         StealProtected: true
@@ -29483,28 +29483,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Crystal_Jewel__
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Crystal_Jewel__
+    #    Rate: 2000
     Drops:
-      - Item: Morpheus's_Armlet
-        Rate: 500
-      - Item: Morpheus's_Ring
-        Rate: 500
-      - Item: Treasure_Box
-        Rate: 2500
-      - Item: Scale_Of_Red_Dragon
-        Rate: 1795
-      - Item: Int_Dish10
-        Rate: 500
-      - Item: Pole_Axe
-        Rate: 50
-      - Item: Gemmed_Crown
-        Rate: 250
+    #  - Item: Morpheus's_Armlet
+    #    Rate: 500
+    #  - Item: Morpheus's_Ring
+    #    Rate: 500
+    #  - Item: Treasure_Box
+    #    Rate: 2500
+    #  - Item: Scale_Of_Red_Dragon
+    #    Rate: 1795
+    #  - Item: Int_Dish10
+    #    Rate: 500
+    #  - Item: Pole_Axe
+    #    Rate: 50
+    #  - Item: Gemmed_Crown
+    #    Rate: 250
       - Item: Detale_Card
         Rate: 1
         StealProtected: true
@@ -29958,28 +29958,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 2000
     Drops:
-      - Item: Pocket_Watch__
-        Rate: 1500
-      - Item: Old_Violet_Box
-        Rate: 1500
-      - Item: Morrigane's_Pendant
-        Rate: 500
-      - Item: Glittering_Clothes
-        Rate: 500
-      - Item: Survival_Rod_
-        Rate: 250
-      - Item: Counter_Dagger
-        Rate: 250
-      - Item: Morrigane's_Belt
-        Rate: 500
+    #  - Item: Pocket_Watch__
+    #    Rate: 1500
+    #  - Item: Old_Violet_Box
+    #    Rate: 1500
+    #  - Item: Morrigane's_Pendant
+    #    Rate: 500
+    #  - Item: Glittering_Clothes
+    #    Rate: 500
+    #  - Item: Survival_Rod_
+    #    Rate: 250
+    #  - Item: Counter_Dagger
+    #    Rate: 250
+    #  - Item: Morrigane's_Belt
+    #    Rate: 500
       - Item: Kiel_Card
         Rate: 1
         StealProtected: true
@@ -30559,26 +30559,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 2000
     Drops:
-      - Item: Valhalla_Flower
-        Rate: 3000
-      - Item: Valkyrie_Armor
-        Rate: 300
-      - Item: Valkyrie_Manteau
-        Rate: 1000
-      - Item: Valkyrie_Shoes
-        Rate: 1000
-      - Item: Helm_
-        Rate: 3000
-      - Item: Bloody_Edge
-        Rate: 1500
+    #  - Item: Valhalla_Flower
+    #    Rate: 3000
+    #  - Item: Valkyrie_Armor
+    #    Rate: 300
+    #  - Item: Valkyrie_Manteau
+    #    Rate: 1000
+    #  - Item: Valkyrie_Shoes
+    #    Rate: 1000
+    #  - Item: Helm_
+    #    Rate: 3000
+    #  - Item: Bloody_Edge
+    #    Rate: 1500
       - Item: Randgris_Card
         Rate: 1
         StealProtected: true
@@ -31183,26 +31183,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: Will_Of_Darkness_
-        Rate: 3500
-      - Item: Blade_Lost_In_Darkness
-        Rate: 2000
-      - Item: Old_Hilt
-        Rate: 1000
-      - Item: Old_Card_Album
-        Rate: 2500
-      - Item: Celestial_Robe
-        Rate: 500
-      - Item: Hurricane_Fury
-        Rate: 50
+    #  - Item: Will_Of_Darkness_
+    #    Rate: 3500
+    #  - Item: Blade_Lost_In_Darkness
+    #    Rate: 2000
+    #  - Item: Old_Hilt
+    #    Rate: 1000
+    #  - Item: Old_Card_Album
+    #    Rate: 2500
+    #  - Item: Celestial_Robe
+    #    Rate: 500
+    #  - Item: Hurricane_Fury
+    #    Rate: 50
       - Item: Gloom_Under_Night_Card
         Rate: 1
         StealProtected: true
@@ -31710,28 +31710,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: Ice_Scale
-        Rate: 4500
-      - Item: Old_Card_Album
-        Rate: 1500
-      - Item: Clack_Of_Servival
-        Rate: 1500
-      - Item: Herald_Of_GOD
-        Rate: 2500
-      - Item: Old_Violet_Box
-        Rate: 2500
-      - Item: Yggdrasilberry
-        Rate: 2500
-      - Item: Huuma_Fluttering_Snow
-        Rate: 2000
+    #  - Item: Ice_Scale
+    #    Rate: 4500
+    #  - Item: Old_Card_Album
+    #    Rate: 1500
+    #  - Item: Clack_Of_Servival
+    #    Rate: 1500
+    #  - Item: Herald_Of_GOD
+    #    Rate: 2500
+    #  - Item: Old_Violet_Box
+    #    Rate: 2500
+    #  - Item: Yggdrasilberry
+    #    Rate: 2500
+    #  - Item: Huuma_Fluttering_Snow
+    #    Rate: 2000
       - Item: Ktullanux_Card
         Rate: 1
         StealProtected: true
@@ -32001,28 +32001,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: Bloody_Rune
-        Rate: 3500
-      - Item: Seed_Of_Yggdrasil
-        Rate: 500
-      - Item: Ring_
-        Rate: 500
-      - Item: Old_Violet_Box
-        Rate: 2500
-      - Item: Yggdrasilberry
-        Rate: 2500
-      - Item: Ulle_Cap
-        Rate: 50
-      - Item: Altas_Weapon
-        Rate: 50
+    #  - Item: Bloody_Rune
+    #    Rate: 3500
+    #  - Item: Seed_Of_Yggdrasil
+    #    Rate: 500
+    #  - Item: Ring_
+    #    Rate: 500
+    #  - Item: Old_Violet_Box
+    #    Rate: 2500
+    #  - Item: Yggdrasilberry
+    #    Rate: 2500
+    #  - Item: Ulle_Cap
+    #    Rate: 50
+    #  - Item: Altas_Weapon
+    #    Rate: 50
       - Item: Atroce_Card
         Rate: 1
         StealProtected: true
@@ -33646,28 +33646,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Blue_Box
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Blue_Box
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 2000
     Drops:
-      - Item: Flame_Heart
-        Rate: 6000
-      - Item: Spiritual_Ring
-        Rate: 1500
-      - Item: Ring_Of_Flame_Lord
-        Rate: 50
-      - Item: Ring_Of_Resonance
-        Rate: 50
-      - Item: Hell_Fire
-        Rate: 1200
-      - Item: Fire_Brand
-        Rate: 1000
-      - Item: Flame_Sprits_Armor_
-        Rate: 100
+    #  - Item: Flame_Heart
+    #    Rate: 6000
+    #  - Item: Spiritual_Ring
+    #    Rate: 1500
+    #  - Item: Ring_Of_Flame_Lord
+    #    Rate: 50
+    #  - Item: Ring_Of_Resonance
+    #    Rate: 50
+    #  - Item: Hell_Fire
+    #    Rate: 1200
+    #  - Item: Fire_Brand
+    #    Rate: 1000
+    #  - Item: Flame_Sprits_Armor_
+    #    Rate: 100
       - Item: Ifrit_Card
         Rate: 1
         StealProtected: true
@@ -35186,28 +35186,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: Holy_Water
-        Rate: 5000
-      - Item: Long_Horn
-        Rate: 500
-      - Item: Spiritual_Ring
-        Rate: 250
-      - Item: Hunting_Spear
-        Rate: 500
-      - Item: Elunium
-        Rate: 2716
-      - Item: Blessed_Wand
-        Rate: 1000
-      - Item: Carnium
-        Rate: 250
+    #  - Item: Holy_Water
+    #    Rate: 5000
+    #  - Item: Long_Horn
+    #    Rate: 500
+    #  - Item: Spiritual_Ring
+    #    Rate: 250
+    #  - Item: Hunting_Spear
+    #    Rate: 500
+    #  - Item: Elunium
+    #    Rate: 2716
+    #  - Item: Blessed_Wand
+    #    Rate: 1000
+    #  - Item: Carnium
+    #    Rate: 250
       - Item: Fallen_Bishop_Card
         Rate: 1
         StealProtected: true
@@ -35301,28 +35301,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: Broken_Crown
-        Rate: 4500
-      - Item: Variant_Shoes
-        Rate: 1000
-      - Item: Death_Note
-        Rate: 1000
-      - Item: Destruction_Rod
-        Rate: 1000
-      - Item: Bison_Horn
-        Rate: 1000
-      - Item: Carnium
-        Rate: 500
-      - Item: Yggdrasilberry
-        Rate: 2750
+    #  - Item: Broken_Crown
+    #    Rate: 4500
+    #  - Item: Variant_Shoes
+    #    Rate: 1000
+    #  - Item: Death_Note
+    #    Rate: 1000
+    #  - Item: Destruction_Rod
+    #    Rate: 1000
+    #  - Item: Bison_Horn
+    #    Rate: 1000
+    #  - Item: Carnium
+    #    Rate: 500
+    #  - Item: Yggdrasilberry
+    #    Rate: 2750
       - Item: Berzebub_Card
         Rate: 1
         StealProtected: true
@@ -35764,28 +35764,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: Old_Violet_Box
-        Rate: 2000
-      - Item: Ring_
-        Rate: 100
-      - Item: Int_Dish10
-        Rate: 500
-      - Item: Ixion_Wing
-        Rate: 50
-      - Item: Pole_Axe
-        Rate: 3
-      - Item: Treasure_Box
-        Rate: 2500
-      - Item: Loard_Circlet
-        Rate: 1
+    #  - Item: Old_Violet_Box
+    #    Rate: 2000
+    #  - Item: Ring_
+    #    Rate: 100
+    #  - Item: Int_Dish10
+    #    Rate: 500
+    #  - Item: Ixion_Wing
+    #    Rate: 50
+    #  - Item: Pole_Axe
+    #    Rate: 3
+    #  - Item: Treasure_Box
+    #    Rate: 2500
+    #  - Item: Loard_Circlet
+    #    Rate: 1
       - Item: Gopinich_Card
         Rate: 1
         StealProtected: true
@@ -42078,28 +42078,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 2000
     Drops:
-      - Item: Treasure_Box
-        Rate: 2500
-      - Item: Hurricane_Fury
-        Rate: 50
-      - Item: Hunting_Spear
-        Rate: 50
-      - Item: Yggdrasilberry
-        Rate: 250
-      - Item: Elunium
-        Rate: 500
-      - Item: Oridecon
-        Rate: 500
-      - Item: Hell_Fire
-        Rate: 50
+    #  - Item: Treasure_Box
+    #    Rate: 2500
+    #  - Item: Hurricane_Fury
+    #    Rate: 50
+    #  - Item: Hunting_Spear
+    #    Rate: 50
+    #  - Item: Yggdrasilberry
+    #    Rate: 250
+    #  - Item: Elunium
+    #    Rate: 500
+    #  - Item: Oridecon
+    #    Rate: 500
+    #  - Item: Hell_Fire
+    #    Rate: 50
       - Item: Boitata_Card
         Rate: 1
         StealProtected: true
@@ -42878,24 +42878,24 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Card_Album
-        Rate: 5500
-      - Item: Old_Card_Album
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Card_Album
+    #    Rate: 5500
+    #  - Item: Old_Card_Album
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 2000
     Drops:
-      - Item: Queen_Wing_Piece
-        Rate: 3500
-      - Item: Alca_Bringer
-        Rate: 500
-      - Item: Meteo_Plate_Armor
-        Rate: 500
-      - Item: Chrome_Twohand_Sword
-        Rate: 200
-      - Item: Mystic_Bow
-        Rate: 250
+    #  - Item: Queen_Wing_Piece
+    #    Rate: 3500
+    #  - Item: Alca_Bringer
+    #    Rate: 500
+    #  - Item: Meteo_Plate_Armor
+    #    Rate: 500
+    #  - Item: Chrome_Twohand_Sword
+    #    Rate: 200
+    #  - Item: Mystic_Bow
+    #    Rate: 250
       - Item: Q_Scaraba_Card
         Rate: 1
         StealProtected: true
@@ -45424,28 +45424,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 2250
-      - Item: Old_Card_Album
-        Rate: 450
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 2250
+    #  - Item: Old_Card_Album
+    #    Rate: 450
     Drops:
-      - Item: Hunting_Spear
-        Rate: 5
-      - Item: Old_Violet_Box
-        Rate: 1250
-      - Item: Yggdrasilberry
-        Rate: 1250
-      - Item: Tidung
-        Rate: 250
-      - Item: Runstone_Rare
-        Rate: 1750
-      - Item: Honey
-        Rate: 1250
-      - Item: Gold
-        Rate: 1000
+    #  - Item: Hunting_Spear
+    #    Rate: 5
+    #  - Item: Old_Violet_Box
+    #    Rate: 1250
+    #  - Item: Yggdrasilberry
+    #    Rate: 1250
+    #  - Item: Tidung
+    #    Rate: 250
+    #  - Item: Runstone_Rare
+    #    Rate: 1750
+    #  - Item: Honey
+    #    Rate: 1250
+    #  - Item: Gold
+    #    Rate: 1000
       - Item: Leak_Card
         Rate: 1
         StealProtected: true
@@ -45799,28 +45799,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Card_Album
-        Rate: 5500
-      - Item: Old_Card_Album
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 2000
+    #MvpDrops:
+    #  - Item: Old_Card_Album
+    #    Rate: 5500
+    #  - Item: Old_Card_Album
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 2000
     Drops:
-      - Item: Queen_Wing_Piece
-        Rate: 2500
-      - Item: Alca_Bringer
-        Rate: 350
-      - Item: Meteo_Plate_Armor
-        Rate: 350
-      - Item: Chrome_Twohand_Sword
-        Rate: 200
-      - Item: Mystic_Bow
-        Rate: 250
-      - Item: Splendid_Box2
-        Rate: 500
-      - Item: Splendid_Box
-        Rate: 500
+    #  - Item: Queen_Wing_Piece
+    #    Rate: 2500
+    #  - Item: Alca_Bringer
+    #    Rate: 350
+    #  - Item: Meteo_Plate_Armor
+    #    Rate: 350
+    #  - Item: Chrome_Twohand_Sword
+    #    Rate: 200
+    #  - Item: Mystic_Bow
+    #    Rate: 250
+    #  - Item: Splendid_Box2
+    #    Rate: 500
+    #  - Item: Splendid_Box
+    #    Rate: 500
       - Item: Gold_Q_Scaraba_Card
         Rate: 1
         StealProtected: true
@@ -46765,20 +46765,20 @@ Body:
     Ai: 21
     Class: Boss
     Drops:
-      - Item: Agrade_Pocket
-        Rate: 5000
-      - Item: Mid_Coin_Pocket
-        Rate: 5000
-      - Item: Low_Coin_Pocket
-        Rate: 5000
-      - Item: High_Weapon_Box
-        Rate: 750
-      - Item: Mid_Coin_Pocket
-        Rate: 5000
-      - Item: Low_Coin_Pocket
-        Rate: 5000
-      - Item: Low_Coin_Pocket
-        Rate: 5000
+    #  - Item: Agrade_Pocket
+    #    Rate: 5000
+    #  - Item: Mid_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: Low_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: High_Weapon_Box
+    #    Rate: 750
+    #  - Item: Mid_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: Low_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: Low_Coin_Pocket
+    #    Rate: 5000
       - Item: Odd_Coelacanth_Card
         Rate: 1
         StealProtected: true
@@ -46816,20 +46816,20 @@ Body:
     Ai: 21
     Class: Boss
     Drops:
-      - Item: Agrade_Pocket
-        Rate: 5000
-      - Item: Mid_Coin_Pocket
-        Rate: 5000
-      - Item: Low_Coin_Pocket
-        Rate: 5000
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Mid_Coin_Pocket
-        Rate: 5000
-      - Item: Low_Coin_Pocket
-        Rate: 5000
-      - Item: Low_Coin_Pocket
-        Rate: 5000
+    #  - Item: Agrade_Pocket
+    #    Rate: 5000
+    #  - Item: Mid_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: Low_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Mid_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: Low_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: Low_Coin_Pocket
+    #    Rate: 5000
       - Item: Black_Coelacanth_Card
         Rate: 1
         StealProtected: true
@@ -46866,20 +46866,20 @@ Body:
     Ai: 21
     Class: Boss
     Drops:
-      - Item: Agrade_Pocket
-        Rate: 7000
-      - Item: Anger_Seagod
-        Rate: 7000
-      - Item: Old_Coin_Pocket
-        Rate: 5000
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Mid_Coin_Pocket
-        Rate: 5000
-      - Item: Low_Coin_Pocket
-        Rate: 5000
-      - Item: Low_Coin_Pocket
-        Rate: 5000
+    #  - Item: Agrade_Pocket
+    #    Rate: 7000
+    #  - Item: Anger_Seagod
+    #    Rate: 7000
+    #  - Item: Old_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Mid_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: Low_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: Low_Coin_Pocket
+    #    Rate: 5000
       - Item: Mutant_Coelacanth_Card
         Rate: 1
         StealProtected: true
@@ -46917,20 +46917,20 @@ Body:
     Ai: 21
     Class: Boss
     Drops:
-      - Item: Agrade_Pocket
-        Rate: 7000
-      - Item: Anger_Seagod
-        Rate: 5000
-      - Item: Old_Coin_Pocket
-        Rate: 5000
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Mid_Coin_Pocket
-        Rate: 5000
-      - Item: Low_Coin_Pocket
-        Rate: 5000
-      - Item: Low_Coin_Pocket
-        Rate: 5000
+    #  - Item: Agrade_Pocket
+    #    Rate: 7000
+    #  - Item: Anger_Seagod
+    #    Rate: 5000
+    #  - Item: Old_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Mid_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: Low_Coin_Pocket
+    #    Rate: 5000
+    #  - Item: Low_Coin_Pocket
+    #    Rate: 5000
       - Item: Cruel_Coelacanth_Card
         Rate: 1
         StealProtected: true
@@ -47393,28 +47393,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Old_Violet_Box
-        Rate: 2250
-      - Item: Old_Card_Album
-        Rate: 450
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Old_Violet_Box
+    #    Rate: 2250
+    #  - Item: Old_Card_Album
+    #    Rate: 450
     Drops:
-      - Item: Tentacle
-        Rate: 2500
-      - Item: Cardo
-        Rate: 250
-      - Item: Ice_Falchon
-        Rate: 250
-      - Item: Hunting_Spear
-        Rate: 250
-      - Item: Water_Sprits_Armor_
-        Rate: 250
-      - Item: Treasure_Box
-        Rate: 2500
-      - Item: Mistic_Frozen
-        Rate: 250
+    #  - Item: Tentacle
+    #    Rate: 2500
+    #  - Item: Cardo
+    #    Rate: 250
+    #  - Item: Ice_Falchon
+    #    Rate: 250
+    #  - Item: Hunting_Spear
+    #    Rate: 250
+    #  - Item: Water_Sprits_Armor_
+    #    Rate: 250
+    #  - Item: Treasure_Box
+    #    Rate: 2500
+    #  - Item: Mistic_Frozen
+    #    Rate: 250
       - Item: Kraken_Card
         Rate: 1
         StealProtected: true
@@ -48730,26 +48730,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 2250
-      - Item: Crystal_Jewel__
-        Rate: 450
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 2250
+    #  - Item: Crystal_Jewel__
+    #    Rate: 450
     Drops:
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Sgrade_Pocket
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 3000
-      - Item: Bradium
-        Rate: 2000
-      - Item: Giant_Shield
-        Rate: 2000
-      - Item: Ancient_Dagger
-        Rate: 2000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Sgrade_Pocket
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 3000
+    #  - Item: Bradium
+    #    Rate: 2000
+    #  - Item: Giant_Shield
+    #    Rate: 2000
+    #  - Item: Ancient_Dagger
+    #    Rate: 2000
       - Item: Paladin_Card
         Rate: 1
         StealProtected: true
@@ -48788,28 +48788,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 2250
-      - Item: Crystal_Jewel__
-        Rate: 450
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 2250
+    #  - Item: Crystal_Jewel__
+    #    Rate: 450
     Drops:
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Sgrade_Pocket
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 3000
-      - Item: Carnium
-        Rate: 2000
-      - Item: End_Sektura
-        Rate: 2000
-      - Item: Ygnus_Stale
-        Rate: 2000
-      - Item: Giant_Axe
-        Rate: 2000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Sgrade_Pocket
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 3000
+    #  - Item: Carnium
+    #    Rate: 2000
+    #  - Item: End_Sektura
+    #    Rate: 2000
+    #  - Item: Ygnus_Stale
+    #    Rate: 2000
+    #  - Item: Giant_Axe
+    #    Rate: 2000
       - Item: Creator_Card
         Rate: 1
         StealProtected: true
@@ -48848,24 +48848,24 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 2250
-      - Item: Crystal_Jewel__
-        Rate: 450
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 2250
+    #  - Item: Crystal_Jewel__
+    #    Rate: 450
     Drops:
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Sgrade_Pocket
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 3000
-      - Item: Bradium
-        Rate: 2000
-      - Item: Alchemy_Glove
-        Rate: 2000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Sgrade_Pocket
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 3000
+    #  - Item: Bradium
+    #    Rate: 2000
+    #  - Item: Alchemy_Glove
+    #    Rate: 2000
       - Item: Professor_Card
         Rate: 1
         StealProtected: true
@@ -48963,26 +48963,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 2250
-      - Item: Crystal_Jewel__
-        Rate: 450
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 2250
+    #  - Item: Crystal_Jewel__
+    #    Rate: 450
     Drops:
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Sgrade_Pocket
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 3000
-      - Item: Bradium
-        Rate: 2000
-      - Item: Scarletto_Nail
-        Rate: 2000
-      - Item: Aztoe_Nail
-        Rate: 2000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Sgrade_Pocket
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 3000
+    #  - Item: Bradium
+    #    Rate: 2000
+    #  - Item: Scarletto_Nail
+    #    Rate: 2000
+    #  - Item: Aztoe_Nail
+    #    Rate: 2000
       - Item: Stalker_Card
         Rate: 1
         StealProtected: true
@@ -49021,24 +49021,24 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Old_Violet_Box
-        Rate: 5500
-      - Item: Old_Blue_Box
-        Rate: 2250
-      - Item: Crystal_Jewel__
-        Rate: 450
+    #MvpDrops:
+    #  - Item: Old_Violet_Box
+    #    Rate: 5500
+    #  - Item: Old_Blue_Box
+    #    Rate: 2250
+    #  - Item: Crystal_Jewel__
+    #    Rate: 450
     Drops:
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Sgrade_Pocket
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 3000
-      - Item: Carnium
-        Rate: 2000
-      - Item: Mystic_Bow
-        Rate: 2000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Sgrade_Pocket
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 3000
+    #  - Item: Carnium
+    #    Rate: 2000
+    #  - Item: Mystic_Bow
+    #    Rate: 2000
       - Item: Clown_Card
         Rate: 1
         StealProtected: true
@@ -49078,18 +49078,18 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: High_Weapon_Box
-        Rate: 5000
-      - Item: Sgrade_Pocket
-        Rate: 5000
-      - Item: Old_Card_Album
-        Rate: 3000
-      - Item: Bradium
-        Rate: 2000
-      - Item: Rosebine
-        Rate: 2000
-      - Item: Mystic_Bow
-        Rate: 2000
+    #  - Item: High_Weapon_Box
+    #    Rate: 5000
+    #  - Item: Sgrade_Pocket
+    #    Rate: 5000
+    #  - Item: Old_Card_Album
+    #    Rate: 3000
+    #  - Item: Bradium
+    #    Rate: 2000
+    #  - Item: Rosebine
+    #    Rate: 2000
+    #  - Item: Mystic_Bow
+    #    Rate: 2000
       - Item: Gypsy_Card
         Rate: 1
         StealProtected: true
@@ -49368,26 +49368,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Magic_Card_Album
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Magic_Card_Album
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: High_Weapon_Box
-        Rate: 100
-      - Item: Old_Violet_Box
-        Rate: 3000
-      - Item: Old_Card_Album
-        Rate: 500
-      - Item: Sg_Weapon_Supply_Box
-        Rate: 3000
-      - Item: Sg_White_Potion_Box
-        Rate: 2000
-      - Item: Sg_Blue_Potion_Box
-        Rate: 1000
+    #  - Item: High_Weapon_Box
+    #    Rate: 100
+    #  - Item: Old_Violet_Box
+    #    Rate: 3000
+    #  - Item: Old_Card_Album
+    #    Rate: 500
+    #  - Item: Sg_Weapon_Supply_Box
+    #    Rate: 3000
+    #  - Item: Sg_White_Potion_Box
+    #    Rate: 2000
+    #  - Item: Sg_Blue_Potion_Box
+    #    Rate: 1000
       - Item: Pyuriel_Card
         Rate: 1
         StealProtected: true
@@ -49472,26 +49472,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Magic_Card_Album
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Magic_Card_Album
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: High_Weapon_Box
-        Rate: 100
-      - Item: Old_Violet_Box
-        Rate: 3000
-      - Item: Old_Card_Album
-        Rate: 500
-      - Item: Sg_Weapon_Supply_Box
-        Rate: 3000
-      - Item: Sg_White_Potion_Box
-        Rate: 2000
-      - Item: Sg_Blue_Potion_Box
-        Rate: 1000
+    #  - Item: High_Weapon_Box
+    #    Rate: 100
+    #  - Item: Old_Violet_Box
+    #    Rate: 3000
+    #  - Item: Old_Card_Album
+    #    Rate: 500
+    #  - Item: Sg_Weapon_Supply_Box
+    #    Rate: 3000
+    #  - Item: Sg_White_Potion_Box
+    #    Rate: 2000
+    #  - Item: Sg_Blue_Potion_Box
+    #    Rate: 1000
       - Item: Gioia_Card
         Rate: 1
         StealProtected: true
@@ -49576,26 +49576,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Magic_Card_Album
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Magic_Card_Album
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: High_Weapon_Box
-        Rate: 100
-      - Item: Old_Violet_Box
-        Rate: 3000
-      - Item: Old_Card_Album
-        Rate: 500
-      - Item: Sg_Weapon_Supply_Box
-        Rate: 3000
-      - Item: Sg_White_Potion_Box
-        Rate: 2000
-      - Item: Sg_Blue_Potion_Box
-        Rate: 1000
+    #  - Item: High_Weapon_Box
+    #    Rate: 100
+    #  - Item: Old_Violet_Box
+    #    Rate: 3000
+    #  - Item: Old_Card_Album
+    #    Rate: 500
+    #  - Item: Sg_Weapon_Supply_Box
+    #    Rate: 3000
+    #  - Item: Sg_White_Potion_Box
+    #    Rate: 2000
+    #  - Item: Sg_Blue_Potion_Box
+    #    Rate: 1000
       - Item: Daehyon_Card
         Rate: 1
         StealProtected: true
@@ -49681,26 +49681,26 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Magic_Card_Album
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Magic_Card_Album
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
     Drops:
-      - Item: High_Weapon_Box
-        Rate: 100
-      - Item: Old_Violet_Box
-        Rate: 3000
-      - Item: Old_Card_Album
-        Rate: 500
-      - Item: Sg_Weapon_Supply_Box
-        Rate: 3000
-      - Item: Sg_White_Potion_Box
-        Rate: 2000
-      - Item: Sg_Blue_Potion_Box
-        Rate: 1000
+    #  - Item: High_Weapon_Box
+    #    Rate: 100
+    #  - Item: Old_Violet_Box
+    #    Rate: 3000
+    #  - Item: Old_Card_Album
+    #    Rate: 500
+    #  - Item: Sg_Weapon_Supply_Box
+    #    Rate: 3000
+    #  - Item: Sg_White_Potion_Box
+    #    Rate: 2000
+    #  - Item: Sg_Blue_Potion_Box
+    #    Rate: 1000
       - Item: Kades_Card
         Rate: 1
         StealProtected: true
@@ -53055,29 +53055,29 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Yggdrasilberry
-        Rate: 5500
-      - Item: Seed_Of_Yggdrasil
-        Rate: 3500
-      - Item: Crystal_Jewel__
-        Rate: 5500
+    #MvpDrops:
+    #  - Item: Yggdrasilberry
+    #    Rate: 5500
+    #  - Item: Seed_Of_Yggdrasil
+    #    Rate: 3500
+    #  - Item: Crystal_Jewel__
+    #    Rate: 5500
     Drops:
-      - Item: Spinx_Helm
-        Rate: 150
-      - Item: Safety_Ring
-        Rate: 50
-      - Item: Rojerta_Piece
-        Rate: 7000
-      - Item: Elunium
-        Rate: 3800
-      - Item: Old_Card_Album
-        Rate: 400
-      - Item: Scarlet_Bible
-        Rate: 50
-        RandomOptionGroup: Group_5
-      - Item: Yggdrasilberry
-        Rate: 3000
+    #  - Item: Spinx_Helm
+    #    Rate: 150
+    #  - Item: Safety_Ring
+    #    Rate: 50
+    #  - Item: Rojerta_Piece
+    #    Rate: 7000
+    #  - Item: Elunium
+    #    Rate: 3800
+    #  - Item: Old_Card_Album
+    #    Rate: 400
+    #  - Item: Scarlet_Bible
+    #    Rate: 50
+    #    RandomOptionGroup: Group_5
+    #  - Item: Yggdrasilberry
+    #    Rate: 3000
       - Item: Grave_Amon_Ra_Card
         Rate: 1
         StealProtected: true
@@ -77754,20 +77754,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Needle_Of_Alarm
-        Rate: 3000
-      - Item: Brigan
-        Rate: 3000
-      - Item: Key_Of_Twisted_Time
-        Rate: 3000
-      - Item: Memorize_Book_
-        Rate: 10
-      - Item: Quadrille_
-        Rate: 5
-      - Item: Menswear
-        Rate: 3
-      - Item: One_Eyed_Glass_
-        Rate: 20
+    #  - Item: Needle_Of_Alarm
+    #    Rate: 3000
+    #  - Item: Brigan
+    #    Rate: 3000
+    #  - Item: Key_Of_Twisted_Time
+    #    Rate: 3000
+    #  - Item: Memorize_Book_
+    #    Rate: 10
+    #  - Item: Quadrille_
+    #    Rate: 5
+    #  - Item: Menswear
+    #    Rate: 3
+    #  - Item: One_Eyed_Glass_
+    #    Rate: 20
       - Item: Timeholder_Card
         Rate: 1
         StealProtected: true
@@ -81108,20 +81108,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Pieces_Of_Grudge
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Thief_Soul
-        Rate: 10000
-      - Item: Thief_Soul
-        Rate: 10000
-      - Item: Thief_Soul
-        Rate: 10000
+    #  - Item: Pieces_Of_Grudge
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Thief_Soul
+    #    Rate: 10000
+    #  - Item: Thief_Soul
+    #    Rate: 10000
+    #  - Item: Thief_Soul
+    #    Rate: 10000
       - Item: GuillotineCross_Card
         Rate: 1
         StealProtected: true
@@ -81160,20 +81160,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Pieces_Of_Grudge
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Acolyte_Soul
-        Rate: 10000
-      - Item: Acolyte_Soul
-        Rate: 10000
-      - Item: Acolyte_Soul
-        Rate: 10000
+    #  - Item: Pieces_Of_Grudge
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Acolyte_Soul
+    #    Rate: 10000
+    #  - Item: Acolyte_Soul
+    #    Rate: 10000
+    #  - Item: Acolyte_Soul
+    #    Rate: 10000
       - Item: Archbishop_Card
         Rate: 1
         StealProtected: true
@@ -81213,20 +81213,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Pieces_Of_Grudge
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Archer_Soul
-        Rate: 10000
-      - Item: Archer_Soul
-        Rate: 10000
-      - Item: Archer_Soul
-        Rate: 10000
+    #  - Item: Pieces_Of_Grudge
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Archer_Soul
+    #    Rate: 10000
+    #  - Item: Archer_Soul
+    #    Rate: 10000
+    #  - Item: Archer_Soul
+    #    Rate: 10000
       - Item: Ranger_Card
         Rate: 1
         StealProtected: true
@@ -81266,20 +81266,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Cursed_Crystal
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Merchant_Soul
-        Rate: 10000
-      - Item: Merchant_Soul
-        Rate: 10000
-      - Item: Merchant_Soul
-        Rate: 10000
+    #  - Item: Cursed_Crystal
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Merchant_Soul
+    #    Rate: 10000
+    #  - Item: Merchant_Soul
+    #    Rate: 10000
+    #  - Item: Merchant_Soul
+    #    Rate: 10000
       - Item: Mechanic_Card
         Rate: 1
         StealProtected: true
@@ -81319,20 +81319,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Pieces_Of_Grudge
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Mage_Soul
-        Rate: 10000
-      - Item: Mage_Soul
-        Rate: 10000
-      - Item: Mage_Soul
-        Rate: 10000
+    #  - Item: Pieces_Of_Grudge
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Mage_Soul
+    #    Rate: 10000
+    #  - Item: Mage_Soul
+    #    Rate: 10000
+    #  - Item: Mage_Soul
+    #    Rate: 10000
       - Item: Warlock_Card
         Rate: 1
         StealProtected: true
@@ -81371,20 +81371,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Cursed_Crystal
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Swordman_Soul
-        Rate: 10000
-      - Item: Swordman_Soul
-        Rate: 10000
-      - Item: Swordman_Soul
-        Rate: 10000
+    #  - Item: Cursed_Crystal
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Swordman_Soul
+    #    Rate: 10000
+    #  - Item: Swordman_Soul
+    #    Rate: 10000
+    #  - Item: Swordman_Soul
+    #    Rate: 10000
       - Item: RuneKnight_Card
         Rate: 1
         StealProtected: true
@@ -81997,20 +81997,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Cursed_Crystal
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Swordman_Soul
-        Rate: 10000
-      - Item: Swordman_Soul
-        Rate: 10000
-      - Item: Swordman_Soul
-        Rate: 10000
+    #  - Item: Cursed_Crystal
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Swordman_Soul
+    #    Rate: 10000
+    #  - Item: Swordman_Soul
+    #    Rate: 10000
+    #  - Item: Swordman_Soul
+    #    Rate: 10000
       - Item: RoyalGuard_Card
         Rate: 1
         StealProtected: true
@@ -82049,20 +82049,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Pieces_Of_Grudge
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Merchant_Soul
-        Rate: 10000
-      - Item: Merchant_Soul
-        Rate: 10000
-      - Item: Merchant_Soul
-        Rate: 10000
+    #  - Item: Pieces_Of_Grudge
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Merchant_Soul
+    #    Rate: 10000
+    #  - Item: Merchant_Soul
+    #    Rate: 10000
+    #  - Item: Merchant_Soul
+    #    Rate: 10000
       - Item: Genetic_Card
         Rate: 1
         StealProtected: true
@@ -82101,20 +82101,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Pieces_Of_Grudge
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Mage_Soul
-        Rate: 10000
-      - Item: Mage_Soul
-        Rate: 10000
-      - Item: Mage_Soul
-        Rate: 10000
+    #  - Item: Pieces_Of_Grudge
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Mage_Soul
+    #    Rate: 10000
+    #  - Item: Mage_Soul
+    #    Rate: 10000
+    #  - Item: Mage_Soul
+    #    Rate: 10000
       - Item: Sorcerer_Card
         Rate: 1
         StealProtected: true
@@ -82153,20 +82153,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Pieces_Of_Grudge
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Acolyte_Soul
-        Rate: 10000
-      - Item: Acolyte_Soul
-        Rate: 10000
-      - Item: Acolyte_Soul
-        Rate: 10000
+    #  - Item: Pieces_Of_Grudge
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Acolyte_Soul
+    #    Rate: 10000
+    #  - Item: Acolyte_Soul
+    #    Rate: 10000
+    #  - Item: Acolyte_Soul
+    #    Rate: 10000
       - Item: Sura_Card
         Rate: 1
         StealProtected: true
@@ -82205,20 +82205,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Pieces_Of_Grudge
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Thief_Soul
-        Rate: 10000
-      - Item: Thief_Soul
-        Rate: 10000
-      - Item: Thief_Soul
-        Rate: 10000
+    #  - Item: Pieces_Of_Grudge
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Thief_Soul
+    #    Rate: 10000
+    #  - Item: Thief_Soul
+    #    Rate: 10000
+    #  - Item: Thief_Soul
+    #    Rate: 10000
       - Item: ShadowChaser_Card
         Rate: 1
         StealProtected: true
@@ -82257,20 +82257,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Pieces_Of_Grudge
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Archer_Soul
-        Rate: 10000
-      - Item: Archer_Soul
-        Rate: 10000
-      - Item: Archer_Soul
-        Rate: 10000
+    #  - Item: Pieces_Of_Grudge
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Archer_Soul
+    #    Rate: 10000
+    #  - Item: Archer_Soul
+    #    Rate: 10000
+    #  - Item: Archer_Soul
+    #    Rate: 10000
       - Item: Minstrel_Card
         Rate: 1
         StealProtected: true
@@ -82309,20 +82309,20 @@ Body:
     Modes:
       Mvp: true
     Drops:
-      - Item: Pieces_Of_Grudge
-        Rate: 3000
-      - Item: Manteau_Of_Fallen
-        Rate: 150
-      - Item: Manteau_Of_Fallen
-        Rate: 500
-      - Item: Pieces_Of_Sentiment
-        Rate: 5000
-      - Item: Archer_Soul
-        Rate: 10000
-      - Item: Archer_Soul
-        Rate: 10000
-      - Item: Archer_Soul
-        Rate: 10000
+    #  - Item: Pieces_Of_Grudge
+    #    Rate: 3000
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 150
+    #  - Item: Manteau_Of_Fallen
+    #    Rate: 500
+    #  - Item: Pieces_Of_Sentiment
+    #    Rate: 5000
+    #  - Item: Archer_Soul
+    #    Rate: 10000
+    #  - Item: Archer_Soul
+    #    Rate: 10000
+    #  - Item: Archer_Soul
+    #    Rate: 10000
       - Item: Wanderer_Card
         Rate: 1
         StealProtected: true
@@ -88375,28 +88375,28 @@ Body:
     Class: Boss
     Modes:
       Mvp: true
-    MvpDrops:
-      - Item: Magic_Card_Album
-        Rate: 5000
-      - Item: Old_Violet_Box
-        Rate: 5000
-      - Item: Yggdrasilberry
-        Rate: 5000
+    #MvpDrops:
+    #  - Item: Magic_Card_Album
+    #    Rate: 5000
+    #  - Item: Old_Violet_Box
+    #    Rate: 5000
+    #  - Item: Yggdrasilberry
+    #    Rate: 5000
     Drops:
-      - Item: Piece_Of_Chimera
-        Rate: 1000
-      - Item: Treasure_Box
-        Rate: 500
-      - Item: Old_Violet_Box
-        Rate: 500
-      - Item: Old_Blue_Box
-        Rate: 500
-      - Item: Yggdrasilberry
-        Rate: 500
-      - Item: Carnium
-        Rate: 500
-      - Item: Poison_Forged_Spear
-        Rate: 10
+    #  - Item: Piece_Of_Chimera
+    #    Rate: 1000
+    #  - Item: Treasure_Box
+    #    Rate: 500
+    #  - Item: Old_Violet_Box
+    #    Rate: 500
+    #  - Item: Old_Blue_Box
+    #    Rate: 500
+    #  - Item: Yggdrasilberry
+    #    Rate: 500
+    #  - Item: Carnium
+    #    Rate: 500
+    #  - Item: Poison_Forged_Spear
+    #    Rate: 10
       - Item: Venom_Kimera_Card
         Rate: 1
         StealProtected: true
