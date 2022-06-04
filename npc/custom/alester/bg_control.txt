@@ -1,0 +1,95 @@
+-	script	Batalhas Campais#bg_control	-1,{
+	OnInit:
+		.queue = create_queue();
+		
+		setarray .bgName$[0], "Escolta";
+		setarray .bgControl$[0], "bg_escolta#control";
+		setarray .bgMinPlayers2Start[0], 2;
+		
+		set .currentBg, rand(getarraysize(.bgName$));
+		bindatcmd "joinbg", strnpcinfo(0) + "::OnJoinQueue";
+		.npc = "[Batalhas Campais]";
+		end;
+		
+	OnRotate:
+		.inBattle = 0;
+		.currentBg++;
+		if(.currentBg >= getarraysize(.bgName$)) {
+			.currentBg = 0;
+		}
+	OnCheckReady:
+		.@queueSize = get_queue_size(.queue);
+		.@bgName$ = .bgName$[.currentBg];
+		.@bgControl$ = .bgControl$[.currentBg];
+		.@bgMinPlayers2Start = .bgMinPlayers2Start[.currentBg];
+		
+		if(getvariableofnpc(.prepare, .@bgControl$)) {
+			remove_queue_data(.queue, getcharid(0));
+			doevent .@bgControl$ + "::OnEnter";
+			end;
+		}
+		
+		if(.inBattle || .@queueSize < .bgMinPlayers2Start[.currentBg]) {
+			end;
+		}
+		
+		.inBattle = 1;
+		mapannounce "prontera", "A Batalha Campal \"" + .@bgName$ + "\" começou!", bc_map;
+		
+		.redTeam = bg_create("-", 0, 0, .bgControl$ + "::OnRedQuit", .bgControl$ + "::OnRedDead");
+		.blueTeam = bg_create("-", 0, 0, .bgControl$ + "::OnBlueQuit", .bgControl$ + "::OnBlueDead");
+		
+		queue_shuffle(.queue);
+		
+		for(.@i = 0; .@i < .@queueSize; .@i++) {
+			.@charId = get_queue_data(.queue, .@i);
+			if(.@i%2 == 0)
+				.@team = .redTeam;
+			else
+				.@team = .blueTeam;
+			bg_join(.@team, "bat_b01", 0, 0, .@charId);
+		}
+		
+		clear_queue(.queue);
+		
+		donpcevent .bgControl$ + "::OnStart";
+		end;
+	
+	OnJoinQueue:
+		getmapxy .@map$, .@x, .@y;
+		if(.@map$ != "prontera") end;
+		
+		.@charid = getcharid(0);
+		
+		if(!queue_data_exists(.queue, .@charid)) {
+			add_queue_data(.queue, .@charid);
+			dispbottom "Você entrou na fila das batalhas campais.";
+			doevent strnpcinfo(0) + "::OnCheckReady";
+			addtimer 1000, strnpcinfo(0) + "::OnCheckQueuePlayerMap";
+		}
+		else {
+			callsub L_LeaveQueue;
+		}
+		end;
+		
+	OnCheckQueuePlayerMap:
+		getmapxy .@map$, .@x, .@y;
+		if(queue_data_exists(.queue, getcharid(0))) {
+			if(.@map$ != "prontera") {
+				callsub L_LeaveQueue;
+			}
+			else {
+				addtimer 1000, strnpcinfo(0) + "::OnCheckQueuePlayerMap";
+			}
+		}
+		end;
+		
+	L_LeaveQueue:
+		remove_queue_data(.queue, getcharid(0));
+		dispbottom "Você saiu na fila das batalhas campais.";
+		end;
+		
+	OnPCLogoutEvent:
+		callsub L_LeaveQueue;
+		end;
+}

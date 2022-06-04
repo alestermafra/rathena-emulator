@@ -1,0 +1,112 @@
+function	script	get_queue_size	{
+	.@queueId = getarg(0);
+	return getarraysize(getd(sprintf("$@queue_system_queue_%d", .@queueId)));
+}
+
+function	script	get_available_queue_id	{
+	.@MAX_QUEUES = 99;
+	for(.@i = 1; .@i <= .@MAX_QUEUES; .@i++) {
+		if($@in_use_queues[.@i] == 0) {
+			return .@i;
+		}
+	}
+	
+	return -1;
+}
+
+function	script	get_queue_data	{
+	.@queueId = getarg(0);
+	.@index = getarg(1);
+	return getd(sprintf("$@queue_system_queue_%d[%d]", .@queueId, .@index));
+}
+
+function	script	set_queue_in_use	{
+	.@queueId = getarg(0);
+	.@inUse = getarg(1);
+	$@in_use_queues[.@queueId] = .@inUse;
+	return;
+}
+
+function	script	clear_queue	{
+	.@queueId = getarg(0);
+	cleararray getd(sprintf("$@queue_system_queue_%d[0]", .@queueId)), 0, get_queue_size(.@queueId);
+	return;
+}
+
+function	script	create_queue	{
+	.@queueId = get_available_queue_id();
+	
+	if(.@queueId != -1) {
+		set_queue_in_use(.@queueId, 1);
+	}
+
+	return .@queueId;
+}
+
+function	script	destroy_queue	{
+	.@queueId = getarg(0);
+	clear_queue(.@queueId);
+	set_queue_in_use(.@queueId, 0);
+	return;
+}
+
+function	script	add_queue_data	{
+	.@queueId = getarg(0);
+	.@data = getarg(1);
+	.@queueSize = get_queue_size(.@queueId);
+	
+	setd sprintf("$@queue_system_queue_%d[%d]", .@queueId, .@queueSize), .@data;
+	return 1;
+}
+
+function	script	set_queue_data	{
+	.@queueId = getarg(0);
+	.@index = getarg(1);
+	.@data = getarg(2);
+	
+	setd sprintf("$@queue_system_queue_%d[%d]", .@queueId, .@index), .@data;
+	return 1;
+}
+
+function	script	queue_data_exists	{
+	.@queueId = getarg(0);
+	.@data = getarg(1);
+	
+	for(.@i = 0; .@i < get_queue_size(.@queueId); .@i++) {
+		if(getd(sprintf("$@queue_system_queue_%d[%d]", .@queueId, .@i)) == .@data) {
+			return 1;
+		}
+	}
+	
+	return 0;
+}
+
+function	script	remove_queue_data	{
+	.@queueId = getarg(0);
+	.@data = getarg(1);
+	
+	for(.@i = 0; .@i < get_queue_size(.@queueId); .@i++) {
+		if(getd(sprintf("$@queue_system_queue_%d[%d]", .@queueId, .@i)) == .@data) {
+			deletearray getd(sprintf("$@queue_system_queue_%d[%d]", .@queueId, .@i)), 1;
+			return 1;
+		}
+	}
+	
+	return 0;
+}
+
+function	script	queue_shuffle	{
+	.@queue = getarg(0);
+	.@queueSize = get_queue_size(.@queue);
+	
+	for(.@i = 0; .@i < get_queue_size(.@queue); .@i++) {
+		.@x = rand(.@queueSize);
+		.@y = rand(.@queueSize);
+		
+		.@temp = get_queue_data(.@queue, .@x);
+		set_queue_data(.@queue, .@x, get_queue_data(.@queue, .@y));
+		set_queue_data(.@queue, .@y, .@temp);
+	}
+	
+	return;
+}
