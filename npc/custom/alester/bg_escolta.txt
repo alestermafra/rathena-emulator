@@ -1,153 +1,122 @@
 -	script	bg_escolta#control	-1,{
 OnInit:
-	.minplayer2start = 1;      // minimum players to start (ex. if 3vs3, set to 3)
-	.eventlasting    = 5 * 60;  // event duration before auto-reset (20 minutes * seconds)
-	setarray .rewarditem[0],   // rewards for the winning team: <item>,<amount>,...
-		501, 10;
+	setarray .winReward[0], 501, 10;
+	setarray .loseReward[0], 501, 5;
 	mapwarp "bat_b01", "prontera", 156, 191;
 	end;
 	
 OnStart:
-	// check ready
-	if(getwaitingroomstate( 0, .rednpcname$) < .minplayer2start || getwaitingroomstate( 0, .bluenpcname$) < .minplayer2start)
-		end;
-
-	// prepare match
-	// create Battleground and teams
-	if(rand(2)) {
-		.atk = waitingroom2bg("bat_b01", 10, 290, strnpcinfo(0)+"::OnAtkQuit", strnpcinfo(0) + "::OnAtkDead", .rednpcname$);
-		.def = waitingroom2bg("bat_b01", 390, 10, strnpcinfo(0)+"::OnDefQuit", strnpcinfo(0) + "::OnDefDead", .bluenpcname$);
-	}
-	else {
-		.def = waitingroom2bg("bat_b01", 10, 290, strnpcinfo(0)+"::OnAtkQuit", strnpcinfo(0) + "::OnDefDead", .rednpcname$);
-		.atk = waitingroom2bg("bat_b01", 390, 10, strnpcinfo(0)+"::OnDefQuit", strnpcinfo(0) + "::OnAtkDead", .bluenpcname$);
+	disablenpc "bat_b01-1";
+	disablenpc "bat_b01-2";
+	enablenpc "healer_bat_b01-1";
+	enablenpc "healer_bat_b01-2";
+	
+	.@queue = getvariableofnpc(.queue, "Batalhas Campais#bg_control");
+	.@queueSize = get_queue_size(.@queue);
+	
+	.atk = bg_create("bat_b01", 10, 290, "bg_escolta#control::OnAtkQuit", "");
+	.def = bg_create("bat_b01", 390, 10, "bg_escolta#control::OnDefQuit", "");
+	
+	queue_shuffle(.@queue);
+	
+	for(.@i = 0; .@i < .@queueSize; .@i++) {
+		.@charId = get_queue_data(.@queue, .@i);
+		if(.@i%2 == 0)
+			.@team = .atk;
+		else
+			.@team = .def;
+		bg_join(.@team, "bat_b01", 0, 0, .@charId);
 	}
 	
-	delwaitingroom .rednpcname$;
-	delwaitingroom .bluenpcname$;
+	clear_queue(.@queue);
 	
 	// send to waiting room
 	bg_warp .atk, "bat_b01", 10, 290;
 	bg_warp .def, "bat_b01", 390, 10;
-
-	// delay before match begins
-	sleep 10000;
-	mapannounce "bat_b01", "O time defensor deve impedir o avanço do Morroc Abestado!", bc_map;
-	sleep 5000;
-	mapannounce "bat_b01", "A batalha começará em 5 segundos", bc_map;
-	sleep 2000;
-	for ( .@i = 3; .@i > 0; --.@i ) {
-		mapannounce "bat_b01", "["+ .@i +"]", bc_map;
-		sleep 1000;
-	}
 	
-	// start match
+	.playerCanEnter = 1; // still allowing players to enter
+	initnpctimer;
+	end;
+	
+OnEnterBG:
+	if(bg_get_data(.atk, 0) <= bg_get_data(.def, 0)) {
+		bg_join(.atk, "bat_b01", 0, 0, getcharid(0));
+		warp "bat_b01", 10, 290;
+	}
+	else {
+		bg_join(.def, "bat_b01", 0, 0, getcharid(0));
+		warp "bat_b01", 390, 10;
+	}
+	end;
+
+//OnTimer35000:
+OnTimer10000:
+	.playerCanEnter = 0; // block players from enter
+	mapannounce "bat_b01", "O time defensor deve impedir o avanço do Morroc Abestado!", bc_map;
+	end;
+	
+//OnTimer40000:
+OnTimer11000:
+	mapannounce "bat_b01", "A batalha começará em 5 segundos", bc_map;
+	end;
+	
+//OnTimer45000:
+OnTimer16000:
 	bg_warp .atk, "bat_b01", 88, 75;
 	bg_warp .def, "bat_b01", 313, 225;
-	sleep 500;
+	enablenpc "bat_b01-1";
+	enablenpc "bat_b01-2";
+	sleep 1000;
 	mapannounce "bat_b01", "Comecem!", bc_map;
 	donpcevent "Morroc Abestado#bg_escolta::OnStart";
+	end;
 	
-	// match duration
-	sleep .eventlasting * 1000;
+//OnTimer645000: // time's end. def win.
+OnTimer76000: // time's end. def win.
+	callsub L_GameEnd, .def, .atk;
+	end;
 	
-	if(!.winner) {
-		.winner = .def;
-		.loser = .atk;
-	}
-
-	// end match, destroy Battleground, reset NPCs
-	mapannounce "bat_b01", "O Time " + ((.winner == .atk)? "atacante" : "defensor") + " venceu!", bc_map;
+OnPackageArrived:
+	callsub L_GameEnd, .atk, .def;
+	end;
 	
-	bg_get_data .winner, 1;
+L_GameEnd:
+	stopnpctimer;
+	.@winner = getarg(0);
+	.@loser = getarg(1);
+	.@timeName$ = (.@winner == .atk? "atacante" : "defensor");
+	mapannounce "bat_b01", "O Time " + .@timeName$ + " venceu!", bc_map;
+	sleep 1000;
+	
+	bg_get_data .@winner, 1;
 	for ( .@i = 0; .@i < $@arenamemberscount; ++.@i )
-		getitem .rewarditem[0], .rewarditem[1], $@arenamembers[.@i];
+		getitem .winReward[0], .winReward[1], $@arenamembers[.@i];
 	
-	if(.loser) {
-		bg_get_data .loser, 1;
-		for (.@i = 0; .@i < $@arenamemberscount; ++.@i)
-			getitem .rewarditem[0], .rewarditem[1] / 2, $@arenamembers[.@i];
-	}
+	bg_get_data .@loser, 1;
+	for (.@i = 0; .@i < $@arenamemberscount; ++.@i)
+		getitem .loseReward[0], .loseReward[1], $@arenamembers[.@i];
 		
 	sleep 5000;
 	bg_warp .atk, "prontera", 156, 191;
 	bg_warp .def, "prontera", 156, 191;
 	bg_destroy .atk;
 	bg_destroy .def;
-	.winner = 0;
-	donpcevent .rednpcname$ +"::OnStart";
-	donpcevent .bluenpcname$ +"::OnStart";
-	end;
-
-// "OnDeath" event
-OnAtkDead:
-	warp "bat_b01", 10, 290;
-	doevent "Curandeira::OnGetBuffs";
-	addtimer 10000, strnpcinfo(0) + "::OnAtkRevive";
-	end;
-	
-OnDefDead:
-	warp "bat_b01", 390, 10;
-	doevent "Curandeira::OnGetBuffs";
-	addtimer 10000, strnpcinfo(0) + "::OnDefRevive";
-	end;
-	
-OnAtkRevive:
-	percentheal 100, 100;
-	warp "bat_b01", 88, 75;
-	end;
-	
-OnDefRevive:
-	percentheal 100, 100;
-	warp "bat_b01", 313, 225;
+	sleep 5000;
+	donpcevent "Batalhas Campais#bg_control::OnRotate";
 	end;
 
 // "OnQuit" event
-OnAtkQuit:  callsub L_Quit, .atk, "atacante";
-OnDefQuit: callsub L_Quit, .def, "defensor";
+OnAtkQuit:  callsub L_Quit, .atk, .def, "atacante";
+OnDefQuit: callsub L_Quit, .def, .atk, "defensor";
 L_Quit:
 	.@team = getarg(0);
+	.@another = getarg(1);
 	if(!bg_get_data(.@team, 0)) {
-		mapannounce "bat_b01", "Todos do time "+ getarg(1) +" saíram!", bc_map, 0xff3333;
-		.loser = 0;
-		.winner = (.@team == .atk? .def : .atk);
-		awake strnpcinfo(0);
+		mapannounce "bat_b01", "Todos do time "+ getarg(2) +" saíram!", bc_map, 0xff3333;
+		callsub L_GameEnd, .@another, 0;
 	}
 	end;
 }
-
-prontera,152,184,5	script	Time Vermelho#bg_escolta	733,{
-	end;
-OnInit:
-	sleep 1;
-	set getvariableofnpc( .rednpcname$, "bg_escolta#control" ), strnpcinfo(0);
-OnStart:
-	waitingroom "Vermelho", getvariableofnpc( .minplayer2start, "bg_escolta#control" ) +1, "bg_escolta#control::OnStart", getvariableofnpc( .minplayer2start, "bg_escolta#control" );
-	end;
-}
-
-prontera,159,184,3	script	Time Azul#bg_escolta	734,{
-	end;
-OnInit:
-	sleep 1;
-	set getvariableofnpc( .bluenpcname$, "bg_escolta#control" ), strnpcinfo(0);
-OnStart:
-	waitingroom "Azul", getvariableofnpc( .minplayer2start, "bg_escolta#control" ) +1, "bg_escolta#control::OnStart", getvariableofnpc( .minplayer2start, "bg_escolta#control" );
-	end;
-}
-
-
-
-
-
-
-
-
-
-
-
-// *getmapxy("<variable for map name>",<variable for x>,<variable for y>{,<type>,"<search value>"})
-// *getareausers("<map name>",<x1>,<y1>,<x2>,<y2>)
 
 bat_b01,145,147,3	script	Morroc Abestado#bg_escolta	1917,{
 	end;
@@ -173,9 +142,7 @@ bat_b01,145,147,3	script	Morroc Abestado#bg_escolta	1917,{
 		if(.@x == .path[.currentPath] && .@y == .path[.currentPath + 1]) {
 			if(.@x == .path[getarraysize(.path) - 2] && .@y == .path[getarraysize(.path) - 1]) {
 				// attacker win
-				set getvariableofnpc(.winner, "bg_escolta#control"), .a;
-				set getvariableofnpc(.loser, "bg_escolta#control"), .d;
-				awake "bg_escolta#control";
+				donpcevent "bg_escolta#control::OnPackageArrived";
 				misceffect 901;
 				sleep 5000;
 				disablenpc;
@@ -201,7 +168,7 @@ bat_b01,145,147,3	script	Morroc Abestado#bg_escolta	1917,{
 				.direction = 1;
 				.currentPath = .currentPath + 2;
 			}
-			.@speed = 700;
+			.@speed = 50;
 			if(.@hasAttackMember == 2) {
 				.@speed = 600;
 			}
@@ -226,6 +193,21 @@ bat_b01,145,147,3	script	Morroc Abestado#bg_escolta	1917,{
 		initnpctimer;
 		end;
 }
+
+bat_b01,390,10,0	script	healer_bat_b01-1	-1,15,15,{
+OnTouch:
+	addtimer 1000, "Curandeira::OnGetBuffs";
+	end;
+}
+
+bat_b01,10,290,0	script	healer_bat_b01-2	-1,15,15,{
+OnTouch:
+	addtimer 1000, "Curandeira::OnGetBuffs";
+	end;
+}
+
+bat_b01,10,282,0	warp	bat_b01-1	1,1,bat_b01,88,75
+bat_b01,390,17,0	warp	bat_b01-2	1,1,bat_b01,313,225
 
 bat_b01	mapflag	battleground
 bat_b01	mapflag	nosave	SavePoint

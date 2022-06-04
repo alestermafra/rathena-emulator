@@ -6,58 +6,40 @@
 		setarray .bgControl$[0], "bg_escolta#control";
 		setarray .bgMinPlayers2Start[0], 2;
 		
-		set .currentBg, rand(getarraysize(.bgName$));
-		bindatcmd "joinbg", strnpcinfo(0) + "::OnJoinQueue";
+		set .currentBG, rand(getarraysize(.bgName$));
+		bindatcmd "joinbg", strnpcinfo(0) + "::OnJoinBG";
 		.npc = "[Batalhas Campais]";
 		end;
 		
 	OnRotate:
-		.inBattle = 0;
-		.currentBg++;
-		if(.currentBg >= getarraysize(.bgName$)) {
-			.currentBg = 0;
+		.inProgress = 0;
+		.currentBG++;
+		if(.currentBG >= getarraysize(.bgName$)) {
+			.currentBG = 0;
 		}
 	OnCheckReady:
 		.@queueSize = get_queue_size(.queue);
-		.@bgName$ = .bgName$[.currentBg];
-		.@bgControl$ = .bgControl$[.currentBg];
-		.@bgMinPlayers2Start = .bgMinPlayers2Start[.currentBg];
+		.@bgName$ = .bgName$[.currentBG];
+		.@bgControl$ = .bgControl$[.currentBG];
+		.@bgMinPlayers2Start = .bgMinPlayers2Start[.currentBG];
 		
-		if(getvariableofnpc(.prepare, .@bgControl$)) {
-			remove_queue_data(.queue, getcharid(0));
-			doevent .@bgControl$ + "::OnEnter";
+		if(.inProgress || .@queueSize < .bgMinPlayers2Start[.currentBG]) {
 			end;
 		}
 		
-		if(.inBattle || .@queueSize < .bgMinPlayers2Start[.currentBg]) {
-			end;
-		}
-		
-		.inBattle = 1;
-		mapannounce "prontera", "A Batalha Campal \"" + .@bgName$ + "\" começou!", bc_map;
-		
-		.redTeam = bg_create("-", 0, 0, .bgControl$ + "::OnRedQuit", .bgControl$ + "::OnRedDead");
-		.blueTeam = bg_create("-", 0, 0, .bgControl$ + "::OnBlueQuit", .bgControl$ + "::OnBlueDead");
-		
-		queue_shuffle(.queue);
-		
-		for(.@i = 0; .@i < .@queueSize; .@i++) {
-			.@charId = get_queue_data(.queue, .@i);
-			if(.@i%2 == 0)
-				.@team = .redTeam;
-			else
-				.@team = .blueTeam;
-			bg_join(.@team, "bat_b01", 0, 0, .@charId);
-		}
-		
-		clear_queue(.queue);
-		
+		.inProgress = 1;
+		mapannounce "prontera", "A Batalha Campal \"" + .@bgName$ + "\" começou!", bc_map;		
 		donpcevent .bgControl$ + "::OnStart";
 		end;
-	
-	OnJoinQueue:
+		
+	OnJoinBG:
 		getmapxy .@map$, .@x, .@y;
 		if(.@map$ != "prontera") end;
+		
+		if(getvariableofnpc(.playerCanEnter, .bgControl$[.currentBG])) {
+			doevent .bgControl$[.currentBG] + "::OnEnterBG";
+			end;
+		}
 		
 		.@charid = getcharid(0);
 		
@@ -65,21 +47,21 @@
 			add_queue_data(.queue, .@charid);
 			dispbottom "Você entrou na fila das batalhas campais.";
 			doevent strnpcinfo(0) + "::OnCheckReady";
-			addtimer 1000, strnpcinfo(0) + "::OnCheckQueuePlayerMap";
+			addtimer 1000, strnpcinfo(0) + "::OnCheckPlayerMap";
 		}
 		else {
 			callsub L_LeaveQueue;
 		}
 		end;
 		
-	OnCheckQueuePlayerMap:
+	OnCheckPlayerMap:
 		getmapxy .@map$, .@x, .@y;
 		if(queue_data_exists(.queue, getcharid(0))) {
 			if(.@map$ != "prontera") {
 				callsub L_LeaveQueue;
 			}
 			else {
-				addtimer 1000, strnpcinfo(0) + "::OnCheckQueuePlayerMap";
+				addtimer 1000, strnpcinfo(0) + "::OnCheckPlayerMap";
 			}
 		}
 		end;
