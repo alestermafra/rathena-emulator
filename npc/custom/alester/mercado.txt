@@ -1,24 +1,129 @@
 prontera,162,194,5	script	Mercado	795,{
-	if(select("Ir até o mercado:^FF0000Sair^000000") == 1)
+	if(select("Ir até o mercado:^FF0000Sair^000000") == 1) {
 		warp "job_cru",28,109;
-	else
-		CallShop "Novidades",1;
+	}
 	end;
 }
 
-
 job_cru,33,109,3	script	Saída#mercado	966,{
-
-message StrCharInfo(0), "Voltando para Prontera.";
-AddTimer 1000, "Saída#mercado::OnGoPrt";
-end;
-
-OnGoPrt:
-	warp "prontera",156,191;
+	message strcharinfo(0), "Voltando para Prontera";
+	AddTimer 1000, "Saída#mercado::OnTimerEnd";
 	end;
+
+	OnTimerEnd:
+		warp "prontera",156,191;
+		end;
 }
 
 -	script	ControleLojas	-1,{
+	function mountAllShops;
+	function mountShop;
+	function itemExists;
+	
+OnInit:	
+	bindatcmd "mercado", strnpcinfo(3) + "::OnAtCommand";		
+	mountAllShops();
+	end;
+
+OnAtCommand:
+	if(.@atcmd_numparameters == 0) {
+		dispbottom "Comando falhou. Informe um ID de item. (uso: @mercado <item_id> <quantidade>)";
+	}
+	else {
+		.@itemId = .@atcmd_parameters$[0];
+		.@count = 1;
+
+		if(.@atcmd_numparameters > 1) {
+			.@count = .@atcmd_parameters$[1];
+			if(!.@count) {
+				.@count = 1;
+			}
+		}
+		
+		if(itemExists(.@itemId)) {
+			getitem .@itemId, .@count;
+		}
+		else {
+			dispbottom "Este item não existe no mercado.";
+		}
+	}
+	end;
+	
+	function mountAllShops	{
+		freeloop(1);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_head_top` = 1 ORDER BY `name_english`", .@headTop);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_head_mid` = 1 ORDER BY `name_english`", .@headMid);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_head_low` = 1 ORDER BY `name_english`", .@headLow);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_armor` = 1 ORDER BY `name_english`", .@armor);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_left_hand` = 1 ORDER BY `name_english`", .@shield);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_garment` = 1 ORDER BY `name_english`", .@garment);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_shoes` = 1 ORDER BY `name_english`", .@shoes);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND (`location_right_accessory` = 1 OR `location_left_accessory` = 1) ORDER BY `name_english`", .@accessory);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Ammo' ORDER BY `name_english`", .@ammo);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` IN ('Usable', 'Healing', 'Delayconsume') ORDER BY `name_english`", .@usable);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Etc' ORDER BY `name_english`", .@utility);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_head_top` = 1 ORDER BY `name_english`", .@cardHeadTop);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_head_mid` = 1 ORDER BY `name_english`", .@cardHeadMid);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_head_low` = 1 ORDER BY `name_english`", .@cardHeadLow);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_armor` = 1 ORDER BY `name_english`", .@cardArmor);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_right_hand` = 1 ORDER BY `name_english`", .@cardWeapon);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_left_hand` = 1 ORDER BY `name_english`", .@cardShield);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_garment` = 1 ORDER BY `name_english`", .@cardGarment);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_shoes` = 1 ORDER BY `name_english`", .@cardShoes);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND (`location_right_accessory` = 1 OR `location_left_accessory` = 1) ORDER BY `name_english`", .@cardAccessory);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Dagger' ORDER BY `name_english`", .@dagger);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Bow' ORDER BY `name_english`", .@bow);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` IN ('Staff', '2hStaff') ORDER BY `name_english`", .@staff);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Whip' ORDER BY `name_english`", .@whip);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` IN ('1hSword', '2hSword') ORDER BY `name_english`", .@sword);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` IN ('Revolver', 'Rifle', 'Shotgun', 'Grenade', 'Gatling') ORDER BY `name_english`", .@guns);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Musical' ORDER BY `name_english`", .@musical);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Katar' ORDER BY `name_english`", .@katar);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` IN ('1hSpear', '2hSpear') ORDER BY `name_english`", .@spear);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Book' ORDER BY `name_english`", .@book);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Mace' ORDER BY `name_english`", .@mace);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` IN ('1hAxe', '2hAxe') ORDER BY `name_english`", .@axe);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Huuma' ORDER BY `name_english`", .@huuma);
+		query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Knuckle' ORDER BY `name_english`", .@knuckle);
+		
+		mountShop("Elmos Topo", .@headTop);
+		mountShop("Elmos Meio", .@headMid);
+		mountShop("Elmos Baixo", .@headLow);
+		mountShop("Armaduras", .@armor);
+		mountShop("Escudos", .@shield);
+		mountShop("Capas", .@garment);
+		mountShop("Sapatos", .@shoes);
+		mountShop("Acessórios", .@accessory);
+		mountShop("Munições", .@ammo);
+		mountShop("Consumíveis", .@usable);
+		mountShop("Utilidades", .@utility);
+		mountShop("Cartas Elmos Topo", .@cardHeadTop);
+		mountShop("Cartas Elmos Meio", .@cardHeadMid);
+		mountShop("Cartas Elmos Baixo", .@cardHeadLow);
+		mountShop("Cartas Armaduras", .@cardArmor);
+		mountShop("Cartas Armamentos", .@cardWeapon);
+		mountShop("Cartas Escudos", .@cardShield);
+		mountShop("Cartas Capas", .@cardGarment);
+		mountShop("Cartas Sapatos", .@cardShoes);
+		mountShop("Cartas Acessórios", .@cardAccessory);
+		mountShop("Adagas", .@dagger);
+		mountShop("Arcos", .@bow);
+		mountShop("Cajados", .@staff);
+		mountShop("Chicotes", .@whip);
+		mountShop("Espadas", .@sword);
+		mountShop("Armas de Fogo", .@guns);
+		mountShop("Instrumentos Musicais", .@musical);
+		mountShop("Katars", .@katar);
+		mountShop("Lanças", .@spear);
+		mountShop("Livros", .@Book);
+		mountShop("Maças", .@mace);
+		mountShop("Machados", .@axe);
+		mountShop("Shurikens", .@huuma);
+		mountShop("Punhos", .@knuckle);
+		freeloop(0);
+		return;
+	}
+	
 	function	mountShop	{
 		.@shop$ = getarg(0);
 		npcshopdelitem .@shop$, 501;
@@ -28,82 +133,16 @@ OnGoPrt:
 		}
 		return;
 	}
-OnInit:
-	freeloop(1);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_head_top` = 1 ORDER BY `name_english`", .@headTop);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_head_mid` = 1 ORDER BY `name_english`", .@headMid);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_head_low` = 1 ORDER BY `name_english`", .@headLow);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_armor` = 1 ORDER BY `name_english`", .@armor);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_left_hand` = 1 ORDER BY `name_english`", .@shield);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_garment` = 1 ORDER BY `name_english`", .@garment);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND `location_shoes` = 1 ORDER BY `name_english`", .@shoes);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Armor' AND (`location_right_accessory` = 1 OR `location_left_accessory` = 1) ORDER BY `name_english`", .@accessory);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Ammo' ORDER BY `name_english`", .@ammo);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` IN ('Usable', 'Healing', 'Delayconsume') ORDER BY `name_english`", .@usable);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Etc' ORDER BY `name_english`", .@utility);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_head_top` = 1 ORDER BY `name_english`", .@cardHeadTop);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_head_mid` = 1 ORDER BY `name_english`", .@cardHeadMid);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_head_low` = 1 ORDER BY `name_english`", .@cardHeadLow);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_armor` = 1 ORDER BY `name_english`", .@cardArmor);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_right_hand` = 1 ORDER BY `name_english`", .@cardWeapon);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_left_hand` = 1 ORDER BY `name_english`", .@cardShield);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_garment` = 1 ORDER BY `name_english`", .@cardGarment);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND `location_shoes` = 1 ORDER BY `name_english`", .@cardShoes);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Card' AND (`location_right_accessory` = 1 OR `location_left_accessory` = 1) ORDER BY `name_english`", .@cardAccessory);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Dagger' ORDER BY `name_english`", .@dagger);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Bow' ORDER BY `name_english`", .@bow);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` IN ('Staff', '2hStaff') ORDER BY `name_english`", .@staff);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Whip' ORDER BY `name_english`", .@whip);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` IN ('1hSword', '2hSword') ORDER BY `name_english`", .@sword);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` IN ('Revolver', 'Rifle', 'Shotgun', 'Grenade', 'Gatling') ORDER BY `name_english`", .@guns);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Musical' ORDER BY `name_english`", .@musical);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Katar' ORDER BY `name_english`", .@katar);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` IN ('1hSpear', '2hSpear') ORDER BY `name_english`", .@spear);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Book' ORDER BY `name_english`", .@book);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Mace' ORDER BY `name_english`", .@mace);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` IN ('1hAxe', '2hAxe') ORDER BY `name_english`", .@axe);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Huuma' ORDER BY `name_english`", .@huuma);
-	query_sql("SELECT `item_id` FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `type` = 'Weapon' AND `subtype` = 'Knuckle' ORDER BY `name_english`", .@knuckle);
 	
-	mountShop("Elmos Topo", .@headTop);
-	mountShop("Elmos Meio", .@headMid);
-	mountShop("Elmos Baixo", .@headLow);
-	mountShop("Armaduras", .@armor);
-	mountShop("Escudos", .@shield);
-	mountShop("Capas", .@garment);
-	mountShop("Sapatos", .@shoes);
-	mountShop("Acessórios", .@accessory);
-	mountShop("Munições", .@ammo);
-	mountShop("Consumíveis", .@usable);
-	mountShop("Utilidades", .@utility);
-	
-	mountShop("Cartas Elmos Topo", .@cardHeadTop);
-	mountShop("Cartas Elmos Meio", .@cardHeadMid);
-	mountShop("Cartas Elmos Baixo", .@cardHeadLow);
-	mountShop("Cartas Armaduras", .@cardArmor);
-	mountShop("Cartas Armamentos", .@cardWeapon);
-	mountShop("Cartas Escudos", .@cardShield);
-	mountShop("Cartas Capas", .@cardGarment);
-	mountShop("Cartas Sapatos", .@cardShoes);
-	mountShop("Cartas Acessórios", .@cardAccessory);
-	
-	mountShop("Adagas", .@dagger);
-	mountShop("Arcos", .@bow);
-	mountShop("Cajados", .@staff);
-	mountShop("Chicotes", .@whip);
-	mountShop("Espadas", .@sword);
-	mountShop("Armas de Fogo", .@guns);
-	mountShop("Instrumentos Musicais", .@musical);
-	mountShop("Katars", .@katar);
-	mountShop("Lanças", .@spear);
-	mountShop("Livros", .@Book);
-	mountShop("Maças", .@mace);
-	mountShop("Machados", .@axe);
-	mountShop("Shurikens", .@huuma);
-	mountShop("Punhos", .@knuckle);
+	function	itemExists	{
+		.@itemId = escape_sql(getarg(0));
+		query_sql(sprintf("SELECT 1 FROM `mercado` INNER JOIN `item_db_re` ON (`id` = `item_id`) WHERE `item_id` = %d", .@itemId), .@found);
 		
-	freeloop(0);
-	end;
+		if(.@found) {
+			return 1;
+		}
+		return 0;
+	}
 }
 
 
